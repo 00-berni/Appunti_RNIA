@@ -1,5 +1,7 @@
 # Ignora le immagini
 *.png
+*.jpeg
+*.jpg
 
 # Ignora i prodotti di pdflatex ma non il .pdf e .log
 *.fls
@@ -11,3 +13,7 @@
 *.lof
 *.out
 *.toc
+*.synctex.gz
+
+# Ignora vscode
+*.json
