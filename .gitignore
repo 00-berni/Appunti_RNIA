@@ -1,0 +1,13 @@
+# Ignora le immagini
+*.png
+
+# Ignora i prodotti di pdflatex ma non il .pdf e .log
+*.fls
+*.aux
+*.fdb_latexmk
+*.idx
+*.ilg
+*.ind
+*.lof
+*.out
+*.toc
