@@ -19,14 +19,14 @@ $$B(Z,A) = Z m_p + N m_N - m \,(\ce{^{A}_{Z}X_N})>0\qquad \text{è definita posi
 \end{figure}
 
 \subsection{Primi passi} 
-Intanto osserviamo che il primo stato legato possibile è $A=2$ ovvero $\ce{^2_1H_1}$ e ha una $B\simeq 2.225$ MeV. Poi notiamo un picco nei d'intorni del $\ce{^56Fe}$:
+Il primo stato legato possibile è $A=2$ ovvero $\ce{^2_1H_1}$ e ha una $B\simeq 2.225$ MeV; notiamo poi un picco nei d'intorni del $\ce{^56Fe}$:
 \begin{itemize}
     \item Per $A<56$ allora si ha che \vir{salendo} anche l'energia di legame aumenta, dunque è favorita la \textbf{fusione nucleare}\footnote{Fa eccezione l'elio per cui si ha una $B\sim 28$ MeV; cercheremo di spiegare più avanti il motivo. Lo stesso vale per il carbonio.}:
     $$\ce{^{A_1}X} + \ce{^{A_2}Y} \to \ce{^AX}'$$
     \item Per $A>56$ \vir{salire} non è conveniente e vengono quindi privilegiati i processi di \textbf{fissione nucleare}:
     $$\ce{^AX}' \to \ce{^{A_1}X} + \ce{^{A_2}Y}$$
 \end{itemize}
-\noindent Osserviamo anche che eccetto i primi salti la curva si assesta intorno a valori compresi tra i $7.5 \% 8.5$ MeV e quindi prenderemo come valor medio per la maggior parte degli elementi 8 MeV.
+\noindent Osserviamo anche che eccetto i primi salti la curva si assesta intorno a valori compresi tra i $7.5 \div 8.5$ MeV e quindi prenderemo come valor medio per la maggior parte degli elementi 8 MeV.
 
 \section{Formula Semi-empirica di massa}
 Per $A$ \vir{sufficientemente grande} esiste una formula empirica che fitta abbastanza bene i dati.
@@ -61,7 +61,7 @@ Passiamo adesso a illustrare il significato dei singoli coefficienti:
     Questo deriva dall'espressione dell'energia coulombiana $\sim Q^2/R = Z^2 e^2 / (r_0A^{1/3})$; allora $a_C \propto e^2/r_0$.
     \item $a_{sym}$:\index{formula semi-empirica di massa!termine simmetrico} questo è un termine puramente quantistico e può essere riscritto come\footnote{Si usa solo $A=Z+N$.}:
     $$(A-2Z)^2 = (N-Z)^2$$
-    Si vede allora che per $N=Z$ questo termine scopare, ovvero il nucleo è più stabile; questo è confermato dalle osservazioni solo per $A$ \vir{non troppo grandi}, come si vede in Figura \ref{segre}, quindi si divide per $A$.
+    Si vede allora che per $N=Z$ questo termine scompare, ovvero il nucleo è più stabile; questo è confermato dalle osservazioni solo per $A$ \vir{non troppo grandi}, come si vede in Figura \ref{segre}, quindi si divide per $A$.
     \item $\delta$: esistono solo 6 nuclei stabili in natura con $A$ pari e $N$ e $Z$ dispari.
 \end{itemize}
 \noindent Infine valgono le seguenti disuguaglianze:
@@ -74,8 +74,10 @@ $$a_C \lll a_V <a_S < a_{sym}$$
     \caption{Sono riportati i nuclei in base a $Z$ e $N$. La linea centrale viene chiamata \textbf{valle di stabilità}\index{valle di stabilità}. Indicativamente dopo il Ca non vale più $N=Z$ per i nuclei stabili. In alto sono riportati i decadimenti.}
     \label{segre}
 \end{figure}
+
 \newpage
-\section{Decadimenti}
+
+\section{Panoramica sui decadimenti}
 Illustriamo i principali decadimenti.
 
 \paragraph{Decadimento $\alpha$} Mediato dall'interazione forte perché sia nello stato iniziale che nel finale ho solo nuclei:
@@ -89,19 +91,19 @@ $$m(\nuc{X}{A}{Z}{N}) = Zm_p + Nm_n - B(Z,A) \simeq Z m(\ce{^1H}) + (A-Z)m_n- B(
 Fissato $A$ cerchiamo il minimo di $m$ al variare di $Z$.
 $$\frac{\partial m}{\partial Z} = 0 \;\Rightarrow\; m(\ce{^1H})-m_n + 2a_C \frac{Z}{A^{1/3}} - \frac{a_C}{A^{1/3}}-4a_{sym}\frac{A-2Z}{A} = 0$$
 $$Z_{\min} = \frac{m_n - m(\ce{^1H})+a_C A^{1/3}+4 a_{sym}}{2[a_CA^{1/3}+4a_{sym}A^{-1}]}\simeq \frac{A}{2}$$
-dove nell'ultima approssimazione abbiamo usato che $m(\ce{1H})\simeq m_n$ e che $a_C\ll a_{sym}$, per cui per $A$ piccolo (ma non troppo) si può trascurare il termine $a_C A^{1/3}$ nel denominatore.\\
-Dato che l'andamento di $B\propto Z^2$ allora possiamo rappresentare\footnote{Qui trattiamo $Z$ come una variabile continua per ottenere gli andamenti.} approssimativamente l'andamento di $M$ al variare di $Z$, come in Figura \ref{MvsZ}.\\
+dove nell'ultima approssimazione abbiamo usato che $m(\ce{1^H})\simeq m_n$ e che $a_C\ll a_{sym}$, per cui per $A$ piccolo (ma non troppo) si può trascurare il termine $a_C A^{1/3}$ nel denominatore.\\
+Dato che l'andamento di $B\propto Z^2$ allora possiamo rappresentare\footnote{Qui trattiamo $Z$ come una variabile continua per ottenere gli andamenti.} approssimativamente l'andamento di $m$ al variare di $Z$ come in Figura \ref{MvsZ}.\\
 È molto raro ma è possibile osservare anche un decadimento doppio $\beta$ indicato $2\nu\beta\beta$; quello che si cerca di osservare è un doppio $\beta$ senza neutrino, ovvero $\phi \nu \beta\beta$, poiché in questo caso si avrebbe una violazione dello \textit{standard model}, il neutrino non sarebbe una particella di Dirac, ma di Mayorana per cui $\nu = \bar{\nu}$.
 
 \begin{figure}[!h]
     \centering
     \includegraphics[scale=0.3]{Immagini/MvsZ.png}
-    \caption{Rappresentazione di $M$ in funzione di $Z$. Si osserva che per i nuclei con $A$ dispari si hanno decadimenti $\beta^-$ scendendo verso destra, mentre $\beta^+$ scendendo verso sinistra. Per i nuclei con $A$ pari il termine di pairing nell'energia di legame si fa sentire e questo porta a nuclei che possono avere sia $\beta^+$ che $\beta^-$ (in questa configurazione i doppio $\beta$ sono praticamente inesistenti).}
+    \caption{Rappresentazione di $m\equiv M$ in funzione di $Z$. Si osserva che per i nuclei con $A$ dispari si hanno decadimenti $\beta^-$ scendendo verso destra, mentre $\beta^+$ scendendo verso sinistra. Per i nuclei con $A$ pari il termine di pairing nell'energia di legame si fa sentire e questo porta a nuclei che possono avere sia $\beta^+$ che $\beta^-$ (in questa configurazione i doppio $\beta$ sono praticamente inesistenti).}
     \label{MvsZ}
 \end{figure}
 
 \begin{curiosita}
-In Fisica Medica viene utilizzato il $\ce{^64Cu}$ poiché può sia decadere $\beta^+$ che $\beta^-$; il decadimento $\beta^+$ viene usato per la PET, mentre il $\beta^-$ per l'uccisione dei tumori
+In Fisica Medica viene utilizzato il $\ce{^64Cu}$ poiché può sia decadere $\beta^+$ che $\beta^-$; il decadimento $\beta^+$ viene usato per la PET, mentre il $\beta^-$ per la cura dei tumori.
 \end{curiosita}
 
 \section{$Q$-value}

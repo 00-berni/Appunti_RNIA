@@ -1,6 +1,6 @@
 %\part*{Lezione 10/03/2021}
-\paragraph{Sui risultati della first order perturbation theory} Riportiamo le ultime considerazioni sui termini di multipolo ottenuti nella lezione precedente.\\
-Possiamo, infatti, rielaborare le espressioni per $E_{JM}$ e $M_{JM}$ sostituendo\footnote{In realtà quello che facciamo è integrare per parti e poi usare il teorema di Gauss.} i termini di corrente che abbiamo calcolato:
+\paragraph{Sui risultati della first order perturbation theory} 
+Possiamo rielaborare le espressioni per $E_{JM}$ e $M_{JM}$ sostituendo\footnote{In realtà quello che facciamo è integrare per parti e poi usare il teorema di Gauss.} i termini di corrente che abbiamo calcolato:
 \begin{displaymath}
 \begin{aligned}
 E_{JM}(k) &= \frac{1}{k} \int d^3x \; \Bigl \{ [\vec{\nabla}\land \mathrm{j}_J(kx) \vec{\mathcal{Y}}^M_{JJ1}] \cdot \vec{J}_C(\vec{x}) + k^2 \mathrm{j}_J(kx) \:\vec{\mu}(\vec{x})\cdot\vec{\mathcal{Y}}^M_{JJ1} \Bigr \} \\
@@ -9,10 +9,10 @@ M_{JM}(k) &=  \int d^3x \; \Bigl \{ \mathrm{j}_J(kx) \vec{\mathcal{Y}}^M_{JJ1}\c
 \end{displaymath}
 Se $k\ll 1$ (situazione frequente) allora sarà dominante in $E$ il termine di corrente $\vec{J}_C$; inoltre a parità di $J$ per $k$ piccolo abbiamo $\mathrm{j}_J\sim (kx)^J$ per cui $E_{JM}>M_{JM}$ (come avevamo trovato per le stime di Weisskopf\index{stime di Weisskopf}).
 
-\paragraph{Stima del dipolo} Consideriamo adesso i termini di dipolo. Poiché $k< 1$ MeV (spesso si prende dell'ordine del keV) si ha che $\mean{\vec{k}\cdot\vec{r}_i}/\hbar c\simeq 10/200 = 1/20\ll 1$, quindi è ragionevole fare la \textbf{Long Wavelength Approximation}\index{long wavelength approximation} per cui sfruttando la $\delta^3(\vec{x}-\vec{r}_i)$ che compare nell'espressione della corrente possiamo approssimare $\exp{(i\vec{k}\cdot\vec{x}_i)}\sim 1$ nel calcolo dell'elemento di matrice, per cui\footnote{Da qui in poi chiameremo il versore di polarizzazione $\widehat{\varepsilon}$ con $\hat{e}$ per semplicità di scrittura.}:
-$$\int d^3x\; \hat{e}_{k\lambda}^+ \cdot \vec{J}(\vec{x}) = \int d^3x\; \hat{e}_{k\lambda,i}^+  (\vec{J}(\vec{x})\cdot \vec{\nabla})\,x_i = - \int d^3x \; \hat{e}_{k\lambda}^+ \cdot \vec{x}\, (\vec{\nabla}\cdot\vec{J}(\vec{x})) $$
+\paragraph{Stima del dipolo} Consideriamo adesso i termini di dipolo. Poiché $k< 1$ MeV (spesso si prende dell'ordine del keV) si ha che $\mean{\vec{k}\cdot\vec{r}_i}/\hbar c\simeq 10/200 = 1/20\ll 1$, quindi è ragionevole assumere la \textbf{Long Wavelength Approximation}\index{long wavelength approximation}; sfruttando la $\delta^3(\vec{x}-\vec{r}_i)$ che compare nell'espressione della corrente possiamo approssimare $\exp{(i\vec{k}\cdot\vec{x}_i)}\sim 1$ nel calcolo dell'elemento di matrice, per cui\footnote{Da qui in poi chiameremo il versore di polarizzazione $\widehat{\varepsilon}$ con $\hat{e}$ per semplicità di scrittura.}:
+$$\int d^3x\; \hat{e}_{k\lambda}^* \cdot \vec{J}(\vec{x}) = \int d^3x\; \hat{e}_{k\lambda_i}^*  (\vec{J}(\vec{x})\cdot \vec{\nabla})\,x_i = - \int d^3x \; \hat{e}_{k\lambda}^* \cdot \vec{x}\, (\vec{\nabla}\cdot\vec{J}(\vec{x})) $$
 dove abbiamo usato $\nabla_j x_i = \delta_{ji}$ e abbiamo integrato per parti. Dall'equazione di continuità per la carica elettrica si ha $\mean{\vec{\nabla}\cdot\vec{J}(\vec{x})} = -i\mean{[H,\rho]} = -i(E_f-E_i)\rho = -i E_\gamma \rho$  valutato sugli stati iniziale e finale, quindi possiamo riscrivere l'equazione precedente come:
-$$\oss{J_fM_f}{\int d^3x \; \hat{e}^+_{k\lambda}\cdot \vec{J}(\vec{x})}{J_iM_i} = iE_\gamma \, \oss{J_fM_f}{\int d^3x \; \hat{e}^+_{k\lambda}\cdot \vec{x}\rho}{J_iM_i} = i E_\gamma \, \hat{e}^+_{k\lambda} \cdot \vec{\mathrm{d}}_{fi}$$
+$$\oss{J_fM_f}{\int d^3x \; \hat{e}^*_{k\lambda}\cdot \vec{J}(\vec{x})}{J_iM_i} = iE_\gamma \, \oss{J_fM_f}{\int d^3x \; \hat{e}^*_{k\lambda}\cdot \vec{x}\rho}{J_iM_i} = i E_\gamma \, \hat{e}^*_{k\lambda} \cdot \vec{\mathrm{d}}_{fi}$$
 $$\vec{\mathrm{d}}_{fi} \equiv \oss{J_fM_f}{\int d^3x \; \vec{x}\rho}{J_iM_i}$$
 dove $\vec{\mathrm{d}}_{fi}$ è l'\textbf{operatore di dipolo elettrico}\index{operatore di dipolo elettrico}.\\
 Se consideriamo invece tutti i termini di multipolo\footnote{Trascuriamo il secondo termine di $E_{JM}$ perché stiamo considerando $k$ piccoli.}:\index{termini di multipolo!elettrico}\index{termini di multipolo!magnetico}
@@ -27,9 +27,9 @@ $$\oss{J_fM_f}{T_{JM}}{J_iM_i} = \underbrace{\frac{(-)^{J_i-M_i}}{\sqrt{2J+1}}\c
 Nell'espressione della sezione d'urto è l'elemento di matrice ridotta\index{elemento di matrice ridotta} che compare e che è comune a ogni termine, quindi posso calcolarlo per il termine di multipolo più conveniente.
 
 \paragraph{Probabilità di decadimento per il dipolo} Procediamo con il calcolo\footnote{Nei calcoli tenderemo a tenere $c=\hbar=1$.} della probabilità di decadimento per il dipolo elettrico e ci aspetteremo di ritrovare il risultato classico.\\
-Facciamo l'ipotesi di long wavelength approximation\index{long wavelength approximation}, per cui:
+Facciamo l'ipotesi di \textit{long wavelength approximation}\index{long wavelength approximation}, per cui:
 $$d\lambda = \sum_{k\lambda} \frac{2\pi}{\hbar} \delta(E_i-E_f-E_\gamma) \,|T_{fi}|^2 \:\Omega \frac{d^3k}{(2\pi)^3}$$
-$$T_{fi}\equiv -\frac{e}{\sqrt{2\omega_k \Omega}}\,i E_\gamma \, \hat{e}^+_{k\lambda}\cdot \vec{\mathrm{d}}_{fi}$$
+$$T_{fi}\equiv -\frac{e}{\sqrt{2\omega_k \Omega}}\,i E_\gamma \, \hat{e}^*_{k\lambda}\cdot \vec{\mathrm{d}}_{fi}$$
 dove la somma su $\vec{k}$ è intesa sullo spazio delle fasi e  $\omega_k = E_\gamma$.
 \begin{figure}[h]
     \centering
@@ -38,8 +38,8 @@ dove la somma su $\vec{k}$ è intesa sullo spazio delle fasi e  $\omega_k = E_\g
     \label{0310_sist}
 \end{figure}
 \newline
-\noindent Soffermiamoci sull'elemento di matrice $|\hat{e}^+_{k\lambda}\cdot \vec{\mathrm{d}}_{fi}|^2$; poiché $\hat{e}_{kz'} = \hat{k}$ dovremo sommare\footnote{Con gli indici primati ci riferiamo al sistema di coordinate costruito sul versore di polarizzazione come in Figura \ref{0310_sist}.} solo su $\lambda = x',y'$:
-$$\sum_{\lambda = x',y'}|\hat{e}^+_{k\lambda}\cdot \vec{\mathrm{d}}_{fi}|^2 = \sum_{\lambda=x',y',z'} |\hat{e}^+_{k\lambda}\cdot \vec{\mathrm{d}}_{fi}|^2 - |\hat{e}^+_{kz'}\cdot \vec{\mathrm{d}}_{fi}|^2 = \mathrm{d}_{fi}^2 -\mathrm{d}_{fi}^2\cos^2{(\theta)} = \mathrm{d}_{fi}^2 \sin^2{(\theta)} $$
+\noindent Soffermiamoci sull'elemento di matrice $|\hat{e}^*_{k\lambda}\cdot \vec{\mathrm{d}}_{fi}|^2$; poiché $\hat{e}_{kz'} = \hat{k}$ dovremo sommare\footnote{Con gli indici primati ci riferiamo al sistema di coordinate costruito sul versore di polarizzazione come in Figura \ref{0310_sist}.} solo su $\lambda = x',y'$:
+$$\sum_{\lambda = x',y'}|\hat{e}^*_{k\lambda}\cdot \vec{\mathrm{d}}_{fi}|^2 = \sum_{\lambda=x',y',z'} |\hat{e}^*_{k\lambda}\cdot \vec{\mathrm{d}}_{fi}|^2 - |\hat{e}^*_{kz'}\cdot \vec{\mathrm{d}}_{fi}|^2 = \mathrm{d}_{fi}^2 -\mathrm{d}_{fi}^2\cos^2{(\theta)} = \mathrm{d}_{fi}^2 \sin^2{(\theta)} $$
 Allora avremo per il rate:
 \begin{displaymath}
 \begin{aligned}
@@ -63,7 +63,7 @@ Riassumiamo i concetti base del decadimento $\gamma$ che abbiamo visto nei parag
     \item A parità di $J$ il contributo elettrico è maggiore rispetto a quello magnetico.
 \end{itemize}
 
-\paragraph{Regole di selezione} Poiché $\vec{J}_i = \vec{J}_f + \vec{J}$ ho che $\pi_i = \pi_f \cdot \pi(T_J)$, per cui non tutti i multipoli sono ammessi; infatti $|J_i - J_f|\leq J\leq J_i+J_f$, allora:
+\paragraph{Regole di selezione} Poiché $\vec{J}_i = \vec{J}_f + \vec{J}$ ho che $\pi_i = \pi_f \cdot \pi(T_J)$, per cui non tutti i multipoli sono ammessi; infatti $|J_i - J_f|\leq J\leq J_i+J_f$:
 \begin{itemize}
     \item Se $\pi_i = \pi_f$: allora per $M$ ho $J$ dispari e per $E$ ho $J$ pari.
     \item Se $\pi_i \not = \pi_f$: allora per $E$ ho $J$ dispari e per $M$ ho $J$ pari.
@@ -81,13 +81,13 @@ $$\ce{^{60}Co}  \xrightarrow{\beta^-} \ce{^{60}Ni}^*  \xrightarrow{\gamma}  \ce{
     \label{0310_bande}
 \end{figure}
 
-Come mostrato nello schema in Figura \ref{0310_bande}, abbiamo 3 possibilità di decadimento:
+\noindent Come mostrato nello schema in Figura \ref{0310_bande}, abbiamo 3 possibilità di decadimento:
 \begin{itemize}
     \item $4^+\to2^+$: in questo caso $2\leq J\leq 6$ e $\delta \pi = 0$, allora avremo $E2,\,M3,\,E4,\,M5,\,E6$, dove domina per $E_\gamma\simeq 1.2$ MeV ($k\ll 1$) solo $E2$, con $M3$ come correzione.
     \item $2^+\to0^+$: in questo caso $J=2$ e $\delta \pi = 0$, allora avremo $E2$.
     \item $4^+\to0^+$: in questo caso $J=4$ e $\delta \pi = 0$, allora avremo $E4$.
 \end{itemize}
-Per quanto riguarda le stime di Weisskopf\index{stime di Weisskopf}, ovviamente non saranno precise perché queste sono bande rotazionali\index{bande rotazionali}, quindi non è possibile fare l'approssimazione di simmetria sferica; tuttavia ci danno l'ordine di grandezza:
+\noindent  Per quanto riguarda le stime di Weisskopf\index{stime di Weisskopf}, ovviamente non saranno precise perché queste sono bande rotazionali\index{bande rotazionali}, quindi non è possibile fare l'approssimazione di simmetria sferica; tuttavia ci danno l'ordine di grandezza:
 \begin{displaymath}
 \begin{aligned}
 \lambda(E2) &\simeq 7\cdot 10^7 \, 60^{4/3}\, (1.2)^5 \sim 2\cdot 10^{10} \unit{s}^{-1} & \tau_{dec} &= \frac{1}{\lambda} \sim 10^{-10} \unit{s} & 4^+&\to2^+ \\
@@ -109,7 +109,7 @@ $$\ce{^{137}Cs}  \xrightarrow{\beta^-} \ce{^{137}Ba}^*  \xrightarrow{\gamma}  \c
     \label{0310_bande1}
 \end{figure}
 
-In questo caso abbiamo la transizione $\frac{11}{2}^-\to\frac{3}{2}^+$ per cui $4\leq J \leq 7$ e $\Delta\pi \not = 0$; allora i termini di multipolo saranno $M4,\,E5,\,M6,\,E7$, dove $M4$ sarà dominante e $E5$ una piccola correzione.
+\noindent In questo caso abbiamo la transizione $\frac{11}{2}^-\to\frac{3}{2}^+$ per cui $4\leq J \leq 7$ e $\Delta\pi \not = 0$; allora i termini di multipolo saranno $M4,\,E5,\,M6,\,E7$, dove $M4$ sarà dominante e $E5$ una piccola correzione.
 
 
 \paragraph{Terzo esempio}
@@ -123,7 +123,7 @@ $$\ce{^{176}_{71}Lu}  \xrightarrow{\beta^-} \ce{^{176}_{72}Hf}^*  \xrightarrow{\
 \end{figure}
 
 In tutti i casi $\Delta\pi =0 $, studiamo $J$:
-\begin{enumerate}
+\begin{enumerate}[1.]
     \item $6^+\to4^+$: abbiamo $2\leq J \leq 10$, dominante $E2$.
     \item $4^+\to2^+$: abbiamo $2\leq J \leq 6$, dominante $E2$.
     \item $2^+\to0^+$: abbiamo $J=2$, dominante $E2$.
@@ -142,4 +142,4 @@ Poiché i decadimenti 1 e 2 sono molto più veloci del decadimento 3 li osserver
 Vogliamo in questa trattazione studiare $J$, quindi non ci interessa che le particelle coinvolte siano nuclei o meno. Prendiamo lo stato di scattering:
 $$n+p \to d + \gamma$$
 Possiamo sempre definire lo stato iniziale come un autostato del momento $J$ ed espanderlo in onde parziali $\psi_{np}$. Allora avremo $\ell = 0,1,2,\dots$, ma dal momento che lo stato è di scattering (basse energie) ci interessa solo $\ell=0$; per quanto riguarda lo spin avremo $S=0,1$, tuttavia poiché i coefficienti di Clebsch-Gordan\index{coefficienti di Clebsch-Gordan} della transizione ${^3S_1}\to {^3S_1}$ sono trascurabili rispetto a quelli della transizione ${^1S_0}\to {^3S_1}$ avremo che rimarrà\footnote{Il pezzo di corrente di magnetizzazione in questo caso è rilevante.} solo $S=0$.\\
-Dunque, abbiamo ${^1S_0}\to {^3S_1}={^30_1}$ con $J=1$ e $\Delta\pi  = 0$ e il termine dominante sarà $M1$.
+Dunque, abbiamo ${^1S_0}\to {^3S_1}$ con $J=1$ e $\Delta\pi  = 0$ e il termine dominante sarà $M1$.

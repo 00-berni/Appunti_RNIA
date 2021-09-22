@@ -19,17 +19,17 @@ $$\frac{dn}{dE_f} = \frac{dn_edn_\nu dn_f}{dE_f}$$
 \end{aligned}
 \end{displaymath}
 Queste 3 equazioni non sono però indipendenti perché sono legate dalla conservazione del quadrimpulso ($P_f+p+q =0$), quindi se $q$ e $p$ variano si può trascurare la variazione di $dn_f$:
-$$dn = \frac{p^2 dp d\hat{p}\,q^2dq\hat{q}\,\Omega^2}{h^6}$$
+$$dn = \frac{p^2 dp d\hat{p}\:q^2dqd\hat{q}\:\Omega^2}{h^6}$$
 Per comprendere la relazione dalle direzioni $\hat{p}$ e $\hat{q}$ scriviamo le funzioni d'onda per il neutrino e per l'elettrone. Quella del neutrino essendo questo neutro ci aspettiamo sia un'onda piana $\phi_\nu = \exp{(-i\vec{q}\cdot\vec{r}_\nu/\hbar)}/\sqrt{\Omega}$; per quella dell'elettrone dovremmo considerare l'interazione coulombiana col nucleo, ma momentaneamente la trascuriamo quindi $\phi_e = \exp{(-i\vec{p}\cdot\vec{r}_e/\hbar)}/\sqrt{\Omega}$. A questo punto assumiamo l'ipotesi di Fermi, ovvero che il decadimento avvenga in un sol punto\footnote{In altre parole le particelle sono distribuite secondo $\delta(\vec{r}_\nu - \vec{r}_e)\delta(\vec{r}_e-\vec{r}_i)$ con $\vec{r}_i$ posizione del nucleone, che equivale a dire $r_e=r_\nu=r_i$.\\ 
 Questa ipotesi è stata dimostrata sperimentalmente, grazie all'osservazione dei bosoni $W^\pm$ e $Z$ mediatori dell'interazione debole, che avendo una massa \vir{molto grande} hanno range di azione \vir{molto piccoli}.}, per cui utilizzeremo la sola variabile $\vec{r}$ per indicare la posizione: 
 $$\int \frac{1}{\Omega} \phi^*_f e^{i\vec{p}\cdot\vec{r}/\hbar} e^{i\vec{q}\cdot\vec{r}/\hbar} O_X \phi_i d\Omega$$
-A questo punto, il $Q$-\textit{value} è dell'ordine del MeV, per cui anche gli impulsi del neutrino e dell'elettrone sono di quell'ordine; inoltre le funzioni d'onda nucleari tendono a zero molto rapidamente per $r>r_{nucleare}$, dunque ci aspettiamo di poter approssimare\footnote{Questa approssimazione ha senso solo se $\phi^*_f O_X \phi_i \not = 0$.} $\phi_e\sim\phi_\nu\sim 1/\sqrt{\Omega}$. Per dare un esempio dell'ordine di grandezza dell'argomento dell'esponenziale:
+A questo punto, il $Q$-\textit{value} è dell'ordine del MeV, per cui anche gli impulsi del neutrino e dell'elettrone sono di quell'ordine; inoltre le funzioni d'onda nucleari tendono a zero molto rapidamente per $r>r_{nucleare}$, dunque ci aspettiamo di poter approssimare\footnote{Come vedremo questa approssimazione ha senso solo se $\int \phi^*_f O_X \phi_i \not = 0$.} $\phi_e\sim\phi_\nu\sim 1/\sqrt{\Omega}$. Per dare un esempio dell'ordine di grandezza dell'argomento dell'esponenziale:
 $$|\frac{\vec{p}\cdot\vec{r}}{\hbar c}|\simeq \frac{1\cdot10}{200}=0.05\ll 1$$
 Questa approssimazione viene detta \textbf{approssimazione a transizione \textit{permessa}}. Perché l'integrale sia non nullo allora le funzioni d'onda dei nucleoni devono avere uguale parità.\\
 Riscriviamo allora il rate:
-$$\lambda = \frac{2\pi}{\hbar}g^2 |\int \phi^*_f O_X \phi_i d\Omega|^2 \frac{p^2 dp 4\pi}{h^3}\frac{q^2dq4\pi}{h^3}\frac{1}{dE_f}$$
+$$\lambda = \frac{2\pi}{\hbar}g^2 \Bigl |\int \phi_f^* O_X \phi_i d\Omega\Bigr |^2 \frac{p^2 dp 4\pi}{h^3}\frac{q^2dq4\pi}{h^3}\frac{1}{dE_f}$$
 dove abbiamo integrato su $d\hat{q}$ e $d\hat{p}$ poiché niente dipende da questi. Fissiamo\footnote{In questi conti usiamo $c=1$.} l'energia dell'elettrone e del nucleone prodotto, quindi differenziamo solo in $q$, ovvero $dE_f = dE_\nu = dq$.
-$$d\lambda = \frac{1}{(2\pi)^3 \hbar^7}g^2 \Bigl |\int \phi_f^* O_X \phi_f d\Omega\Bigr |^2 p^2 dp\, q^2 $$
+$$d\lambda = \frac{1}{2\pi^3 \hbar^7}g^2 \Bigl |\int \phi_f^* O_X \phi_i d\Omega\Bigr |^2 p^2 dp\, q^2 $$
 dove $q$ è fissato da $p$. Consideriamo il numero di elettroni con impulso tra $p$ e $p+dp$: $d\lambda = N(p)dp \propto p^2 q^2 dp$. Esprimiamo $q$ in funzione dell'energia dell'elettrone tramite il $Q$-\textit{value}: $Q = T_Y + T_e + q \simeq T_e + q$ con $T_e = \sqrt{m_e^2 + p^2}-m_e$, quindi $q \simeq Q-T_e$. Abbiamo quindi:
 $$N(p) \propto p^2(Q-\sqrt{m_e^2 + p^2}+m_e)^2$$
 Vogliamo però esprimere tutto nell'energia cinetica dell'elettrone $dT_e = pdp/\sqrt{m_e^2+p^2}$:
@@ -81,7 +81,7 @@ $$\lambda = \frac{g^2 |M_{fi}|^2}{2\pi^3 \hbar^7}\int_0^{p_{\max}} p^2 (Q-T_e)^2
 
 \begin{definition}[\textbf{Integrale di Fermi}]\index{integrale di Fermi}
 $$f(Z_Y,E_0) = \frac{1}{m_e^5 c^5}\int_0^{p_{\max{}}} p^2 F(Z_Y,p)(E_0-E_e)^2 dp$$
-non è un integrale analitico, ma è tabulato per vari $Z_Y$.
+dove $E_0= Q- m_e$. Non è un integrale analitico, ma è tabulato per vari $Z_Y$.
 \end{definition}
 \noindent Per definizione di tempo di dimezzamento $\tmez$ si ha:
 \begin{displaymath}
@@ -90,7 +90,7 @@ non è un integrale analitico, ma è tabulato per vari $Z_Y$.
 f\tmez &= \ln{2}\frac{2\pi^3 \hbar^7}{ g^2 |M_{fi}|^2 m_e^5 c^4} 
 \end{aligned}
 \end{displaymath}
-dove abbiamo inizialmente trascurato $c$ e poi reintrodotta. Quest'ultima espressione viene detta $f\tau$\textbf{-value}\index{ft-value@$f\tau$\textbf{-value}}, dipende solo da $|M_{fi}|$, ovvero solo dai nuclei, e varia in un range esteso tra $10^3$ e $10^{20}$ s, per questa ragione spesso se ne esprime il logaritmo. Per $\log{(f\tau)}\sim 3 \div 4$, ovvero decadimenti molto veloci, si parla di decadimenti \textit{super-permessi} e sono tutti $0^+\to0^+$ con $M_{fi}\sim \sqrt{2}$ indipendente dal nucleo considerato. Questo decadimento è allora perfetto per stimare la costante di accoppiamento debole $g$ dal momento che presenta per ogni nucleo lo stesso valore $f\tau$, come riportato in Figura \ref{0304_dati2}; si ottiene così:
+dove abbiamo inizialmente trascurato $c$ e poi reintrodotta\footnote{$c^{-1}$ compare da $dn/dE_\nu = dn/d(cq)$.}. Quest'ultima espressione viene detta $f\tau$\textbf{-value}\index{ft-value@$f\tau$\textbf{-value}}, dipende solo da $|M_{fi}|$, ovvero solo dai nuclei, e varia in un range esteso tra $10^3$ e $10^{20}$ s, per questa ragione spesso se ne esprime il logaritmo. Per $\log{(f\tau)}\sim 3 \div 4$, ovvero decadimenti molto veloci, si parla di decadimenti \textit{super-permessi} e sono tutti $0^+\to0^+$ con $M_{fi}\sim \sqrt{2}$ indipendente dal nucleo considerato. Questo decadimento è allora perfetto per stimare la costante di accoppiamento debole $g$ dal momento che presenta per ogni nucleo lo stesso valore $f\tau$, come riportato in Figura \ref{0304_dati2}; si ottiene così:
 $$g\simeq 0.88\cdot 10^{-4} \;\mbox{MeV}\,\mbox{fm}^3$$
 Per avere una quantità adimensionale possiamo definire una costante tipica dell'interazione $G = g \,m^2c/\hbar^3$, per cui:
 \begin{displaymath}
@@ -109,8 +109,8 @@ In quest'ultimo caso viene detta \textbf{costante di Fermi} $G_F$\index{costante
     \label{0304_dati2}
 \end{figure}
 
-\subsubsection{La massa del neutrino}
-Finora per tutti i conti che abbiamo fatto, abbiamo considerato $m_\nu=0$, ma questo non è sempre un'approssimazione corretta: per elettroni energetici, ovvero $T_e\to Q$, dalla conservazione dell'energia si ha che $q\ll 1$, quindi il neutrino non è più relativistico ($q\not = Q-T_e$) e gli effetti della sua massa non sono più trascurabili\footnote{Posto $c=1$.} $E_\nu \simeq m_\nu + q^2/2m_\nu$. Poiché ciò influisce sul numero di elettroni, Fermi rielaborò i suoi conti tenendo conto della massa del neutrino e ottenne un andamento come quello riportato in Figura \ref{0304_nu}.
+\subsubsection{La massa del neutrino}\label{sec-nu-mass}
+In tutti i calcoli fatti finora abbiamo considerato $m_\nu=0$, ma non è sempre un'approssimazione corretta: per elettroni energetici, ovvero $T_e\to Q$, dalla conservazione dell'energia si ha che $q\ll 1$, quindi il neutrino non è più relativistico ($q\not = Q-T_e$) e gli effetti della sua massa non sono più trascurabili\footnote{Posto $c=1$.} $E_\nu \simeq m_\nu + q^2/2m_\nu$. Poiché ciò influisce sul numero di elettroni, Fermi rielaborò i suoi conti\footnote{Guarda \secrif{compl-neutrini}.} tenendo conto della massa del neutrino e ottenne un andamento come quello riportato in Figura \ref{0304_nu}.
 
 \begin{figure}[h]
     \centering
@@ -159,7 +159,7 @@ O = \Biggl \{
 \end{array}
 \end{displaymath}
 dove $i$ indica l'$i$-esimo nucleone. \\
-Concentriamoci adesso sul momento angolare: poiché il momento angolare iniziale dev'essere uguale al finale si ha per $S=0$ $\Delta J = 0$, mentre per $S=1$ avrei $\vec{J}_f - \vec{J}_i = \vec{1} $ per cui $\Delta J = 0,1$, ma notiamo che $\Delta J=0$ non è \textit{permesso} perché non posso cambiare la parità ($\pi = (-)^\ell, \ell=0$). Vediamo alcuni esempi\footnote{Indichiamo con F il decadimento di Fermi e con GT quello di Gamow-Teller}:
+Concentriamoci adesso sul momento angolare: poiché il momento angolare iniziale dev'essere uguale al finale si ha per $S=0$ $\Delta J = 0$, mentre per $S=1$ avrei $\vec{J}_f - \vec{J}_i = \vec{1} $ per cui $\Delta J = 0,1$, ma notiamo che $J_i=J_f=0$ non è \textit{permesso} perché non posso cambiare la parità ($\pi = (-)^\ell, \ell=0$). Vediamo alcuni esempi\footnote{Indichiamo con F il decadimento di Fermi e con GT quello di Gamow-Teller}:
 \begin{displaymath}
 \begin{aligned}
 \ce{^{14}O} &\to \ce{^{14}N} & 0^+&\to0^+ & &\text{F} \\

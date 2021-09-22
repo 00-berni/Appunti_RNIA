@@ -12,7 +12,7 @@ dove abbiamo indicato con $\vec{P}_R$ l'impulso del nucleo dovuto al rinculo, pe
 \begin{displaymath}
 \begin{aligned}
 E_i&=E_f + E_\gamma + T_R \\
-\Delta E &= E_\gamma + \frac{E_\gamma^2}{2M}
+\Delta E &= E_\gamma + \frac{E_\gamma^2}{2M} &
 E_\gamma &= M\Bigl [ -1 + \sqrt{1+\frac{2\Delta E}{M}} \Bigr]
 \end{aligned}
 \end{displaymath}
@@ -38,7 +38,7 @@ d(t) &= qz \cos{\omega t} & \mu(t)&= i A \cos{\omega t} \\
 \vec{E} &= \vec{B}\times \vec{n} & \vec{E} &= \vec{B}\times \vec{n} 
 \end{aligned}
 \end{displaymath}
-Poiché l'interazione di particelle cariche è proporzionale a prodotto $\vec{v}\cdot\vec{A}$ e questo ha la stessa parità di $\vec{B}$, è il campo magnetico a determinare la parità del dipolo; si ha quindi: $\pi=-1$ per quello elettrico e $\pi=+1$ per quello magnetico.\\
+Poiché l'interazione tra cariche e campo è proporzionale al prodotto $\vec{v}\cdot\vec{A}$ e questo ha la stessa parità di $\vec{B}$, è il campo magnetico a determinare la parità del dipolo; si ha quindi: $\pi=-1$ per quello elettrico e $\pi=+1$ per quello magnetico.\\
 Riassumiamo adesso alcuni concetti di Fisica III\footnote{Dal momento che sono solo rimandi, non ci soffermiamo molto sulle spiegazioni.}:
 \begin{enumerate}
     \item La potenza irradiata in $dA$ a $\theta$ dall'asse $z$ è proporzionale al $\sin^2{\theta}$.
@@ -66,7 +66,8 @@ A titolo di esempio, riportiamo il caso del dipolo elettrico:
 $$P(E1) = \frac{4}{9\varepsilon_0}\frac{\omega^4}{c^3}\;[m(E1)]^2 \;\,\Rightarrow\;\, [m(E1)]^2 = \frac{3}{16\pi}\,d^2$$
 Quest'ultimo risultato è molto utile in meccanica quantistica.
 
-\subsection{Trattazione quantistica} Nell'ottica della meccanica quantistica abbiamo il passaggio da una funzione d'onda iniziale $\psi_i$ e una funzione d'onda finale $\psi_f$ dovuto agli operatori\footnote{In meccanica quantistica non si parla più di \textit{momenti}, ma di \textit{operatori}.} di multipolo. Per analogia con il decadimento $\beta$ ci aspettiamo che sia determinato da un elemento di matrice associato a un operatore\footnote{Nel caso del decadimento $\beta$ avevamo $M_{fi}$ e $O_X$.}:
+\subsection{Trattazione quantistica}\label{sec-gamma-multipoli}
+Secondo un approccio quantistico abbiamo il passaggio da una funzione d'onda iniziale $\psi_i$ e una funzione d'onda finale $\psi_f$ dovuto agli operatori\footnote{In meccanica quantistica non si parla più di \textit{momenti}, ma di \textit{operatori}.} di multipolo. Per analogia con il decadimento $\beta$ ci aspettiamo che sia determinato da un elemento di matrice associato a un operatore\footnote{Nel caso del decadimento $\beta$ avevamo $M_{fi}$ e $O_X$.}:
 $$m_{fi}(\sigma L) = \int \psi_f^*\, m(\sigma L)\, \psi_i d\Omega$$
 Scriviamo il rate di emissione di un singolo fotone\footnote{Questo sarà la potenza irraggiata divisa per l'energia del singolo fotone.}:
 \begin{equation*}\label{0308_rate}
@@ -76,8 +77,8 @@ Scriviamo il rate di emissione di un singolo fotone\footnote{Questo sarà la pot
 Per semplificare il calcolo facciamo queste due assunzioni: viene scambiato un singolo fotone e il processo coinvolge un singolo protone che passa da uno \textit{shell} a un altro.\\ Consideriamo inizialmente $\sigma = E$:
 \begin{displaymath}
 \begin{array}{ll}
-    L=1 & d\to eZ \\
-    L=2 & q\to 3Z^2\Omega^2
+    L=1 & d\to ez \\
+    L=2 & q\to 3z^2\Omega^2
 \end{array}
 \end{displaymath}
 Consideriamo una funzione d'onda a gradino, ovvero costante per $r<R$ e nulla altrimenti; allora dato l'operatore $e r^L Y_{LM}(\theta, \phi)$ l'elemento di matrice normalizzato per questa funzione d'onda è dato da:
@@ -132,7 +133,7 @@ dove abbiamo indicato con $a$ e $a^+$ gli operatori\footnote{Ricordiamo che per 
 \begin{displaymath}
 \begin{aligned}
 \widehat{\varepsilon}_{\vec{k}0} &= \widehat{k} \\
-\widehat{\varepsilon}_{\vec{k}\lambda\pm 1} &= \mp \frac{\widehat{\varepsilon}_{\vec{k}_x}\pm i\widehat{\varepsilon}_{\vec{k}_y}}{\sqrt{2}}
+\widehat{\varepsilon}_{\vec{k}\pm 1} &= \mp \frac{\widehat{\varepsilon}_{\vec{k}_x}\pm i\widehat{\varepsilon}_{\vec{k}_y}}{\sqrt{2}}
 \end{aligned}
 \end{displaymath}
 Poiché stiamo studiando il decadimento $\gamma$ ci interessa solo il termine di emissione in $\vec{A}(\vec{x})$, allora:
@@ -157,19 +158,19 @@ Si osserva che la funzione d'onda del fotone si porta dietro un momento angolare
 Per arrivare a una forma più compatta dell'espressione, introduciamo le armoniche sferiche vettoriali\index{armoniche sferiche!vettoriali} $\vec{\mathcal{Y}}^M_{J\ell s}$:
 \begin{displaymath}
 \begin{aligned}
-\vec{\mathcal{Y}}^M_{J\ell 1} &\equiv \sum_{m\lambda} \clebs{\ell m ,\, 1\lambda}{JM}\: \mathcal{Y}_{\ell m} (\hat{x}) \widehat{\varepsilon}_{1\lambda} \\
-\mathcal{Y}_{\ell m} (\hat{x}) \widehat{\varepsilon}_{1\lambda} &= \sum_{JM} \clebs{\ell m ,\, 1\lambda}{JM} \: \vec{\mathcal{Y}}^M_{J\ell 1} \\
+\vec{\mathcal{Y}}^M_{J\ell 1} &\equiv \sum_{m\lambda} \clebs{\ell m ,\, 1\lambda}{JM}\: \mathcal{Y}_{\ell m} (\hat{x}) \widehat{\varepsilon}_{\vec{k}\lambda} \\
+\mathcal{Y}_{\ell m} (\hat{x}) \widehat{\varepsilon}_{\vec{k}\lambda} &= \sum_{JM} \clebs{\ell m ,\, 1\lambda}{JM} \: \vec{\mathcal{Y}}^M_{J\ell 1} \\
 \Rightarrow\quad \widehat{\varepsilon}_{\vec{k}\lambda}\, e^{i\vec{k}\cdot\vec{x}} &= \widehat{\varepsilon}_{\vec{k}\lambda} \sum_{\ell=0}^\infty i^\ell \sqrt{4\pi(2\ell+1)}\, \mathrm{j}_\ell (kx) \, \sum_J \clebs{\ell 0 ,\, 1\lambda}{J\lambda}\, \vec{\mathcal{Y}}^{M=\lambda}_{J\ell 1}
 \end{aligned}
 \end{displaymath}
 dove abbiamo introdotto le funzioni di Bessel $\mathrm{j}$\index{funzioni di Bessel@$\mathrm{j}$ funzioni di Bessel} e nel secondo passaggio abbiamo usato l'ortogonalità dei coefficienti di Clebsch-Gordan\index{coefficienti di Clebsch-Gordan}. Sempre per le proprietà di tali coefficienti abbiamo che $\clebs{\ell 0,\, 1\lambda}{J\lambda}$ è non nullo solo se $\ell = J,\,J-1,\,J+1$ e quindi possiamo riscrivere:
 \begin{displaymath}
 \begin{aligned}
-\widehat{\varepsilon}_{\vec{k}\lambda}\, e^{i\vec{k}\cdot\vec{x}} = \sum_{J \geq 1} i^J \sqrt{\frac{4\pi (2J+1)}{2}} \;\Biggl \{& -\lambda \,\mathrm{j}_J (kx) \, \vec{\mathcal{Y}}^\lambda_{JJ1}\; + \\
-&-i\Biggl [\sqrt{\frac{J+1}{2J+1}} \,\mathrm{j}_{J-1} (kx) \, \vec{\mathcal{Y}}^\lambda_{J(J-1)1}\; + \\
-& -\sqrt{\frac{J}{2J+1}} \,\mathrm{j}_{J+1} (kx) \, \vec{\mathcal{Y}}^\lambda_{J(J+1)1} \Biggr ] \Biggr \} \\
+\widehat{\varepsilon}_{\vec{k}\lambda}\, e^{i\vec{k}\cdot\vec{x}} = \sum_{J \geq 1} i^J \sqrt{\frac{4\pi (2J+1)}{2}} \;\Biggl \{& -\lambda \,\mathrm{j}_J (kz) \, \vec{\mathcal{Y}}^\lambda_{JJ1}\; + \\
+&-i\Biggl [\sqrt{\frac{J+1}{2J+1}} \,\mathrm{j}_{J-1} (kz) \, \vec{\mathcal{Y}}^\lambda_{J(J-1)1}\; + \\
+& -\sqrt{\frac{J}{2J+1}} \,\mathrm{j}_{J+1} (kz) \, \vec{\mathcal{Y}}^\lambda_{J(J+1)1} \Biggr ] \Biggr \} \\
 %
-\widehat{\varepsilon}_{\vec{k}\lambda}\, e^{i\vec{k}\cdot\vec{x}} = \sum_{J \geq 1} i^J \sqrt{\frac{4\pi (2J+1)}{2}} \;\Biggl \{&-\lambda\,\mathrm{j}_J (kx) \, \vec{\mathcal{Y}}^\lambda_{JJ1} - \frac{1}{k} \vec{\nabla}\land [\mathrm{j}_J (kx)\, \vec{\mathcal{Y}}^\lambda_{JJ1}]\Biggr \}
+\widehat{\varepsilon}_{\vec{k}\lambda}\, e^{i\vec{k}\cdot\vec{x}} = \sum_{J \geq 1} i^J \sqrt{\frac{4\pi (2J+1)}{2}} \;\Biggl \{&-\lambda\,\mathrm{j}_J (kz) \, \vec{\mathcal{Y}}^\lambda_{JJ1} - \frac{1}{k} \vec{\nabla}\land [\mathrm{j}_J (kz)\, \vec{\mathcal{Y}}^\lambda_{JJ1}]\Biggr \}
 \end{aligned}
 \end{displaymath}
 dove nell'ultimo passaggio abbiamo usato le proprietà del prodotto $\vec{\nabla}\land \mathrm{j}\vec{\mathcal{Y}}$. Dunque il versore polarizzazione del fotone si porta dietro una parte proporzionale a un'armonica sferica vettoriale e una parte proporzionale al suo rotore (per questa ragione l'armonica sferica vettoriale è la \textit{funzione tipo} del fotone). A questo punto riscriviamo l'elemento di matrice\footnote{Nei calcoli ometteremo $\clebs{J_f M_f}{J_i M_i}$ per semplicità.} da cui eravamo partiti:
@@ -180,11 +181,11 @@ E_{JM}(k) &= \frac{1}{k}\int d^3x\: [\vec{\nabla}\land \mathrm{j}_J (kx)\, \vec{
 M_{JM}(k) &= \int d^3x\: [\mathrm{j}_J (kx)\, \vec{\mathcal{Y}}^M_{JJ1}]\cdot \vec{J}(\vec{x}) \\
 \end{aligned}
 \end{displaymath}
-dove abbiamo introdotto i termini di multipolo elettrico $E_{JM}$\index{termini di multipolo!elettrico} e magnetico $M_{JM}$\index{termini di multipolo!magnetico}; infatti ricordandosi che $\vec{\mathcal{Y}}^{\lambda\,+}_{JJ1} = (-)^{\lambda+1}\,\vec{\mathcal{Y}}^{-\lambda}_{JJ1}$ si ha che la parità è  data da:
+dove abbiamo introdotto i termini di multipolo elettrico $E_{JM}$\index{termini di multipolo!elettrico} e magnetico $M_{JM}$\index{termini di multipolo!magnetico}; infatti ricordandosi che $\vec{\mathcal{Y}}^{+\lambda}_{JJ1} = (-)^{\lambda+1}\,\vec{\mathcal{Y}}^{-\lambda}_{JJ1}$ si ha che la parità è  data da:
 \begin{displaymath}
 \begin{array}{l}
-    \pi(EJ) = (-)^{J+1} \\
-    \pi(MJ) = (-)^J  
+    \pi(EJ) = (-)^J \\
+    \pi(MJ) = (-)^{J+1}  
 \end{array}
 \end{displaymath}
 che è la parità che avevamo trovato anche nel conto classico.
