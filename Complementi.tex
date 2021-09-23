@@ -9,4 +9,17 @@ $$N(T_e)\propto \sqrt{T_e^2+2T_em_e} \: \sqrt{Q-T_e} \: (T_e+m_e)$$
 Si nota che quando $T_e\to Q$ $dN/dp\to 0$ se $m_\nu = 0$ e $dN/dp\to \infty$ se $m_\nu \not = 0$, come si osserva in Figura \ref{0304_nu}; dalla pendenza è quindi possibile studiare il limite per la massa del neutrino.
 
 \section{CRM: indipendeza dal parametro $B$}
-Nel discutere il metodo della 
+Nel discutere il metodo della \textit{Calculable} $R$ MATRIX (sezione \secrif{sec-RM-C}) siamo arrivati all'espressione:
+$$U_\ell = e^{2i\varphi_\ell} \, \frac{1+B\,R_\ell (E,B)-L_\ell^* \, R_\ell (E,B)}{1+B\,R_\ell(E,B)-L_\ell  \, R_\ell (E,B)}$$
+Si può dimostrare\footnote{Seguiamo la dimostrazione dell'articolo Descouvemont, P. \& Baye, D., Rep. Prog. Phys., 2010, vol.3, \texttt{DOI:} \doi{10.1088/0034-4885/73/3/036301}, \texttt{arXiv:} \url{https://arxiv.org/abs/1001.0678}.\articolo{Descouvemont \& Baye}} che $U_\ell$ non dipende da $B$.\\
+Consideriamo una matrice invertibile $\mathbf{V}$ di dimensione  $N\times N$ e due vettori di dimensione $N$ $\mathbf{u}$ e $\mathbf{v}$; possiamo sempre costruire una matrice quadrata $\mathbf{W}$ definita come:
+$$\mathbf{W} = \mathbf{V} + \mathbf{u}\mathbf{v}^T$$
+Notiamo che data l'espressione di $\mathbf{W}$ si ha:
+$$\mathbf{W}^{-1} = \mathbf{V}^{-1} - \frac{\mathbf{V}^{-1}\mathbf{u}\mathbf{v}^T\mathbf{V}^{-1}}{1-\mathbf{v}^T\mathbf{V}^{-1}\mathbf{u}}$$
+$$\mathbf{W}^{-1}\mathbf{u} = \frac{\mathbf{V}^{-1}\mathbf{u}}{1-\mathbf{v}^T\mathbf{V}^{-1}\mathbf{u}} \: \Rightarrow \: (\mathbf{v}^T\mathbf{W}^{-1}\mathbf{u})^{-1} = 1 + (\mathbf{v}^T\mathbf{V}^{-1}\mathbf{u})^{-1} $$
+Osserviamo che se $\mathbf{V}\equiv C(E,B)$, $\mathbf{W}\equiv C(E,0)$, $\mathbf{u} \equiv \ket{\varphi_j}$ e $\mathbf{v} \equiv \ket{\varphi_i}$\footnote{Dove abbiamo preso $\ket{\varphi_k} \to \varphi_k(a)$.} allora possiamo scrivere:
+$$C(E,0) = C(E,B) + \frac{\hbar^2}{2\mu a} B\: \ket{\varphi_j}\bra{\phi_i}$$
+$$\ppc{\frac{\hbar^2}{2\mu a}}^{-1}(\bra{\phi_i}C(E,0)^{-1}\ket{\phi_j})^{-1} = B + \ppc{\frac{\hbar^2}{2\mu a}}^{-1}(\bra{\phi_i}C(E,B)^{-1}\ket{\phi_j})^{-1} $$
+Usando l'espressione di $R_\ell$ in \eqref{0412_Rl2} si ottiene:
+$$\frac{1}{R_\ell (E,0)} = B+ \frac{1}{R_\ell (E,B)}$$
+dalla quale si ha l'indipendeza di $U_\ell$ cercata.
