@@ -44,7 +44,6 @@ u_\ell^{int}(a) = u_\ell^{ext}(a)\\
 u_\ell'^{int}(a) = u_\ell'^{ext}(a)	
 \end{array}
 \end{equation}
-%%! Capire questa parte 
 Abbiamo però una difficoltà: $H_\ell$ non è hermitiano in $[0,a]$, quindi non è simmetrico:
 \begin{displaymath}
 	\begin{aligned}
@@ -136,9 +135,9 @@ $$e^{2i\delta_\ell} = U_\ell = e^{2i\Phi_\ell} \, \frac{\ppc{1-S_\ell\, R_\ell +
 
 \subsubsection{RM e risonanza}
 Consideriamo un processo di scattering $A_1 + A_2 \to A + \gamma$ e supponiamo che esista una risonanza in $E_R$ (che avevamo visto manifestarsi in un salto di $\pi/2$ nello sfasamento). Dal momento che compare anche l'interazione coulombiana non sarà $\delta$ a saltare di $\pi/2$, ma $\delta_\ell -\Phi_\ell = \pi/2$ e questo implica per la risonanza $P_\ell\, R_\ell / (1-S_\ell\, R_\ell) \to \infty$, ovvero $S_\ell (E_R)\, R_\ell(E_R) =1 $ (questo è un modo per definire $E_R$ perché è una condizione univoca). Espandiamo in serie di Taylor il prodotto $S_\ell(E)\, R_\ell(E)$:
-$$S_\ell(E)\, R_\ell(E) = \overbrace{S_\ell(E_R)\, R_\ell(E_R)}^{=1} + (E-E_R) \frac{d}{dE}(S_\ell(E)\, R_\ell(E))\Bigl |_{E=E_R}$$
+$$S_\ell(E)\, R_\ell(E) \simeq \overbrace{S_\ell(E_R)\, R_\ell(E_R)}^{=1} + (E-E_R) \frac{d}{dE}(S_\ell(E)\, R_\ell(E))\Bigl |_{E=E_R}$$
 Sostituiamo in $U_\ell$:
-$$U_\ell = e^{2i\Phi_\ell} \, \frac{(E-E_R)+i\: P_\ell (E)\, R_\ell (E) /(S_\ell\, R_\ell)' (E_R)}{(E-E_R)- i \: P_\ell (E)\, R_\ell(E) / (S_\ell\,R_\ell)' (E_R)}$$
+$$U_\ell \simeq e^{2i\Phi_\ell} \, \frac{(E-E_R)+i\: P_\ell (E)\, R_\ell (E) /(S_\ell\, R_\ell)' (E_R)}{(E-E_R)- i \: P_\ell (E)\, R_\ell(E) / (S_\ell\,R_\ell)' (E_R)}$$
 Definendo l'ampiezza della risonanza $\Gamma (E) \equiv 2P_\ell (E) \, R_\ell (E) / (S_\ell \, R_\ell)' (E_R)$ si arriva a:
 \begin{equation}\label{0412_risUl}
 U_\ell = e^{2i\Phi_\ell} \, \frac{E-E_R + i\, \Gamma/2}{E-E_R - i\,\Gamma/2}
