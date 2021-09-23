@@ -75,40 +75,41 @@ Le condizioni al contorno per questa equazione differenziale sono imposte dalla 
 \end{displaymath}
 Per semplicità definiamo $R_{DH}$\footnote{Dall'analisi dimensionale $[R_{DH}] = [L]$. Le lettere a pedice indicano le iniziali di Debye e \Huckel{}, questa scelta fu fatta da Salpeter poiché le soluzioni di questo problema erano le stesse di quelle della teoria delle soluzioni diluite elettrolitiche, costruita dai due scienziati\complementi{la teoria di Debye-\Huckel}.} in modo da raccogliere tutti i termini costanti in \eqref{0329_eq}:
 $$R_{DH}^2 \equiv \frac{kT}{4\pi \rho N_0e^2} \frac{A}{z+z^2} = \frac{kT}{e^2} a^3 \frac{A}{z+z^2}$$
-La soluzione è data da\footnote{$$\nabla^2 \psi(r) = \ppc{\frac{d^2}{dr^2} + \frac{2}{r}\frac{d}{dr}}\psi(r)$$}:
+La soluzione è data da\footnote{$$\nabla^2 \psi(r) = \ppc{\frac{d^2}{dr^2} + \frac{2}{r}\frac{d}{dr}}\psi(r)\: \Rightarrow\: \frac{d^2\Psi}{dr^2} - \frac{1}{R_{DH}^2}\Psi = \frac{1}{R_{DH}^2} $$%
+con $\Psi (r) \equiv r\,\psi(r)$ per cui $\Psi \to -1$ per $r\to+\infty$ e $\Psi \to 0$ per $r\to 0$.}:
 $$\psi(r) = \frac{1}{r}\ppc{e^{-r/R_{DH}}-1}$$
 Notiamo che $\psi(0)\simeq (1-r/R_{DH}-1)/r=-1/R_{DH}$ e $\psi(r\to\infty)=-1/r$. Avremo allora per l'energia potenziale $U(r) = Z_1Z_2 e^2 \psi(r)$:
 $$U(r) = Z_1Z_2 e^2 \frac{1}{r} \ppc{e^{-r/R_{DH}}-1} \qquad U(0)=U_0 = -\frac{Z_1Z_2 e^2}{R_{DH}}$$
 \begin{equation}\label{0329_U0}
--\frac{U_0}{kT}\simeq 0.188 Z_1Z_2 \sqrt{\frac{\rho}{T_6^3}}\,\zeta
+-\frac{U_0}{kT}\simeq 0.188 Z_1Z_2 \sqrt{\frac{\rho}{T_6^3}}\,\xi
 \end{equation}
-dove abbiamo definito $\zeta\equiv \sqrt{(z+z^2)/A}$.
+dove abbiamo definito $\xi\equiv \sqrt{(z+z^2)/A}$.
 
 \paragraph{Un calcolo più preciso.}Rilassiamo a questo punto alcune delle ipotesi fatte in precedenza. Consideriamo un gas a più specie nucleari $z_i, A_i, X_i$, per cui\footnote{\acc{E} sufficiente mandare $z^2/A$ in $\sum_i X_iz^2_i/A_i$.}:
 $$\bar{\rho}(r)\propto \sum_i \exp{\ppc{-Z_1 \frac{z_iX_i e^2}{kT}\psi_{tot}(r)}}$$
 Inoltre dal momento che sono fermioni consideriamo gli elettroni distribuiti come una Fermi-Dirac\index{distribuzione di Fermi-Dirac}:
 $$f(\eta) = \int_0^\infty dx \frac{\sqrt{x}}{e^{x-\eta}+1}$$
-con $\eta \equiv \mu/kT$; per elettroni non interagenti $f(\eta) = 2D^{2/3}/3$. Poiché la densità degli elettroni si aggiusta in modo tale d uniformare il potenziale termodinamico, per elettroni interagenti avremo:
+con $\eta \equiv \mu/kT$; per elettroni non interagenti $f(\eta) = 2D^{2/3}/3$. Poiché la densità degli elettroni si aggiusta in modo tale da uniformare il potenziale termodinamico, per elettroni interagenti avremo:
 \begin{displaymath}
 \begin{aligned}
 f\ppc{\eta - \frac{U_e(r)}{kT}} &= \int_0^\infty dx \frac{\sqrt{x}}{e^{x-\eta}e^{U_e/kT}+1} \simeq \\
 &\simeq \int_0^\infty dx \frac{\sqrt{x}}{e^{x-\eta}\ppc{1+U_e/kT}+1} =\\
 &= \int_0^\infty dx \frac{\sqrt{x}}{\ppc{e^{x-\eta}+1}\ppc{1+\frac{U_e}{kT}\frac{e^{x-\eta}}{e^{x-\eta}+1}}}\simeq \\
-&\simeq int_0^\infty dx \frac{\sqrt{x}}{e^{x-\eta}+1}\ppc{1-\frac{U_e}{kT}\frac{e^{x-\eta}}{e^{x-\eta}+1}} =\\
+&\simeq \int_0^\infty dx \frac{\sqrt{x}}{e^{x-\eta}+1}\ppc{1-\frac{U_e}{kT}\frac{e^{x-\eta}}{e^{x-\eta}+1}} =\\
 &= f(\eta) - \frac{U_e}{kT}\frac{df}{d\eta}\:\footnotemark
 \end{aligned}
 \end{displaymath}
 \footnotetext{$$\frac{df}{d\eta} = -\int_0^\infty dx \frac{\sqrt{x}}{(e^{x-\eta}+1)^2} (-e^{x-\eta})$$}
 \noindent Il rapporto tra gli elettroni interagenti e quelli non interagenti sarà dato da:
-$$\frac{f(\eta-U-e/kT)}{f(\eta)} \simeq 1- \frac{U_e}{kT}\frac{f'(\eta)}{f(\eta)}$$
-Questo termine entra nell'espressione di $\bar{\rho}$ influendo sul rapporto $z/A$, per cui adesso avremo la stessa espressione \eqref{0329_U0}, ma $\zeta$ sarà definito come\footnote{Ovviamente è necessario conoscere $X_i$; fino a qualche anno fa non c'erano problemi, ma negli ultimi tempi nuove misure per il Sole hanno sollevato tensioni sui valori.}:
-$$\zeta \equiv \sum_i\frac{X_iz_i^2}{A_i} + \frac{f'(\eta)}{f(\eta)}\sum_i\frac{X_iz_i}{A_i}$$
+$$\frac{f(\eta-U_e/kT)}{f(\eta)} \simeq 1- \frac{U_e}{kT}\frac{f'(\eta)}{f(\eta)}$$
+Questo termine entra nell'espressione di $\bar{\rho}$ influendo sul rapporto $z/A$, per cui adesso avremo la stessa espressione \eqref{0329_U0}, ma $\xi$ sarà definito come\footnote{Ovviamente è necessario conoscere $X_i$; fino a qualche anno fa non c'erano problemi, ma negli ultimi tempi nuove misure per il Sole hanno sollevato tensioni sui valori.}:
+$$\xi^2 \equiv \sum_i\frac{X_iz_i^2}{A_i} + \frac{f'(\eta)}{f(\eta)}\sum_i\frac{X_iz_i}{A_i}$$
 
 \subsubsection{In laboratorio}
 Studiamo allora gli effetti dell'elettroscreening\index{elettroscreening}.\\
 Prendiamo un nucleo proiettile $A_1$ (per es. ioni di un nucleo) e un nucleo bersaglio $A_2$ (per es. una targhetta o un gas) per cui si ha:
 $$A_1+A_2 \to A_3 + \gamma$$
-Per esempio $p+\ce{^7Be}$. Dato che il nucleo è circondato dalla nuvola elettronica avremo un certo effetto di screening, tuttavia non si tratta dell'effetto di interesse astrofisico, poiché le densità stellari sono differenti da quelle ottenibili in laboratorio; non siamo quindi interessati alla sezione d'urto con lo screening ($\sigma_{lab}$), ma a quella priva di esso ($\sigma_{bare}$). Definito $\eta(E)\equiv Z_1Z_2e^2/\hbar\nu$, abbiamo dalla teoria:
+Per esempio $p+\ce{^7Be}$. Dato che il nucleo è circondato dalla nuvola elettronica avremo un certo effetto di screening, tuttavia non si tratta dell'effetto di interesse astrofisico, poiché le densità stellari sono differenti da quelle ottenibili in laboratorio; non siamo quindi interessati alla sezione d'urto con lo screening ($\sigma_{lab}$), ma a quella priva di esso ($\sigma_{bare}$). Definito $\eta(E)\equiv Z_1Z_2e^2/\hbar v$, abbiamo dalla teoria:
 $$\sigma_{lab}(E) = \frac{S(E)}{E}e^{-2\pi \eta(E)}$$
 Poiché\footnote{Si tenga a mente che $U_0^{lab}\not= U_{0}^{star}$.} $U_0\ll E_{\max{}}$, detta $E_{eff}\equiv E+U_0$ si ha che $S(E)/E\approx S(E_{eff})/E_{eff}$, per cui:
 $$\frac{\sigma_{lab}(E)}{\sigma_{bare}(E)} \simeq \frac{e^{-2\pi\eta(E_{eff})}}{e^{-2\pi\eta(E)}}$$

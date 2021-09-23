@@ -9,7 +9,7 @@ Esistono due principali versioni:
 Il primo a essere stato sviluppato è stato 1., ma dal punto di vista didattico è più chiaro il 2., per cui partiremo da questo.
 
 \section{Calculable RM}\index{metodo Rmatrix@metodo $R$-MATRIX!Calculable}
-Studiamo lo scattering $A_1 + A_2$ all'energia $E$. Trascurando per semplicità lo \textit{spin},sviluppiamo in armoniche sferiche la soluzione dell'equazione di \Sch{} $(T+V)\psi = E\psi$:
+Studiamo lo scattering $A_1 + A_2$ all'energia $E$. Trascurando per semplicità lo \textit{spin}, sviluppiamo in armoniche sferiche la soluzione dell'equazione di \Sch{} $(T+V)\psi = E\psi$:
 $$\psi = \sum_\ell \frac{u_\ell (r)}{r}\mathcal{Y}_{\ell m}(\hat{r})$$
 $$\PPq{\underbrace{-\frac{\hbar^2}{2\mu}\Bigl (\frac{d^2}{dr^2} -\frac{\ell(\ell+1)}{r^2}}_{T_\ell}+\underbrace{V(r)}_{V_N + V_{coul}}\Bigr )-E} u_\ell(r) =0$$
 Raccogliendo i vari termini in $H_\ell\equiv T_\ell + V_C + V_N$ si ha:
@@ -45,12 +45,12 @@ u_\ell'^{int}(a) = u_\ell'^{ext}(a)
 \end{array}
 \end{equation}
 %%! Capire questa parte 
-Abbiamo però una difficoltà: $H_\ell$ non è hermitiano in $[0,a]$, quindi non è simmetrico; infatti:
+Abbiamo però una difficoltà: $H_\ell$ non è hermitiano in $[0,a]$, quindi non è simmetrico:
 \begin{displaymath}
 	\begin{aligned}
-	\int_0^a dr\, \varphi_i \frac{d^2}{dr^2} \varphi_j &\not = \int_0^a dr\, \phi_j \frac{d^2}{dr^2} \varphi_j \\ 
-	\varphi_i (a) \frac{d}{dr}\varphi_j(a)-\int_0^a dr\,\frac{d}{dr}\varphi_i \frac{d}{dr}\varphi_j &\not = \varphi_j (a) \frac{d^2}{dr^2}\varphi_i (a) - \int_0^a dr\,\frac{d}{dr}\varphi_j \frac{d}{dr}\varphi_i  \\
-	\varphi_i (a) \frac{d}{dr}\varphi_j(a) &\not = \varphi_j (a) \frac{d^2}{dr^2}\varphi_i (a) 
+	\int_0^a dr\, \varphi_i \frac{d^2}{dr^2} \varphi_j &\not = \int_0^a dr\, \varphi_j \frac{d^2}{dr^2} \varphi_j \\ 
+	\varphi_i (a) \frac{d}{dr}\varphi_j(a)-\int_0^a dr\,\frac{d}{dr}\varphi_i \frac{d}{dr}\varphi_j &\not = \varphi_j (a) \frac{d}{dr}\varphi_i (a) - \int_0^a dr\,\frac{d}{dr}\varphi_j \frac{d}{dr}\varphi_i  \\
+	\varphi_i (a) \frac{d}{dr}\varphi_j(a) &\not = \varphi_j (a) \frac{d}{dr}\varphi_i (a) 
 	\end{aligned}
 \end{displaymath}
 Per questa ragione \vir{\textit{hermitizzeremo}} l'operatore tramite quello che viene definito operatore di Bloch\index{operatore di Bloch}:
@@ -63,7 +63,7 @@ il risultato non dovrà ovviamente dipendere dal parametro $B$ scelto. Avremo qu
 \end{equation}
 dove l'ultima uguaglianza deriva dalla condizione di continuità in $r=a$ (imposto dalla $\delta$) in equazione \eqref{0412_cont}. Definiamo allora la matrice $R$ \index{R-Matrix@$R$-Matrix} come:
 \begin{equation}\label{0412_Rl}
-u_\ell (a) \equiv R_\ell (E,B) [a \, u_\ell ' (a) - B u_\ell (a)]	
+u_\ell (a) \equiv R_\ell (E,B) [a \, u_\ell ' (a) - B u_\ell (a)]
 \end{equation}
 $$\frac{1}{R_\ell (E,B)} \equiv a \frac{u'}{u}\Bigl |_{r=a} - B$$
 Sostituendo l'espressione di $u^{int}$ definita in equazione \eqref{0412_uint} nell'equazione \eqref{0412_blocsch}:
@@ -81,7 +81,7 @@ dove $C_{ij}(E,B)$ sono elementi di una matrice simmetrica facilmente calcolabil
 Possiamo da questa ricavare un'espressione per $R_\ell$ partendo dalla \eqref{0412_uint}:
 $$u_\ell^{int}(a) = \sum_j \varphi_j(a) \: \sum_i  \pp{[}{C(E,B)}{]}_{ij}^{-1} \varphi_i(a) \frac{\hbar^2}{2\mu a} \frac{u_\ell^{ext}(a)}{R_\ell(E,B)}$$
 \begin{equation}\label{0412_uint2}
-	u_\ell^{int}(a) = \frac{\hbar^2}{2\mu a} \frac{u_\ell^{ext}(a)}{R_\ell(E,B)} \:  \sum_{i,j=1}^N \varphi_j(a) \pp{[}{C(E,B)}{]}_{ij}^{-1} \varphi_i	
+	u_\ell^{int}(a) = \frac{\hbar^2}{2\mu a} \frac{u_\ell^{ext}(a)}{R_\ell(E,B)} \:  \sum_{i,j=1}^N \varphi_j(a) \pp{[}{C(E,B)}{]}_{ij}^{-1} \varphi_i (a)
 \end{equation}
 Usando la continuità:
 \begin{equation}\label{0412_Rl2}
@@ -90,13 +90,13 @@ R_\ell(E,B) = \frac{\hbar^2}{2\mu a} \sum_{i,j=1}^N \varphi_i(a)\, \pp{[}{C(E,B)
 Ricordiamo che il potenziale che viene usato non è quello di un singolo nucleone, ma quello di uno o due cluster e questo lo distingue da un metodo \textit{ab-initio}\index{metodo ab-initio@metodo \textit{ab-initio}}.
 
 \subsection{Proprietà della RM}
-Supponiamo che $N$ sia finito e le $\varphi$ siano ortonormali. Per $E=0$, poiché la matrice $[C]_{ij}$ è diagonalizzabile, avremo autovettori $\bar{v}_{n\ell}$ (che prendiamo ortonormali) e autovalori $E_{n\ell}$ per cui $C(0,B)\bar{v}_{n\ell} = E_{n\ell} \bar{v}_{n\ell}$. Possiamo allora fare una decomposizione spettrale del tipo $C(0,B) = \sum_n E_{n\ell} \bar{v}_{n\ell} \bar{v}^T_{n\ell}$, da cui sfruttando l'ortonormalità delle $\varphi$ si ha:
+Supponiamo che $N$ sia finito e le $\varphi$ siano ortonormali. Per $E=0$, poiché la matrice $[C]_{ij}$ è diagonalizzabile, avremo autovettori $\bar{v}_{n\ell}$ (che prendiamo ortonormali) e autovalori $E_{n\ell}$ per cui $C(0,B)\bar{v}_{n\ell} = E_{n\ell} \bar{v}_{n\ell}$. Possiamo allora fare una decomposizione spettrale del tipo $C_{ij}(0,B) = \sum_n E_{n\ell} \bar{v}_{n\ell,i} \bar{v}^T_{n\ell,j}$, da cui sfruttando l'ortonormalità delle $\varphi$ si ha:
 
-$$ C(E,B) = \oss{\varphi_1}{H_\ell + \mathscr{L}(B) - E}{\varphi_j} = C(0,B) - E = \sum_{n=1}^N (E_{n\ell} - E)\, \bar{v}_{n\ell,i}\bar{v}^T_{n\ell,j}$$
+$$ C_{ij}(E,B) = \oss{\varphi_i}{H_\ell + \mathscr{L}(B) - E}{\varphi_j} = C_{ij}(0,B) - E\: \delta_{ij} = \sum_{n=1}^N (E_{n\ell} - E)\, \bar{v}_{n\ell,i}\bar{v}^T_{n\ell,j}$$
 Sostituendo nella \eqref{0412_Rl2}:
 $$R_\ell (E,B) = \frac{\hbar^2}{2\mu a} \sum_{i,j =1}^N \varphi_i(r) \: \sum_{n=1}^{N} \frac{\bar{v}_{n\ell,i}\bar{v}^T_{n\ell,j}}{E_{n\ell}-E} \: \varphi_j$$ 
 
-Per rendere l'espressione più compatta\footnote{Questa è l'espressione che solitamente si trova per $R$.} definiamo la \textit{reduced width}\index{reduced width@\textit{reduced width}} $\gamma_{n\ell} = \sqrt{\hbar^2/2\mu a} \: \phi_{n\ell}(a)$ dove abbiamo definito le funzioni d'onda $\phi_{n\ell}(r) = \sum_i \bar{v}_{n\ell,i}\varphi_i(r)$:
+\noindent Per rendere l'espressione più compatta\footnote{Questa è l'espressione che solitamente si trova per $R$.} definiamo la \textit{reduced width}\index{reduced width@\textit{reduced width}} $\gamma_{n\ell} = \sqrt{\hbar^2/2\mu a} \: \phi_{n\ell}(a)$ dove abbiamo definito le funzioni d'onda $\phi_{n\ell}(r) = \sum_i \bar{v}_{n\ell,i}\varphi_i(r)$:
 \begin{equation}\label{0412_Rl3}
 R_\ell (E,B) = \sum_{n=1}^N \frac{\gamma_{n\ell}^2}{E_{n\ell}-E}	
 \end{equation}
@@ -111,12 +111,12 @@ Per trovare una relazione tra la matrice di sfasamento $U_\ell$ in \eqref{0412_u
 \end{displaymath}%
 } l'espressione \eqref{0412_uext} con la definizione \eqref{0412_Rl} per $u^{ext}_\ell (a)$:
 $$ C_\ell \PPq{I_\ell(ka) - U_\ell \, O_\ell(ka)} = u_\ell^{ext} = R_\ell(E,B) \,[a \, u_\ell^{ext\,\prime}  (a) - B u_\ell^{ext}] $$
-$$U_\ell = \frac{I_\ell(ka)}{O_\ell(ka)} \frac{1+B\, R_\ell -R_\ell \, \overbrace{ka \, I_\ell ' (ka)/I_\ell (ka)}^{L_\ell *}}{1+B\, R_\ell - R_\ell \, \underbrace{ka \,  O_\ell ' (ka)/O_\ell (ka)}_{L_\ell}}$$
-dove abbiamo definito le quantità $L_\ell$ e $L_\ell *$. Ricordando l'espressione per $I_\ell$ e $O_\ell$ possiamo definire un'angolo di sfasamento $\Phi_\ell$ che caratterizza il contributo coulombiano secondo:
+$$U_\ell = \frac{I_\ell(ka)}{O_\ell(ka)} \frac{1+B\, R_\ell -R_\ell \, \overbrace{ka \, I_\ell ' (ka)/I_\ell (ka)}^{L_\ell^*}}{1+B\, R_\ell - R_\ell \, \underbrace{ka \,  O_\ell ' (ka)/O_\ell (ka)}_{L_\ell}}$$
+dove abbiamo definito le quantità $L_\ell$ e $L_\ell^*$. Ricordando l'espressione per $I_\ell$ e $O_\ell$ possiamo definire un'angolo di sfasamento $\Phi_\ell$ che caratterizza il contributo coulombiano secondo:
 $$\frac{I_\ell (ka)}{O_\ell (ka)} = \frac{\ppc{1-i \, F_\ell/G_\ell}^2}{1 + (F_\ell/G_\ell)^2} = \PPc{\frac{1-i\, F_\ell/G_\ell}{\sqrt{1 + (F_\ell/G_\ell)^2}}}^2 \equiv e^{i\Phi_\ell}$$
 $$\tan{\Phi_\ell} = - F_\ell / G_\ell\Bigl |_{ka}$$
 Per cui otteniamo un'espressione di $U_\ell$ che è indipendente da $B$\footnote{Non è evidente, ma è possibile dimostrarlo; non faremo il conto in questa sede, questo è trattato nell'articolo riportato.} (come atteso): 
-$$U_\ell = e^{2i\Phi_\ell} \, \frac{1-L_\ell * \, R_\ell (E)}{1-L_\ell  \, R_\ell (E)}$$
+$$U_\ell = e^{2i\Phi_\ell} \, \frac{1-L_\ell^* \, R_\ell (E)}{1-L_\ell  \, R_\ell (E)}$$
 Questa relazione può essere usata anche per determinare l'accuratezza del metodo numerico\footnote{\label{0412_art2} prova}. 
 %? (valutando appunto la dipendenza dal parametro $B$)
 %! Questo sopra l'ho detto io e secondo me ci sta 

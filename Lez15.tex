@@ -16,11 +16,11 @@ dn &= \frac{d^3 p}{(2\pi\hbar)^3}\frac{d^3 q}{(2\pi\hbar)^3} =\\
 \end{aligned}
 \end{displaymath}
 \footnotetext{Abbiamo integrato su $d\hat{q}d\hat{p}$.}
-dove ci siamo limitato sono agli stati di interesse $dn/dE_\nu$ (come avevamo fatto nel decadimento $\beta$ fissando l'energia dell'elettrone e differenziando in $q$). Avremo quindi per il \textit{rate}:
+dove ci siamo limitati solo agli stati di interesse $dn/dE_\nu$ (come avevamo fatto nel decadimento $\beta$ fissando l'energia dell'elettrone e differenziando in $q$). Avremo quindi per il \textit{rate}:
 $$dw = \frac{2\pi}{\hbar}|V_{fi}|^2\,\frac{p^2 (E_0-E)^2}{4\pi^4 c \hbar^6\,c^2} dp \stackrel{p\to E}{=} \frac{|V_{fi}|^2}{2\pi^3 \hbar^7 c^6} (E_0-E)^2 \sqrt{E^2 - m^2c^4} E dE $$
 Ricordando che $d\sigma = dw/j_{inc} = dw/v$, integrando in $dE$ si ha\footnote{$c=\hbar=1$.}:
 $$\sigma = \frac{1}{2\pi^3 v} G_F^2 |M|^2 \underbrace{\int_m^{E_0} (E_0-E)^2 \sqrt{E^2-m^2}E dE}_{\text{int. di Fermi } f(E_0)} $$\index{integrale di Fermi@integrale di Fermi $f(E_0)$}
-$$|M|^2 \to \frac{1}{(2J_p +1)^2} \sum_{spin} |M|^2 = \frac{1}{4} \sum_{spin} |\int d^3x\: \psi^*_d (\vec{x})\,\psi_{pp}(\vec{x})|^2$$
+$$|M|^2 \to \frac{1}{(2S_p +1)^2} \sum_{spin} |M|^2 = \frac{1}{4} \sum_{spin} |\int d^3x\: \psi^*_d (\vec{x})\,\psi_{pp}(\vec{x})|^2$$
 dove abbiamo mediato sugli \textit{spin}\footnote{La parte di \textit{isospin} $\eta_d(\tau=0)(np)\sum_i\tau^-_i (pp)$ valutata sulle funzioni d'onda è 1.}. Da questo punto in poi adesso si procede numericamente, tuttavia a scopo illustrativo illustriamo il calcolo analitico che eseguì anche Bethe\footnote{L'articolo al quale ci riferiamo è Bethe, H. A. \& Critchfield, C. L., Phys. Rev., 1938, vol.54, p.248, \texttt{url:} \url{https://journals.aps.org/pr/abstract/10.1103/PhysRev.54.248}.\articolo{Bethe}}.
 
 \paragraph{Risoluzione analitica.} Anche se il calcolo è analitico il risultato è piuttosto valido.\\
@@ -31,19 +31,19 @@ Per studiare $\psi_d$ prendiamo:
     $$%
     \psi_d = \Bigl \{
     \begin{array}{llr}
-        C\, e^{-\alpha r }/r & r>r_0 & \alpha\equiv \sqrt{mB}/\hbar \\
-        C'\, \sin{(k_0 r)}/r & r<r_0 & k_0 \equiv \sqrt{m(V_0-B)}/\hbar
+        \frac{C}{r}\, e^{-\alpha r } & r>r_0 & \alpha\equiv \sqrt{mB}/\hbar \\
+        \frac{C'}{r}\, \sin{(k_0 r)} & r<r_0 & k_0 \equiv \sqrt{m(V_0-B)}/\hbar
     \end{array}%
     $$
-    Abbiamo allora $b\equiv 1/\alpha \simeq 4.4$ fm e definendo $x\equiv r/b$, $x_0\equiv r_0/b$ e $\mu \equiv \sqrt{(V_0-B)/B}$ si ottiene:
+    Abbiamo allora $b\equiv 1/\alpha \simeq 4.4$ fm e definendo $x\equiv r/b$, $x_0\equiv r_0/b$ e $\mu \equiv \sqrt{(V_0-B)/B}=k_0/\alpha$ si ottiene:
     $$%
     \psi_d = \Bigl \{
     \begin{array}{ll}
-        A/r\; e^{-(x-x_0)}\equiv \psi_> & r>r_0 \\
-        A/r\; \sin{(\mu x)}/\sin{(\mu x_0)}\equiv \psi_< & r<r_0
+        \frac{A}{r}\; e^{-(x-x_0)}\equiv \psi_> & r>r_0 \\
+        \frac{A}{r}\; \sin{(\mu x)}/\sin{(\mu x_0)}\equiv \psi_< & r<r_0
     \end{array}%
     $$
-    Osserviamo che quest'espressione soddisfa automaticamente la continuità si della funzione che della sua derivata in $r=r_0$, per cui dalla condizione di normalizzazione\footnote{$1=\int |\psi_d|^2=\int_0^{r_0}|\psi_<|^2+\int_{r_0}^\infty|\psi_>|^2$.} si ottiene\footnote{Successivamente per non confonderci con la costante che compare in $\psi_{pp}$ chiameremo questa $A\to A_d$.}:
+    Osserviamo che questa espressione soddisfa automaticamente la continuità sia della funzione che della sua derivata in $r=r_0$, per cui dalla condizione di normalizzazione\footnote{$1=\int |\psi_d|^2=\int_0^{r_0}|\psi_<|^2+\int_{r_0}^\infty|\psi_>|^2$.} si ottiene\footnote{Successivamente per non confonderci con la costante che compare in $\psi_{pp}$ chiameremo questa $A\to A_d$.}:
     $$A = \frac{1}{\sqrt{2\pi b}}\, \frac{1}{\sqrt{1+x_0}}\,\frac{1}{\sqrt{1+\mu^{-2}}}$$
 \end{itemize}
 Studiamo a questo punto $\psi_{pp}$:
@@ -94,8 +94,8 @@ Possiamo adesso calcolare l'elemento di matrice\footnote{Si ricordi che $x\equiv
 %!
 \begin{displaymath}
     \begin{aligned}
-        M&=\int d^3x \: \psi^*_{pp} (\vec{x})\, \psi_d(\vec{x})= \\ 
-        &= 4\pi \int_0^\infty r^2 dr \: \psi_{pp} (r)\, \psi_d(r) = \\ 
+        M&=\int d^3x \: \psi^*_d(\vec{x}) \, \psi_{pp} (\vec{x}) = \\ 
+        &= 4\pi \int_0^\infty r^2 dr \: \psi_d(r)\,\psi_{pp} (r)  = \\ 
         &=  4\pi \PPq{ \int_0^{r_0} r^2 dr \: \psi_{pp,<} (r)\, \psi_{d,<}(r) + \int_{r_0}^\infty r^2 dr \: \psi_{pp,>} (r)\, \psi_{d,>}(r) } \\ 
         &= 4\pi C_0 A_d b^2 \Bigl [ \frac{x_0}{\sin{\mu x_0}} \frac{(\Phi(kr_0)+\lambda\Theta(kr_0)}{\sin{\gamma x_0}} \int_0^{x_0} dx\, \sin{\mu x} \sin{\nu x} \\ 
         &+ \int_{x_0}^\infty dx\, xe^{-(x-x_0)}\Phi(kbx) + \lambda \int_{x_0}^\infty x_0 e^{-(x-x_0)}\Theta(kbx) \Bigr ] \equiv \\ 
@@ -107,7 +107,7 @@ dove abbiamo definito $\Lambda_i$ per raccogliere i vari integrali, anche se son
 $$ \sigma = \frac{C_0^2 b^3}{\pi^2 v} G_F^2 f(E_0) \Lambda^2 $$
 
 \subsection{Risultati}
-Così facendo Bethe trovò $\Lambda^2 = 8.08 \div 5.93$ e un fattore astrofisico\index{fattore astrofisico@fattore astrofisico $S(E)$} $S = (4.61 \div 3.38)\cdot\ord{-25}$ MeVb. I risultati\footnote{\acc{E} interessante osservare che il neutrino fu teorizzato proprio nel 1938 e Bethe ne tiene di conto, tuttavia non lo riporta.} globali sono riportati in Tabella \ref{0331_tab}.
+Così facendo Bethe trovò $\Lambda^2 = 5.93 \div 8.08 $ e un fattore astrofisico\index{fattore astrofisico@fattore astrofisico $S(E)$} $S = ( 3.38 \div 4.61 )\cdot\ord{-25}$ MeVb. I risultati\footnote{\acc{E} interessante osservare che il neutrino fu teorizzato proprio nel 1938 e Bethe ne tiene di conto, tuttavia non lo riporta.} globali sono riportati in Tabella \ref{0331_tab}.
 \begin{figure}[h]
     \centering
     \includegraphics*[scale=0.5]{Immagini/0331_Bethetab.png}
