@@ -8,7 +8,7 @@ Esistono due principali versioni:
 \end{enumerate}
 Il primo a essere stato sviluppato è stato 1., ma dal punto di vista didattico è più chiaro il 2., per cui partiremo da questo.
 
-\section{Calculable RM}\index{metodo Rmatrix@metodo $R$-MATRIX!Calculable}
+\section{Calculable RM}\index{metodo Rmatrix@metodo $R$-MATRIX!Calculable}\label{sec-RM-C}
 Studiamo lo scattering $A_1 + A_2$ all'energia $E$. Trascurando per semplicità lo \textit{spin}, sviluppiamo in armoniche sferiche la soluzione dell'equazione di \Sch{} $(T+V)\psi = E\psi$:
 $$\psi = \sum_\ell \frac{u_\ell (r)}{r}\mathcal{Y}_{\ell m}(\hat{r})$$
 $$\PPq{\underbrace{-\frac{\hbar^2}{2\mu}\Bigl (\frac{d^2}{dr^2} -\frac{\ell(\ell+1)}{r^2}}_{T_\ell}+\underbrace{V(r)}_{V_N + V_{coul}}\Bigr )-E} u_\ell(r) =0$$
@@ -113,11 +113,11 @@ Per trovare una relazione tra la matrice di sfasamento $U_\ell$ in \eqref{0412_u
 $$ C_\ell \PPq{I_\ell(ka) - U_\ell \, O_\ell(ka)} = u_\ell^{ext} = R_\ell(E,B) \,[a \, u_\ell^{ext\,\prime}  (a) - B u_\ell^{ext}] $$
 $$U_\ell = \frac{I_\ell(ka)}{O_\ell(ka)} \frac{1+B\, R_\ell -R_\ell \, \overbrace{ka \, I_\ell ' (ka)/I_\ell (ka)}^{L_\ell^*}}{1+B\, R_\ell - R_\ell \, \underbrace{ka \,  O_\ell ' (ka)/O_\ell (ka)}_{L_\ell}}$$
 dove abbiamo definito le quantità $L_\ell$ e $L_\ell^*$. Ricordando l'espressione per $I_\ell$ e $O_\ell$ possiamo definire un'angolo di sfasamento $\Phi_\ell$ che caratterizza il contributo coulombiano secondo:
-$$\frac{I_\ell (ka)}{O_\ell (ka)} = \frac{\ppc{1-i \, F_\ell/G_\ell}^2}{1 + (F_\ell/G_\ell)^2} = \PPc{\frac{1-i\, F_\ell/G_\ell}{\sqrt{1 + (F_\ell/G_\ell)^2}}}^2 \equiv e^{i\Phi_\ell}$$
+$$\frac{I_\ell (ka)}{O_\ell (ka)} = \frac{\ppc{1-i \, F_\ell/G_\ell}^2}{1 + (F_\ell/G_\ell)^2} = \PPc{\frac{1-i\, F_\ell/G_\ell}{\sqrt{1 + (F_\ell/G_\ell)^2}}}^2 \equiv e^{i2\Phi_\ell}$$
 $$\tan{\Phi_\ell} = - F_\ell / G_\ell\Bigl |_{ka}$$
 Per cui otteniamo un'espressione di $U_\ell$ che è indipendente da $B$\footnote{Non è evidente, ma è possibile dimostrarlo; non faremo il conto in questa sede, questo è trattato nell'articolo riportato.} (come atteso): 
 $$U_\ell = e^{2i\Phi_\ell} \, \frac{1-L_\ell^* \, R_\ell (E)}{1-L_\ell  \, R_\ell (E)}$$
-Questa relazione può essere usata anche per determinare l'accuratezza del metodo numerico\footnote{\label{0412_art2} prova}. 
+Questa relazione può essere usata anche per determinare l'accuratezza del metodo numerico. 
 %? (valutando appunto la dipendenza dal parametro $B$)
 %! Questo sopra l'ho detto io e secondo me ci sta 
 \\
