@@ -3,43 +3,36 @@
 %$$\sigma (E) = \frac{1}{E}\,\exp{\PPc{-\sqrt{2\mu}\pi\, \frac{Z_1Z_2 e^2}{\hbar \sqrt{E}}}}\, S(E)$$
 \paragraph{Fattore astrofisico} 
 Sostituiamo l'espressione per la sezione d'urto nel calcolo del \textit{reaction-rate}:
-\begin{displaymath}
-\begin{aligned}
+\begin{align*}
 \mean{\sigma\, v } &= \sqrt{\frac{8}{\pi\mu}} \ppc{\frac{1}{kT}}^{3/2} \int_0^\infty \frac{1}{E}\,\exp{\PPc{-\sqrt{2\mu}\pi\, \frac{Z_1Z_2 e^2}{\hbar \sqrt{E}}}}\, S(E) \; \exp{\ppc{-\frac{E}{kT}}} E dE = \\
 &= \sqrt{\frac{8}{\pi\mu}} \ppc{\frac{1}{kT}}^{3/2} \int_0^\infty S(E) \: \exp{(-f(E))} \\
 f(E) &\equiv \frac{E}{kT} + \frac{b}{\sqrt{E}}\\
-b &\equiv \sqrt{2\mu}\pi\, \frac{Z_1Z_2 e^2}{\hbar} \simeq 0.99 \, Z_1 Z_2 A^{1/2} \unit{MeV}^{1/2}\; \footnotemark 
-\end{aligned}
-\end{displaymath}
-\begin{figure}
+b &\equiv \sqrt{2\mu}\pi\, \frac{Z_1Z_2 e^2}{\hbar} \simeq 0.99 \, Z_1 Z_2 A^{1/2} \unit{MeV}^{1/2}
+\end{align*}
+\noindent dove $A$ è la massa ridotta in unità di masse atomiche. Studiamo allora l'andamento $\exp{(-f(E))}$ in Figura \ref{0324_picco}. Notiamo che per $E=E_0$ si ha un massimo, per cui $f'(E_0) = 0$ da cui\footnote{Con $T_6$ si intende $T = T_6 \cdot \ord{6}\unit{K}$.}: 
+$$E_0 = (\frac{b}{2}kT)^{2/3} \simeq 1.22 \, (Z_1Z_2 A^{1/2} T_6)^{2/3}\unit{keV} $$
+questa è l'energia più probabile e $f(E_0)$ è detto \textbf{picco di Gamow}\index{picco di Gamow}. Notiamo che il picco è molto sensibile alla temperatura; per esempio nel Sole ($T_6\simeq 15$) per la $pp$ si ha $E_0 = 1.22\, (15\cdot \sqrt{1/2})^{2/3} = 5.89$ keV. In generale, $E_0$ è un valore caratteristico della stella.
+\begin{figure}[h]
     \centering
     \includegraphics[scale=0.2]{Immagini/0324_gamow2.png}
     \caption{In alto l'andamento di $\exp{(-E/kT)}$, di $\exp{(-b/\sqrt{E})}$ e di $\exp{(-f(E))}$; in basso l'ingrandimento del picco di Gamow\index{picco di Gamow}.}
     \label{0324_picco}
 \end{figure}
-\footnotetext{Qui $A$ è la massa ridotta in unità di masse atomiche.}
-\noindent Studiamo allora l'andamento $\exp{(-f(E))}$ in Figura \ref{0324_picco}. Notiamo che per $E=E_0$ si ha un massimo, per cui $f'(E_0) = 0$ da cui\footnote{Con $T_6$ si intende $T = T_6 \cdot \ord{6}\unit{K}$.}: 
-$$E_0 = (\frac{b}{2}kT)^{2/3} \simeq 1.22 \, (Z_1Z_2 A^{1/2} T_6)^{2/3}\unit{keV} $$
-questa è l'energia più probabile e $f(E_0)$ è detto \textbf{picco di Gamow}\index{picco di Gamow}. Notiamo che il picco è molto sensibile alla temperatura; per esempio nel Sole ($T_6\simeq 15$) per la $pp$ si ha $E_0 = 1.22\, (15\cdot \sqrt{1/2})^{2/3} = 5.89$ keV. In generale, $E_0$ è un valore caratteristico della stella.\\
-Dal momento che non conosciamo $S(E)$ per ogni $E$, cercheremo di sviluppare l'integrale e a tale scopo definiamo $\tau\equiv f(E_0)= 3E_0/kT$\footnote{$f(E_0)$ si calocola facilmente sostituendo $b=2E_0^{2/3}/kT$.} (nel Sole $\tau_{pp}\sim 14\gg 1$) e riscriviamo $f(E)$ come:
-\begin{displaymath}
-\begin{aligned}
+\noindent Dal momento che non conosciamo $S(E)$ per ogni $E$, cercheremo di sviluppare l'integrale e a tale scopo definiamo $\tau\equiv f(E_0)= 3E_0/kT$\footnote{$f(E_0)$ si calocola facilmente sostituendo $b=2E_0^{2/3}/kT$.} (nel Sole $\tau_{pp}\sim 14\gg 1$) e riscriviamo $f(E)$ come:
+\begin{align*}
 f(E) &= \PPc{\frac{E}{3E_0}\tau + \frac{b}{\sqrt{E}}\frac{kT}{3E_0} \tau} =\\
 &= \tau \, \PPc{\frac{E}{3E_0} + \frac{2E_0^{3/2}}{kT \sqrt{E}}\frac{kT}{3E_0}} =\\
 &= \tau \, \PPc{\frac{E}{3E_0} + \frac{2}{3}\sqrt{\frac{E_0}{E}}}\\
 \text{Definiamo } x \text{ tale che } E&\equiv E_0 \ppc{1+\frac{2x}{\sqrt{\tau}}}\\
 E-E_0 &= \frac{2x}{\sqrt{\tau}}E_0 = 2\sqrt{\frac{kTE_0}{3}}\,x \equiv \frac{\Delta}{2} x
-\end{aligned}
-\end{displaymath}
+\end{align*}
 dove abbiamo definito $\Delta \equiv 4\sqrt{kTE_0/3}$ (per il Sole $\Delta_{pp}\sim 6.4$ keV)%che somiglia molto alla HWFH della Gaussiana
 . Facciamo allora un'espansione\footnote{Si ricordi che $f'(E_0)=0$ e che $\tau/2E_0^2 = 8/\Delta^2$, per cui $f(x) = f(E_0) + ((E-E_0)/(\Delta/2))^2 + \dots$.} di $f(E)$ intorno a $E_0$, che in termini di $x$ è un'espansione intorno a $x=0$:
-\begin{displaymath}
-\begin{aligned}
+\begin{align*}
 f(x) &= \tau \, \PPq{\frac{1}{3} \ppc{1+\frac{2x}{\sqrt{\tau}}} + \frac{2}{3} \frac{1}{\sqrt{\ppc{1+2x/\sqrt{\tau}}}}} \simeq\\
 &\simeq \PPq{\frac{1}{3} \ppc{1+\frac{2x}{\sqrt{\tau}}} + \frac{2}{3} \PPc{1-\frac{x}{\sqrt{\tau}} +\frac{3}{2}\frac{x^2}{\tau} - \frac{5}{2} \frac{x^3}{\tau\sqrt{\tau}}+\frac{35}{8}\frac{x^4}{\tau^2}+ O(x^5)} } \simeq \\
 &\simeq \tau  + x^2 - \frac{5}{3} \frac{x^3}{\sqrt{\tau}} + \frac{35}{12}\frac{x^4}{\tau}
-\end{aligned}
-\end{displaymath}
+\end{align*}
 Sostituendo allora nell'integrale:
 \begin{displaymath}
 \begin{aligned}

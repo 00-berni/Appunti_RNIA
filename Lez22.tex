@@ -1,8 +1,9 @@
 %\part*{Lezione 26/04/2021}
+\newpage
 \section{\textit{The Holy Grail}}\index{the holy Grail of Nuclear Astrophysics@\textit{The Holy grail of Nuclear Astrophysics}}
 La misura della reazione di distruzione del carbonio:
 $$\alpha +\ce{^{12}C}\to\ce{^{16}O}+\gamma$$
-è di importanza tale da essere stata definita nel 1983 da William Fowler nella sua \textit{Nobel Prize lecture} \textit{\vir{The Holy Grail of Nuclear Astrophysics}}. Se infatti la $3\alpha$ produce carbonio, questa reazione lo distrugge in favore dell'ossigeno; la combinazione di queste due è quindi fonsamentale\footnote{La $3\alpha$ è conosciuta con un'incertezza del 10\%, ma questo non vale per la $\alpha\, \ce{^{12}C}$ (circa il 20\%).} per lo studio delle abbondanze di tali elementi, che sono tra le maggiori. Per esempio, nella nostra galassia (stieme spettroscopiche):
+è di importanza tale da essere stata definita nel 1983 da William Fowler nella sua \textit{Nobel Prize lecture} \textit{\vir{The Holy Grail of Nuclear Astrophysics}}. Se infatti la $3\alpha$ produce carbonio, questa reazione lo distrugge in favore dell'ossigeno\footnote{La $3\alpha$ è conosciuta con un'incertezza del 10\%, ma questo non vale per la $\alpha\, \ce{^{12}C}$ (circa il 20\%).}, dunque lo studio della combinazione dei due processi diviene fondamentale per la stima delle abbondanze di questi elementi, peraltro tra i più presenti nell'universo. Nella nostra galassia, per esempio\footnote{Stime spettroscopiche.}:
 \begin{align*}
 	&74\%\qquad\;\quad\ce{H} \\
 	&24\%\qquad\;\;\ce{^{4}He} \\
@@ -10,21 +11,20 @@ $$\alpha +\ce{^{12}C}\to\ce{^{16}O}+\gamma$$
 	&0.39\%\qquad\ce{^{12}C} \\
 	&\dots
 \end{align*}
-\acc{E} una reazione fondamentale anche per l'innesco del C-\textit{burning} e quindi influenza l'evoluzione\footnote{Infatti, durante H-\textit{burning} il nucleo di He è inerte e collassa, fin quando non si raggiungono le temperature per l'innesco del He-\textit{burning} tramite la $3\alpha$; i residui di questo processo sono appunto il carbonio e l'ossigeno che deriva da $\ce{^{12}C}(\alpha,\gamma)\ce{^{16}O}$. Conoscere l'abbondanza di questi elementi determina l'evoluzione successiva.} per \textit{low} e \textit{high mass stars}. Non solo, questa reazione determina anche l'abbondanza di carbonio e ossigeno nelle popolazioni stellari successive in \textit{main sequence}.
+\acc{E} una reazione fondamentale anche per l'innesco del C-\textit{burning} e quindi influenza l'evoluzione\footnote{Infatti, durante H-\textit{burning} in \textit{shell} il nucleo di He è inerte e collassa, fin quando non si raggiungono le temperature per l'innesco del He-\textit{burning} tramite la $3\alpha$; i residui di questo processo sono appunto il carbonio e l'ossigeno che deriva da $\ce{^{12}C}(\alpha,\gamma)\ce{^{16}O}$. Conoscere l'abbondanza di questi elementi determina l'evoluzione successiva.} delle \textit{low} e \textit{high mass stars}. Non solo, questa reazione determina anche l'abbondanza di carbonio e ossigeno nelle popolazioni stellari successive.
 
-\subsection{Studio della reazione} Studiamo\footnote{Facciamo riferimento all'articolo R.J., de Boer et al., Rev. Mod. Phys 
-., 2017, vol.89, n.3, \texttt{DOI:}\doi{10.1103/RevModPhys.89.035007}\articolo{de Boer}.} adesso la combinazione di questa reazione con la $3\alpha$. Usando la stessa notazione di Figura \ref{0422_reaz}:
+\subsection{Studio della reazione} Studiamo\footnote{Facciamo riferimento all'articolo R.J., de Boer et al., Rev. Mod. Phys., 2017, vol.89, n.3, \texttt{DOI:}\doi{10.1103/RevModPhys.89.035007}\articolo{de Boer}.} adesso la combinazione di questa reazione con la $3\alpha$. Usando la stessa notazione di Figura \ref{0422_reaz}:
 \begin{align*}
 	\tderpar{Y_{\ce{^{12}C}}} &= \frac{1}{3!} Y_{\alpha}^3 \rho^2 N_u^2 \, \mean{\sigma v}_{3\alpha} - Y_\alpha Y_{\ce{^{12}C}} \rho N_u \, \mean{\sigma v}_{\alpha\ce{^{12}C}} \\
 	\tderpar{Y_{\ce{^{16}O}}} &= Y_\alpha Y_{\ce{^{12}C}} \rho N_u \, \mean{\sigma v}_{\alpha\ce{^{12}C}} - Y_\alpha Y_{\ce{^{16}O}} \rho N_u \, \mean{\sigma v}_{\alpha\ce{^{16}O}}	
 \end{align*}
 dove abbiamo tenuto conto anche della reazione di distruzione\footnote{La studieremo successivamente.} dell'ossigeno:
 $$\alpha + \ce{^{16}O} \to \ce{^{20}Ne} + \gamma$$
-con $\mean{\sigma v}_{\alpha \ce{^{16}O}}\ll\ll \mean{\sigma v}_{\alpha \ce{^{12}C}}$.\\ 
+con $\mean{\sigma v}_{\alpha \ce{^{16}O}}\lll \mean{\sigma v}_{\alpha \ce{^{12}C}}$.\\ 
 Vediamo come viene modificata l'evoluzione stellare che modellizziamo dividendo:
 \begin{enumerate}[a)]
 	\item $M\leq 8 M\sol$ \textit{stars}\footnote{Sono quelle che fanno il ramo di AGB e terminano in Nane Bianche.}.\\ 
-	L'innesco della $\alpha\,\ce{^{12}C}$ interrompe He-\textit{burning} e il nucleo di C-O comincia a contrarre; gli strati esterni si espandono e raffreddano e la stella entra nella fase di AGB. La quantità $\mean{\sigma v}_{\alpha\ce{^{12}C}}$ determina il tempo dell'He-\textit{burning}, l'inizio dell'AGB e le abbondanze della Nana Bianca che si formerà (e quindi della possibile SN IA che potrebbe esserci).  
+	Terminato He-\textit{burning}, non riescono a innescare il carbonio e il nucleo di C-O comincia a contrarre; gli strati esterni si espandono e raffreddano e la stella entra nella fase di AGB. La quantità $\mean{\sigma v}_{\alpha\ce{^{12}C}}$ determina il tempo dell'He-\textit{burning}, l'inizio dell'AGB e le abbondanze di carbonio e ossigeno della Nana Bianca che si formerà (e quindi della possibile SN IA che potrebbe esserci).  
 	\item $M\geq 8M\sol$ \textit{stars}\footnote{Queste evolvono fino a raggiungere \textit{Core-collapse Supernov\ae}.}.\\ 
 	Per queste il He-\textit{burning} dura circa $\ord{6}$ y dunque la $3\alpha$ e la $\alpha\,\ce{^{12}C}$ divengono essenziali per la produzione di energia (e da qui la loro importanza). Negli stati finali (alte temperature e densità) la $\alpha\,\ce{^{12}C}$ non è l'unica reazione che \vir{consuma} $\alpha$; vi sono 3 processi:
 	\begin{itemize}
@@ -37,7 +37,7 @@ Vediamo come viene modificata l'evoluzione stellare che modellizziamo dividendo:
 \end{enumerate} 
 
 \paragraph{Risonanza dell'ossigeno} 
-In Figura \ref{0426_lv} riportiamo i livelli dell'ossigeno e alcune reazioni di produzione, tr cui $\alpha \, \ce{^{12}C}$. Osserviamo che i dati si fermano a circa 2 MeV mentre l'energia di Gamow è di circa 300 keV, quindi è necessaria la teoria per l'estrapolazione dei risultati.
+In Figura \ref{0426_lv} riportiamo i livelli dell'ossigeno e alcune reazioni di produzione, tra cui $\alpha \, \ce{^{12}C}$. Osserviamo che i dati si fermano a circa 2 MeV mentre l'energia di Gamow è di circa 300 keV, quindi è necessaria la teoria per l'estrapolazione dei risultati.
 
 \begin{figure}[h]
 	\centering
@@ -56,9 +56,9 @@ In Figura \ref{0426_lv} riportiamo i livelli dell'ossigeno e alcune reazioni di 
 	Ricordiamo che per $\ell\not = 0$ il termine di barriera centrifuga si fa sentire e sopprime in parte la cattura diretta. Per $E1$, inoltre, abbiamo anche un altro problema: per $q\to0$ 
 	$$E\lambda \to Z_{eff}^{(\lambda)}\,r_{\alpha\mbox{C}}^\lambda Y_{\lambda \mu}(\hat{r}_{\alpha\mbox{C}})$$
 	$$Z_{eff}^{(\lambda)} \equiv Z_\alpha \ppc{\frac{m_{C}}{m_\alpha + m_{C}}}^\lambda + Z_C \ppc{\frac{-m_\alpha}{m_\alpha+m_C}}^\lambda$$
-	dove abbiamo definito la carica efficace\index{carica efficace} $Z_{eff}^{(\lambda)}$ (ma non trattiamo qui il significato di tale definizione). Allora valutiamo la carica efficacie per $E1$:
+	dove abbiamo definito la carica efficace\index{carica efficace} $Z_{eff}^{(\lambda)}$ (ma non approfondiamo il significato di tale definizione). Allora valutiamo la carica efficacie per $E1$:
 	$$Z_{eff}^{(1)} = 2{\frac{m_{C}}{m_\alpha + m_{C}}} - 6 {\frac{m_\alpha}{m_\alpha+m_C}} \stackrel{\ce{C}\sim 3\alpha}{\simeq} 2 \frac{3m_\alpha}{4m_\alpha} - 6 \frac{m_\alpha}{4m_\alpha} = 0$$
-	Il termine $E1$ è quindi soppresso. Una spiegazione più elegante di questo fatto è data dal fatto che essendo $Z_{eff}$ molto piccola i nuclei coinvolti saranno tutti circa a isospin nullo: $\ce{^4He} = nn\, pp$ $T_z=0$ e $T=0,1,2$, dove però $T=0$ sarà dominante; ugualmente per $\ce{^12C_6}$ e $\ce{^{16}O_8.}$. $E1$ si porta dietro nella corrente la dipendenza dall'isospin secondo il termine in $\tau_z$ (isovettoriale) allora dal momento che $T=0\to0=T$ è soppressa lo è anche $E1$. In sintesi, $E1\sim E2$ sono paragonabili\footnote{Questo avviene anche per altre reazioni.} %! Sul quaderno ho segnato anche p+d
+	Il termine $E1$ è quindi soppresso. Una spiegazione più elegante di questo fatto è data dal fatto che essendo $Z_{eff}$ molto piccola i nuclei coinvolti saranno tutti circa a isospin nullo: $\ce{^4He} = nn\, pp$ $T_z=0$ e $T=0,1,2$, dove però $T=0$ sarà dominante; ugualmente per $\ce{^12C_6}$ e $\ce{^{16}O_8}$. $E1$ si porta dietro nella corrente la dipendenza dall'isospin secondo il termine in $\tau_z$ (isovettoriale) allora dal momento che $T_i=0\to0=T_f$ è soppressa lo è anche $E1$. In sintesi, $E1\sim E2$ sono paragonabili\footnote{Questo avviene anche per altre reazioni.} %! Sul quaderno ho segnato anche p+d
 	e questo comporta che la cattura diretta sia fortemente soppressa.
 	\item Cattura risonante soprasoglia, per $E_X = 9.59$ MeV $J^\pi = 1^-$ e $E_X = 9.84$ MeV $J^\pi = 2^+$. Quest'ultima è stretta e non ci interessa; $1^-$ ha invece larghezza $\Gamma=2.4$ MeV (molto larga). Il contributo sarà $E1$ perché la transizione è $1^-\to0^+$ e non abbiamo il problema della soppressione.
 	\item Cattura risonante sottosoglia, per $E_X = 7.12$ MeV $J^\pi =1^-$ ($E_R\simeq -45$ keV) e $E_X = 6.92$ MeV $J^\pi =2^+$ ($E_R\simeq -245$ keV). Queste sono responsabili della risalita del fattore astrofisico in Figura \ref{0426_lv} per $E\to0$. Abbiamo quindi $E1$ da $1^-\to0^+$ ed $E2$ da $2^+\to0^+$ con lo stesso ordine di grandezza ($E1\sim E2$).
@@ -69,7 +69,7 @@ Nel 1937 Wheeler fece per la prima volta i conti per questa reazione e propose u
 %! Ho scritto qualcosa sul fatto che le eccitazioni possono essere viste come "comp." di una molecola e non so se è composizioni o componenti.
 L'unica difficoltà del modello è che richiede un potenziale di interazione effettivo $V_{\alpha \alpha}$ e con questo si ha però problemi a riprodurre le risonanze. Il metodo quindi sarebbe anche valido con un ottimo potere predittivo, tuttavia l'accuratezza richiesta dall'astrofisica non è ancora stata raggiunta.\\ 
 Anche metodi \textit{ab-initio}\index{Metodo ab-initio@Metodo \textit{ab-initio}} non sono congeniali, dal momento che la teoria per $A=16$ non è affatto semplice. A oggi, la scelta più frequente è il metodo della \textit{Phenomenological} $R$-MATRIX\index{metodo Rmatrix@metodo $R$-MATRIX!Phenomenological}, che però non dà informazioni sulla funzione d'onda.
-Si ha quindi in \textit{input} i dati sperimentali e in \textit{output} la stima del fattore astrofisico, di cui riportiamo i risultati in Figura \ref{0426_Se}. Notiamo che per $E_{Gamow} \simeq 300$ keV non ci sono dati e che se i dati per $E1$ sono approssimativamente in accordo tra le varie acquisizioni non si può certo dire lo stesso dei dati per $E2$, per i quali spesso c'è discrepanza anche tra il fit e l'andamento degli stessi. Questo problema può essere dovuto a una raccolta dati \vir{sporcata} da un \textit{overall factor} di normalizzazione, che si sistema con misure a risonanza larga. %! che significa?
+Si ha quindi in \textit{input} i dati sperimentali e in \textit{output} la stima del fattore astrofisico, di cui riportiamo i risultati in Figura \ref{0426_Se}. Notiamo che per $E_{Gamow} \simeq 300$ keV non ci sono dati e che se i dati per $E1$ sono approssimativamente in accordo tra le varie acquisizioni non si può certo dire lo stesso dei dati per $E2$, per i quali spesso c'è discrepanza anche tra il fit e l'andamento degli stessi. Si ritiene che ciò derivi da una raccolta dati \vir{sporcata} da un \textit{overall factor} di normalizzazione, che si può correggere con misure a risonanza larga. %! che significa?
 
 \begin{figure}[!h]
 	\centering

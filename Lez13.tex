@@ -41,22 +41,21 @@ $$\sigma = \pi\frac{\hbar^2}{2\mu E}g\Gamma_a\Gamma_b \frac{1}{(E-E_R)^2+(\Gamma
 \end{aligned}
 \end{displaymath}
 $$k_0 \equiv \frac{\sqrt{2m(V_0-B_\ell)}}{\hbar}\qquad\quad k_b\equiv\frac{\sqrt{2m(V_b+B_\ell)}}{\hbar}\qquad\quad k_\infty\equiv\frac{\sqrt{2mB_\ell}}{\hbar}$$
-Per trovare i vari coefficienti e $B_\ell$ si impone la continuità della funzione e della derivata prima e la normalizzazione. In Figura \ref{0325_ris} abbiamo riportato i risultati per $A=5$ nel fondamentale. Come si ottiene lo stato eccitato? Si potrebbe promuovere un nucleone dal secondo livello a quello di valenza\index{livello di valenza}, ma questo non sarebbe lo stato risonante. 
-\noindent Osserviamo però che modificando $V_0$ (cioè \vir{alzandolo}) si potrebbe fare in modo che l'energia del livello di valenza\index{livello di valenza} divenga positiva, ma rimanga inferiore a $V_b$ (Figura \ref{0325_potris}); esiterebbe allora una certa probabilità di \textit{tunneling}\footnote{$P_{tunnel} = 1 - P_{stay}$.} per quel nucleone:
-$$\frac{dP_{stay}}{dt} = -\Gamma \, P_{stay} \quad \Rightarrow \quad P_{stay}\propto e^{-\Gamma t}$$
+Per trovare i vari coefficienti e $B_\ell$ si impone la continuità della funzione e della derivata prima e la normalizzazione. In Figura \ref{0325_ris} abbiamo riportato i risultati per $A=5$ nel fondamentale. 
 \begin{figure}[!h]
     \centering
     \includegraphics[scale=0.3]{Immagini/0325_risonanza.png}
     \caption{Grafici del potenziale e delle soluzioni del calcolo riportato nell'articolo.}
     \label{0325_ris}
 \end{figure}
+\noindent Come si ottiene lo stato eccitato? Si potrebbe promuovere un nucleone dal secondo livello a quello di valenza\index{livello di valenza}, ma questo non sarebbe lo stato risonante. Osserviamo però che modificando $V_0$ (cioè \vir{alzandolo}) si potrebbe fare in modo che l'energia del livello di valenza\index{livello di valenza} divenga positiva, ma rimanga inferiore a $V_b$ (Figura \ref{0325_potris}); esiterebbe allora una certa probabilità di \textit{tunneling}\footnote{$P_{tunnel} = 1 - P_{stay}$.} per quel nucleone:
+$$\frac{dP_{stay}}{dt} = -\Gamma \, P_{stay} \quad \Rightarrow \quad P_{stay}\propto e^{-\Gamma t}$$
 \begin{figure}[h]
     \centering
     \includegraphics{Immagini/0325_po_risonanza.png}
     \caption{Schema dello stato risonante.}
     \label{0325_potris}
 \end{figure}
-\newpage
 \noindent Dobbiamo allora considerare l'equazione di \Sch{} in funzione del tempo\footnote{$$i\hbar \frac{d\psi}{dt}(x,t) = \ppc{-\frac{\hbar^2}{2m}\frac{d^2}{dx}+V}\psi(x,t)$$} e cercare una soluzione del tipo $\psi(x,t) = \exp{(-i t \, E/\hbar)}\,\psi(x)$, dove $\psi(x)$ è soluzione dell'equazione di \Sch{} precedente. Ora l'andamento di $P_{stay}$ impone\footnote{$P_{stay}\propto |\psi(x,t)|^2 = |\exp{(-i t \, E/\hbar)}|^2\,|\psi(x)|^2$} che $E\in \C$, per cui scegliamo $E = E_R - i \Gamma/2 \:\Rightarrow\: |\psi(x,t)|^2 = \exp{(-t\Gamma/\hbar)}\,|\psi(x)|^2$. Osserviamo che il termine di dipendenza temporale si fa sentire solo per $x>x_b$ (Figura \ref{0325_ris2}), dunque:
 $$x>x_b \qquad \psi(x,t) = H\,e^{i\,(-\frac{E}{\hbar}\,t + i\,k_\infty x)}$$
 \begin{figure}[h]
