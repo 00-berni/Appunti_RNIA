@@ -11,7 +11,7 @@ Applicare tutto ciò alla fisica nucleare non è immediato: i nucleoni, infatti,
     \label{0301_rE}
 \end{figure}
 \newline
-Tuttavia, vi sono alcune evidenze sperimentali a favore di tale modello. Innanzitutto, le differenze di energia di separazione\footnote{Sono le energie di separazione del protone e del neutrone rispettivamente.} tra nuclei con $N=$cost (\textbf{isotoni}\index{nucleo!isotono}) e nuclei con $Z=$cost (\textbf{isotopi}\index{nucleo!isotopo}) hanno salti ben determinati\footnote{Dovrebbe comparire anche il 2, ma non lo vedo perché corrisponde alla separazione di 2 protoni. Per quanto riguarda il 126 non si vede in natura nel caso di $Z$, perché il nucleo non è stabile.}, come mostrato in Figura \ref{diffeng}. I numeri atomico o neutronico per i quali si hanno i salti richiamano i numeri quantici del modello \vir{a shell} e vengono definiti \textbf{numeri magici}\index{numeri magici}:
+Tuttavia, vi sono alcune evidenze sperimentali a favore di tale modello. Innanzitutto, le differenze di energia di separazione\footnote{Sono le energie di separazione del protone e del neutrone rispettivamente.} tra nuclei con $N=$cost (\textbf{isotoni}\index{nucleo!isotono}) e nuclei con $Z=$cost (\textbf{isotopi}\index{nucleo!isotopo}) hanno salti ben determinati\footnote{Dovrebbe comparire anche il 2, ma non lo vedo perché corrisponde alla separazione di 2 protoni. Per quanto riguarda il 126 non si vede in natura nel caso di $Z$, perché il nucleo non è stabile.}, come mostrato in Figura \ref{diffeng}. I numeri atomico o neutronico per i quali si hanno i salti richiamano i numeri quantici di un modello \vir{a shell} e vengono definiti \textbf{numeri magici}\index{numeri magici}:
 $$2,8,20,28,50,82,126$$
 \begin{figure}[!h]
     \centering
@@ -20,7 +20,7 @@ $$2,8,20,28,50,82,126$$
     \label{diffeng}
 \end{figure}
 
-\noindent Un'altra evidenza consiste negli andamenti della sezione d'urto di cattura neutronica $\sigma$ e dei raggi di carica nucleari, riportati in Figura \ref{sigmar}, che ricordano quelli del raggio atomico.
+\noindent Un'altra evidenza consiste negli andamenti della sezione d'urto di cattura neutronica $\sigma$ e dei raggi di carica nucleari, riportati in Figura \ref{sigmar}, che ricordano quello del raggio atomico.
 
 \begin{figure}[!h]
     \centering
@@ -33,9 +33,8 @@ $$2,8,20,28,50,82,126$$
 \index{modelli nucleari! a shell@\textit{a shell}}
 \subsection{Sciogliamo i nodi} 
 Innanzitutto risolviamo i problemi che ci eravamo posti nella formulazione del modello.\\
-Assumiamo che il moto del singolo nucleone sia governato dal potenziale generato da tutti gli altri, coi quali interagisce, escuso esso stesso. Per quanto riguarda gli urti, essendo i nucleoni fermioni se avvenisse una collisione (quindi un trasferimento di energia) questo comporterebbe una promozione a un livello di valenza (unico disponibile per Pauli), ma le energie richieste per far ciò sono notevolmente maggiori di quelle scambiabili attraverso l'urto. Dunque, assumeremo che gli urti non avvengono.
-
-\paragraph{Calcolo della funzione d'onda} Dobbiamo ovviamente soddisfare all'equazione di \Sch, tuttavia per semplificare il calcolo possiamo prima rimaneggiare l'hamiltoniana del sistema $H=\sum_i T_i + \sum_{i<j}V_{ij}$, dove $T_i$ è l'energia cinetica e $V_{ij}$ il potenziale di interazione, sommando e sottraendo il potenziale $U_i$ che sente la $i$-esima particella a causa degli altri $j\not =i$ nucleoni:
+Assumiamo che il moto del singolo nucleone sia governato dal potenziale generato da tutti gli altri, con i quali interagisce, escluso esso stesso. Per quanto riguarda gli urti, essendo i nucleoni fermioni se avvenisse una collisione (quindi un trasferimento di energia) questo comporterebbe una promozione a un livello di valenza (unico disponibile per Pauli), ma le energie richieste per far ciò sono notevolmente maggiori di quelle scambiabili attraverso l'urto. Dunque, assumeremo che gli urti non avvengono.
+\paragraph{Calcolo della funzione d'onda} Dobbiamo ovviamente soddisfare all'equazione di \Sch, tuttavia per semplificare il calcolo possiamo prima rimaneggiare l'hamiltoniana del sistema $H=\sum_i T_i + \sum_{i<j}V_{ij}$ (dove $T_i$ è l'energia cinetica e $V_{ij}$ il potenziale di interazione), sommando e sottraendo il potenziale $U_i$ che sente la $i$-esima particella a causa degli altri $j\not =i$ nucleoni:
 \begin{displaymath}
 \begin{aligned}
 H&=\sum_i T_i + \sum_{i<j}V_{ij} +\sum_i U_i - \sum_i U_i=\\
@@ -44,13 +43,13 @@ H&=\sum_i T_i + \sum_{i<j}V_{ij} +\sum_i U_i - \sum_i U_i=\\
 H_i &\simeq T_i + U_i
 \end{aligned}
 \end{displaymath}
-dove nell'ultimo passaggio abbiamo trascurato il contributo dato dal potenziale residuo, perché se $U_i$ è una buona approssimazione del campo che risente $i$ allora quella differenza è molto piccola. Ottengo così un'hamiltoniana di singola particella, per cui $H_i \psi_i = \varepsilon_i \psi_i$, con $\psi = \Pi_i \psi_i$ e $E = \sum_i \varepsilon_i$. Dal momento che si tratta di fermioni cerchiamo una $\psi$ antisimmetrica, quindi usiamo il determinante di Slater:
+dove nell'ultimo passaggio abbiamo trascurato il contributo dato dal potenziale residuo, perché se $U_i$ è una buona approssimazione del campo che risente $i$ allora quella differenza è molto piccola. Otteniamo così un'hamiltoniana di singola particella, per cui $H_i \psi_i = \varepsilon_i \psi_i$, con $\psi = \Pi_i \psi_i$ e $E = \sum_i \varepsilon_i$. Dal momento che si tratta di fermioni cerchiamo una $\psi$ antisimmetrica, quindi usiamo il determinante di Slater:
 \begin{displaymath}
 \psi = \det
 \begin{vmatrix}
 \psi_1 (\xi_1) & \psi_1 (\xi_2) & \dots & \psi_1 (\xi_N) \\
 \psi_2 (\xi_1) & \psi_2 (\xi_2) & \dots & \psi_2 (\xi_N) \\
-\vdots &  & \ddots & \\
+\vdots         &                & \ddots&                \\
 \psi_N (\xi_1) & \psi_N (\xi_2) & \dots & \psi_N (\xi_N)
 \end{vmatrix}
 \end{displaymath}
@@ -103,7 +102,7 @@ Abbiamo quindi che i due stati sono separati e la configurazione $1f_{7/2}$ si a
 
 \subsubsection{I successi del modello} 
 Questo modello è valso un premio Nobel, non solo perché riproduce i numeri magici, ma anche perché spiega varie evidenze sperimentali. Per esempio riesce a spiegare il forte legame dei nuclei doppiamente magici, ovvero con sia $N$ che $Z$ numeri magici (come $\ce{^4_2He_2}$, $\ce{^{16}_8O_8}$,\dots); infatti tutti i nuclei pari-pari hanno stato fondamentale $0^+$, poiché si vanno ad accoppiare tutti i nucleoni (anche se questi non chiudono tutte le \textit{shell}). Il modello\footnote{In realtà questo è \textit{extreme indipendent particle model}.}, infatti, permette di descrivere le prorpietà di un sistema dallo stato di un nucleone spaiato.
-Maggior successo fu appunto la previsione del $J^\pi$ dei nuclei pari-dispari con un solo nucleone disaccoppiato. Prendiamo a esempio $\ce{^{17}_8O_9}$ e osserviamo che ha un neutrone spaiato nel livello $1d_{5/2}$, questo ci dà tutte le informazioni sul $J^\pi=\frac{5}{2}^+$; il $\ce{^15_8O_7}$ ha invece un neutrone spaiato nello stato $1p_{3/2}$, quindi $J^\pi = \frac{1}{2}^-$. Tuttavia, questo funziona solo per i nuclei con $A$ dispari e $A<150 \vee 190<A<220$.\\
+Maggior successo fu appunto la previsione del $J^\pi$ dei nuclei pari-dispari con un solo nucleone disaccoppiato. Prendiamo a esempio $\ce{^{17}_8O_9}$ e osserviamo che, secondo il modello, ha un neutrone spaiato nel livello $1d_{5/2}$, questo ci dà tutte le informazioni sul $J^\pi=\frac{5}{2}^+$; il $\ce{^15_8O_7}$ ha invece un neutrone spaiato nello stato $1p_{3/2}$, quindi $J^\pi = \frac{1}{2}^-$. Tuttavia, questo funziona solo per i nuclei con $A$ dispari e $A<150 \vee 190<A<220$.\\
 Altro successo del modello è la predizione dei momenti di dipolo magnetico nucleare $\vec{\mu} = \mu_N (g_\ell \vec{\ell}+g_s \vec{s})$, dove $g_\ell$ è il fattore giromagnetico:
 $$\mu \equiv \mean{\frac{\vec{\mu}\cdot\vec{j}\, j_z}{j^2}} = \frac{j}{j(j+1)}\mean{\vec{\mu}\cdot\vec{j}}$$
 Calcoliamoci allora $\mean{\vec{\mu}\cdot\vec{j}}$, sfruttando $(\vec{j}-\vec{\ell})^2 = j^2 + \ell^2 -2\vec{j}\cdot\vec{\ell}$ e $(\vec{j}-\vec{s})^2 = j^2 + s^2 - 2\vec{j}\cdot\vec{s}$:
@@ -127,9 +126,8 @@ Quello che viene misurato è $Q_{zz} = 3z^2 - r^2$, che va calcolato sugli stati
 $$\mean{Q} = -\frac{2j-1}{2(j+1)}\mean{r^2}\qquad \text{con } \mean{r^2} = \frac{3}{5}R^2 =\frac{3}{5}R_0^2A^{2/3}$$
 che va valutato per $j=\ell\pm 1/2$. Riportiamo in Figura \ref{Q} gli andamenti dei dati sperimentali, dove si osserva che per $Z$ o $N$ \vir{grandi} si perde l'accordo con la teoria.
 
-
-
-\subsubsection{I problemi del modello} Partiamo proprio dall'ultimo grafico, quello in Figura \ref{Q}. Notiamo che per circa $Z>50$ non vi è accordo, ma soprattutto per circa $N>100$ compaiono momenti di quadrupolo elettrico per i neutroni e questo è assurdo! Si potrebbe cercare di spiegare questa evidenza imputando la presenza di questi quadrupoli ai protoni delle \textit{shell} precedenti più vicine, ma questo non funziona\footnote{Le linee nella figura sono proprio ottenute con queste correzioni e come si vede non rappresentano i dati}. Per questi nuclei, dunque, questo modello non è sufficiente, poiché cerca di spiegare le caratteristiche di tutto il nucleo basandosi solo sul nucleone spaiato, trascurando quindi qualsiasi moto collettivo. Vedremo che è necessario introdurre un nuovo modello.
+\subsubsection{I problemi del modello} 
+Partiamo proprio dall'ultimo grafico, quello in Figura \ref{Q}. Notiamo che per circa $Z>50$ non vi è accordo, ma soprattutto per circa $N>100$ compaiono momenti di quadrupolo elettrico per i neutroni e questo è assurdo! Si potrebbe cercare di spiegare questa evidenza imputando la presenza di questi quadrupoli ai protoni degli \textit{shell} precedenti più vicini, ma in realtà non è così\footnote{Le linee nella figura sono proprio ottenute con queste correzioni e come si vede non rappresentano i dati}. Per questi nuclei, dunque, questo modello non è sufficiente, poiché non tiene conto di alcun tipo di moti collettivi, ma imputa la totale descrizione del sistema al solo nucleone spaiato\footnote{Anche considerare più nucleoni spaiati non fornisce osservabili compatibili.}. Vedremo che è necessario introdurre un nuovo modello.
 
 \begin{figure}[!h]
     \centering

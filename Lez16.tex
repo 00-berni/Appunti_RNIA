@@ -9,9 +9,9 @@ Esistono due principali versioni:
 Il primo a essere stato sviluppato è stato 1., ma dal punto di vista didattico è più chiaro il 2., per cui partiremo da questo.
 
 \section{Calculable RM}\index{metodo Rmatrix@metodo $R$-MATRIX!Calculable}\label{sec-RM-C}
-Studiamo lo scattering $A_1 + A_2$ all'energia $E$. Trascurando per semplicità lo \textit{spin}, sviluppiamo in armoniche sferiche la soluzione dell'equazione di \Sch{} $(T+V)\psi = E\psi$:
+Studiamo lo scattering $A_1 + A_2$ all'energia $E$. Trascurando per semplicità lo \textit{spin}, sviluppiamo in armoniche sferiche la soluzione dell'equazione di \Sch{}\footnote{L'Hamiltoniana è simmetrica sotto rotazioni, traslazioni e riflessioni.} $(T+V)\psi = E\psi$:
 $$\psi = \sum_\ell \frac{u_\ell (r)}{r}\mathcal{Y}_{\ell m}(\hat{r})$$
-$$\PPq{\underbrace{-\frac{\hbar^2}{2\mu}\Bigl (\frac{d^2}{dr^2} -\frac{\ell(\ell+1)}{r^2}}_{T_\ell}+\underbrace{V(r)}_{V_N + V_{coul}}\Bigr )-E} u_\ell(r) =0$$
+% $$\PPq{\underbrace{-\frac{\hbar^2}{2\mu}\Bigl (\frac{d^2}{dr^2} -\frac{\ell(\ell+1)}{r^2}}_{T_\ell}- \underbrace{V(r)}_{V_N + V_{coul}}\Bigr )-E} u_\ell(r) =0$$
 Raccogliendo i vari termini in $H_\ell\equiv T_\ell + V_C + V_N$ si ha:
 \begin{equation}\label{0412_sch}
 	(H_\ell - E) u_\ell (r) =0
@@ -95,7 +95,7 @@ $$ C_{ij}(E,B) = \oss{\varphi_i}{H_\ell + \mathscr{L}(B) - E}{\varphi_j} = C_{ij
 Sostituendo nella \eqref{0412_Rl2}:
 $$R_\ell (E,B) = \frac{\hbar^2}{2\mu a} \sum_{i,j =1}^N \varphi_i(r) \: \sum_{n=1}^{N} \frac{\bar{v}_{n\ell,i}\bar{v}^T_{n\ell,j}}{E_{n\ell}-E} \: \varphi_j$$ 
 
-\noindent Per rendere l'espressione più compatta\footnote{Questa è l'espressione che solitamente si trova per $R$.} definiamo la \textit{reduced width}\index{reduced width@\textit{reduced width}} $\gamma_{n\ell} = \sqrt{\hbar^2/2\mu a} \: \phi_{n\ell}(a)$ dove abbiamo definito le funzioni d'onda $\phi_{n\ell}(r) = \sum_i \bar{v}_{n\ell,i}\varphi_i(r)$:
+\noindent Per rendere l'espressione più compatta\footnote{Questa è l'espressione che solitamente si trova per $R$, dove si evidenzia il fatto che è una funzione \textit{meromorfa}\index{funzione meromorfa}.} definiamo la \textit{reduced width}\index{reduced width@\textit{reduced width}} $\gamma_{n\ell} = \sqrt{\hbar^2/2\mu a} \: \phi_{n\ell}(a)$ dove abbiamo definito\footnote{Se $N$ è finito, allora $\phi_{n\ell}$ sono l'approssimazione variazionale delle autofunzioni dell'operatore $H+\mathscr{L}$ in $a$ e l'espressione per $R$ diviene un'approssimazione.} le funzioni d'onda $\phi_{n\ell}(r) = \sum_i \bar{v}_{n\ell,i}\varphi_i(r)$:
 \begin{equation}\label{0412_Rl3}
 R_\ell (E,B) = \sum_{n=1}^N \frac{\gamma_{n\ell}^2}{E_{n\ell}-E}	
 \end{equation}
@@ -134,11 +134,11 @@ $$e^{2i\delta_\ell} = U_\ell = e^{2i\Phi_\ell} \, \frac{\ppc{1-S_\ell\, R_\ell +
 \end{equation}
 
 \subsubsection{RM e risonanza}
-Consideriamo un processo di scattering $A_1 + A_2 \to A + \gamma$ e supponiamo che esista una risonanza in $E_R$ (che avevamo visto manifestarsi in un salto di $\pi/2$ nello sfasamento). Dal momento che compare anche l'interazione coulombiana non sarà $\delta$ a saltare di $\pi/2$, ma $\delta_\ell -\Phi_\ell = \pi/2$ e questo implica per la risonanza $P_\ell\, R_\ell / (1-S_\ell\, R_\ell) \to \infty$, ovvero $S_\ell (E_R)\, R_\ell(E_R) =1 $ (questo è un modo per definire $E_R$ perché è una condizione univoca). Espandiamo in serie di Taylor il prodotto $S_\ell(E)\, R_\ell(E)$:
+Consideriamo un processo di scattering $A_1 + A_2 \to A + \gamma$ e supponiamo che esista una risonanza in $E_R$ (che avevamo visto manifestarsi in un salto di $\pi/2$ nello sfasamento). Dal momento che compare anche l'interazione coulombiana non sarà $\delta$ a saltare di $\pi/2$, ma $\delta_\ell -\Phi_\ell = \pi/2$ e questo implica per la risonanza $P_\ell\, R_\ell / (1-S_\ell\, R_\ell) \to \infty$, ovvero $S_\ell (E_R)\, R_\ell(E_R) =1 $ (è un modo per definire $E_R$ perché è una condizione univoca). Espandiamo in serie di Taylor il prodotto $S_\ell(E)\, R_\ell(E)$:
 $$S_\ell(E)\, R_\ell(E) \simeq \overbrace{S_\ell(E_R)\, R_\ell(E_R)}^{=1} + (E-E_R) \frac{d}{dE}(S_\ell(E)\, R_\ell(E))\Bigl |_{E=E_R}$$
 Sostituiamo in $U_\ell$:
-$$U_\ell \simeq e^{2i\Phi_\ell} \, \frac{(E-E_R)+i\: P_\ell (E)\, R_\ell (E) /(S_\ell\, R_\ell)' (E_R)}{(E-E_R)- i \: P_\ell (E)\, R_\ell(E) / (S_\ell\,R_\ell)' (E_R)}$$
-Definendo l'ampiezza della risonanza $\Gamma (E) \equiv 2P_\ell (E) \, R_\ell (E) / (S_\ell \, R_\ell)' (E_R)$ si arriva a:
+$$U_\ell \simeq e^{2i\Phi_\ell} \, \frac{(E_R-E)+i\: P_\ell (E)\, R_\ell (E) /(S_\ell\, R_\ell)' (E_R)}{(E_R-E)- i \: P_\ell (E)\, R_\ell(E) / (S_\ell\,R_\ell)' (E_R)}$$
+Definendo l'ampiezza della risonanza come $\Gamma (E) \equiv 2P_\ell (E) \, R_\ell (E) / (S_\ell \, R_\ell)' (E_R)$ si arriva a:
 \begin{equation}\label{0412_risUl}
 U_\ell = e^{2i\Phi_\ell} \, \frac{E-E_R + i\, \Gamma/2}{E-E_R - i\,\Gamma/2}
 \end{equation}

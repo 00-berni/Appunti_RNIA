@@ -34,7 +34,7 @@ Discutiamo adesso i singoli \textit{step} del metodo.
 	Nel secondo caso si può ottenere la misura facendo uno scattering in un certo range di energie. Prendiamo come esempio la reazione:
 	$$ \underbrace{d}_{p-n} + \ce{^{11}B} \to \ce{^{8}Be} +\alpha +n $$ 
 	I risultati sono riportati in Figura \ref{0421_spec-W} (a destra).
-	\vspace{-1cm}
+%	\vspace{-1cm}
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=0.5]{Immagini/0421_Se.png}
@@ -67,14 +67,14 @@ e si ottennero i risultati in Figura \ref{0421_Se}: il fattore astrofisico è st
 \subsection{\textit{Asymptotic Normalization Coefficients method}}\index{Asymptotic Normalization Coefficients method@\textit{Asymptotic Normalization Coefficients method}}
 \paragraph{Introduzione}
 Consideriamo anche questa volta un nucleo fortemente a cluster\footnote{La notazione è stata cambiata} $B\equiv A+a$. L'equazione di \Sch{} ridotta per $A+a$ sarà:
-$$u_L'' + \ppc{\frac{2\mu }{\hbar^2} V+ \frac{2\mu }{\hbar^2}E - \frac{L(L+1)}{r^2}}u_L =0$$
+$$u_L'' + \ppc{-\frac{2\mu }{\hbar^2} V+ \frac{2\mu }{\hbar^2}E - \frac{L(L+1)}{r^2}}u_L =0$$
 Prendiamo uno stato legato $E<0$ e definiamo $k\in \mathbb{C}$ tale $E\equiv \hbar^2 k^2 / 2\mu$, da cui $k = i\, \sqrt{2\mu |E|/\hbar^2} \equiv i\,k_I$ con $k_I\in \mathbb{R}$. Il potenziale sarà quello coulombiano più quello dovuto all'interazione nucleare $V=V_{nucl} + Z_1Z_2 e^2 /r$; definiamo allora il parametro:
 $$\eta \equiv \frac{Z_1Z_2 e^2}{\hbar v} = \frac{Z_1Z_2 e^2}{\hbar}\frac{\mu}{\hbar k} = - i \, \frac{Z_1Z_2 e^2\mu}{\hbar^2 k_I} \equiv i\, \eta_I$$
 %%! CAPIRE IL DISCORSO CHE SEGUE
 A questo punto ci mettiamo a grande distanza ($V_{nucl} \simeq 0$ per $r>R_N$) e studiamo le soluzioni dell'equazione di \Sch{}, ovvero le funzioni di Coulomb\index{funzioni di Coulomb} \textit{in-going} e \textit{out-going}: $u^\pm_L (\eta,kr)$. In realtà, siccome siamo interessati solo alla soluzione asintotica prendiamo la \textit{in-going} perché vogliamo un andamento che sia $e^{ikr}=e^{-k_I r}$, dunque abbiamo solo $u^+_L(\eta,kr)$; questa però non è ben definita per $1+L+i\eta =0$, allora per correggere si usa la funzione di \Wh{}\index{funzione di \Wh}:
 $$W_{-i\eta,L+1/2}(-2i\rho) = e^{-\pi\eta/2}e^{-i\,L\pi/2} u^+_L(\eta,\rho)$$
 con $\rho\equiv kr$. Si può mostrare che per $r\to\infty$ ($\rho\to\infty$):
-$$W_{-i\eta,L+1/2}(-2i\rho) \to e^{i\rho-i\eta\ln{2\rho}}\, e^{-\eta\pi/2} = \underbrace{e^{-k_Ir + \eta_I \ln{2k_Ir}}}_\text{Onda distorta}\: e^{i\eta_I\pi/2}$$
+$$W_{-i\eta,L+1/2}(-2i\rho) \to \underbrace{e^{i\rho-i\eta\ln{2\rho}}}_\text{Onda distorta} \, e^{-\eta\pi/2} = e^{-k_Ir + \eta_I \ln{2k_Ir}}\: e^{i\eta_I\pi/2}$$
 Dunque la nostra soluzione $u_L(r)$ asintoticamente sarà proporzionale a $W_{\eta_I,L+1/2}(2k_I r)$ e il fattore di proporzionalità $C_L$ viene appunto detto \textbf{Coefficiente Asintotico di Normalizzazione} (ANC)\index{Coefficiente Asintotico di Normalizzazione}.
 
 \paragraph{Nel metodo}
@@ -103,7 +103,7 @@ Dunque se conosco gli ANC allora conosco anche $I$ e di conseguenza $M$.
 \end{itemize}
 \noindent Nel secondo caso si scelgono spesso reazioni di \textit{transfer} $b(X,Y)a$, con $X=Y+c$ cluster\footnote{Cambio di notazione.} (per cui il vertice è lo stesso).\\ 
 Per fare un esempio prendiamo:
-$$\underbrace{\ce{^{3}He}}_{p+d} + \ce{^{14}N} \to \ce{^{15}O}+\gamma + d$$
+$$\underbrace{\ce{^{3}He}}_{p+d} + \ce{^{14}N} \to \ce{^{15}O}+ d$$
 Sperimentalmente si misura $d\sigma^{transf}/d\Omega$ e questa è legata ai coefficienti di normalizzazione secondo:
 $$\frac{d\sigma^{transf}}{d\Omega}\propto \sum_{J_x J_a} (C_{cY}^X)^2 (C_{bc}^a)^2 \sigma_\text{DWBA}$$
 Se conosciamo $\sigma_\text{DWBA}$ e $C_{cY}^X$ otteniamo il valore cercato $C_{bc}^a$; $\sigma_\text{DWBA}$ si calcola facilmente, per quanto riguarda $C_{cY}^X$ si prende da un'altra reazione oppure si calcola (nel caso per esempio di $C_{pd}^{\ce{^3He}}$ è calcolabile).

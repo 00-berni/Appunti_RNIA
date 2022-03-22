@@ -4,7 +4,7 @@
 \begin{itemize}
     \item Un network di reazioni.
     \item Il numero di neutroni e protoni di partenza, che sarà determinato, come abbiamo accennato, dalla vita media del neutrone, misura sulla quale tuttora è presente una certa incertezza (fornitaci dal PDG\footnote{PDG = Particle Data Group.}).
-    \item Il rapporto tra barioni e fotoni detto \textbf{\textit{entropy factor}} $\eta$\index{entropy factor@\textit{entropy factor} $\eta$}\footnote{\acc{E} definito come rapporto tra la densità barionica e quella dei fotoni.}. Questo parametro ci dice se è favorita la ricombinazione ($\eta$ grande) o la fotodisintegrazione della materia.
+    \item Il rapporto tra barioni e fotoni detto \textbf{\textit{entropy factor}} $\eta$\index{entropy factor@\textit{entropy factor} $\eta$}\footnote{\acc{E} definito come rapporto tra la densità barionica e quella dei fotoni $n_b/n_\gamma$.}. Questo parametro ci dice se è favorita la ricombinazione ($\eta$ grande) o la fotodisintegrazione della materia.
     \item Il fattore $\eta$ è legato alla \textbf{\textit{barion density}}\index{barion density@\textit{barion density} $\rho_B$} secondo $\rho_B = 6.8\cdot\ord{-22}\unit{g cm}^{-3}\; \cdot \eta$. Spesso però al posto di questa si tende a lavorare con la \textbf{\textit{barion fraction of critical mass density}}\index{barion fraction of critical mass density@\textit{barion fraction of critical mass density} $\Omega_B h^2$}, definita come $\Omega_B h^2= 3.6 \cdot\ord{7}\;\cdot \eta$\footnote{Dove $h$ è un parametro adimensionale per la costante di Hubble, definito come $h=H_0/100 [\mbox{km}/\mbox{s Mpc}]$.}.
 \end{itemize}
 Come \vir{output} da questi avremo le abbondanze degli elementi primordiali (ovvero H, He e metalli leggeri). Passiamo allora alla trattazione di questi \vir{input}.
@@ -26,12 +26,12 @@ In Figura \ref{0315_net} riportiamo le reazioni coinvolte nella nucleosintesi pr
 \end{itemize}
 
 \subsection{La nucleosintesi primordiale}\label{sec-nuc-prim}
-La prima reazione che abbiamo è il decadimento del neutrone\footnote{Si tratta dell'unica reazione di interazione debole.} (1.); successivamente segue una cattura radiativa $p$-$n$ (2.) e a questo punto abbiamo 3 possibili reazioni di distruzione del deuterio: secondo il I criterio la (4.) e la (5.) dovrebbero contare maggiormente rispetto alla (3.), ma poiché l'abbondanza di $p$ è superiore a quella di $d$ le probabilità delle tre reazioni sono dello stesso ordine\footnote{Si capisce allora come mai non si ha $d(d,\gamma)\ce{^4He}$ (poca abbondanza e interazione EM).}. Queste reazioni non sono sufficienti a consumare tutto il deuterio, che potrà interagire con il trizio $t$ secondo la (6.); il trizio non è un elemento primordiale perché decade, ma essendo un decadimento debole è molto probabile che interagisca nuovamente con $\alpha$ (7.) dando $\ce{^7Li}$ (vedremo che la presenza di questo $\ce{^7Li}$ sarà una questione delicata da trattare).
+La prima reazione che abbiamo è il decadimento del neutrone\footnote{Si tratta dell'unica reazione di interazione debole.} (1.); successivamente segue una cattura radiativa $p$-$n$ (2.) e a questo punto abbiamo 3 possibili reazioni di distruzione del deuterio: secondo il I criterio la (4.) e la (5.) dovrebbero contare maggiormente rispetto alla (3.), ma poiché l'abbondanza di $p$ è superiore a quella di $d$ le probabilità delle tre reazioni sono dello stesso ordine\footnote{Si capisce allora come mai non si ha $d(d,\gamma)\ce{^4He}$ (poca abbondanza e interazione EM).}. Queste reazioni non sono sufficienti a consumare tutto il deuterio, che potrà interagire con il trizio $t$ secondo la (6.); il trizio non è un elemento primordiale perché decade, ma essendo un decadimento debole è molto probabile che interagisca nuovamente con $\alpha$ (7.) dando $\ce{^7Li}$\footnote{Vedremo che la presenza di questo $\ce{^7Li}$ sarà una questione delicata da trattare.}.
 Per quanto riguarda $\ce{^3He}$, invece, questo è stabile e ha varie reazioni di distruzione\footnote{Esisterebbe anche $\ce{^3He}(n,\gamma)\ce{^4He}$, ma la (8.) (data l'abbondanza e la natura dell'interazione) è molto più importante.}, tra cui la più importante se ancora vi sono neutroni è la (8.), alla quale segue (nonostante la poca abbondanza di deuterio) la (9.) e quando si raggiunge un certo numero di $\ce{^3He}$ e $\alpha$ si ha anche la (10.); ora il berillio che si è formato da questo viene distrutto praticamente tutto in $\ce{^7Li}$ (12.).\\
 Fermiamoci un attimo: come mai non troviamo reazioni per $\ce{^5He}$, $\ce{^6He}$ e $\ce{^6Li}$? Allora il $\ce{^5He}$ non è uno stato legato, ma $\ce{^6He}$ sì, tuttavia questo decade $\beta$ molto velocemente (è poco legato) in $\ce{^6Li}$. Quest'ultimo si ottiene anche da $\alpha + d$ con l'emissione di un fotone e il motivo per cui la sua abbondanza non è significativa è dovuto al fatto che è poco legato, per cui si rompe facilmente.\\
 Abbiamo ancora un problema da risolvere, ovvero che la carta dei nuclei presenta un \textit{gap} per $A=8$: il $\ce{^8B}$ e il $\ce{^8Li}$ decadono $\beta$ e il $\ce{^8Be}$ decade $\alpha$. Dunque, la BBN si ferma qui\footnote{In realtà esistono reazioni per saltare da $A=5$ ad $A=7$, ma sono comunque trascurabili rispetto a tutti gli altri processi.} con $p$, $\ce{^2H}$, $\ce{^3He}$, $\ce{^4He}$, $\ce{^7Li}$ (poco) e $\ce{^7Be}$ (pochissimo).
 
-\paragraph{Confronto con le osservazioni} A questo punto per studiare la BBN è necessario prendere i valori delle varie sezioni d'urto delle reazioni coinvolte e vederne l'evoluzione temporale, come mostrato in Figura \ref{0315_mfrac}, dove è riportato la \textit{mass fraction} dei principali elementi predetto dal modello. Dunque, dalle misure di queste quantità è possibile stimare la bontà della teoria; una piccola nota sul berillio: non è facile da misurare, quindi spesso quello che si misura è il rapporto $d/\ce{H}$ o $\ce{^3He/H}$.
+\paragraph{Confronto con le osservazioni} A questo punto per studiare la BBN è necessario prendere i valori delle varie sezioni d'urto delle reazioni coinvolte e vederne l'evoluzione temporale, come mostrato in Figura \ref{0315_mfrac}, dove è riportata la \textit{mass fraction} dei principali elementi predetta dal modello\footnote{Una piccola nota sul berillio: non è facile da misurare, quindi spesso quello che si misura è il rapporto $d/\ce{H}$ o $\ce{^3He/H}$.}. Dunque, dalle misure di queste quantità è possibile stimare la bontà della teoria.
 
 \begin{figure}[h]
     \centering
@@ -40,7 +40,7 @@ Abbiamo ancora un problema da risolvere, ovvero che la carta dei nuclei presenta
     \label{0315_mfrac}
 \end{figure}
 
-\noindent Riportiamo allora le osservazioni in Figura \ref{0315_mfrac2}. Da queste misure è possibile misurare $\Omega_B h^2$ e alla fine degli anni '90 si ebbe la prima evidenza che la densità di materia dell'Universo era differente da quella attesa (a causa dell'assenza nel conto del contributo dovuto alla materia oscura). 
+\noindent Riportiamo allora le osservazioni in Figura \ref{0315_mfrac2}. Da queste misure è possibile stimare $\Omega_B h^2$ e alla fine degli anni '90 si ebbe la prima evidenza che la densità di materia dell'Universo fosse differente da quella attesa (a causa dell'assenza nel conto del contributo dovuto alla materia oscura). 
 
 \begin{figure}[h]
     \centering
@@ -49,7 +49,7 @@ Abbiamo ancora un problema da risolvere, ovvero che la carta dei nuclei presenta
     \label{0315_mfrac2}
 \end{figure}
 
-\paragraph{Misurazione delle abbondanze primordiali} Partiamo dalla misura per $\ce{^4He}$. I primi problemi sorgono dal fatto che le stelle ne hanno aumentato la concentrazione, dunque si fanno misure del rapporto $\ce{^4He}/\ce{H}$ in regioni in cui è avvenuta poca o quasi nulla evoluzione stellare, ovvero galassie \textit{metal-poor}. Riportiamo in Figura \ref{0315_Hefrac} un esempio. Oggi si ha un valore di circa $Y_p \sim 0.25$.
+\paragraph{Misurazione delle abbondanze primordiali} Partiamo dalla misura per $\ce{^4He}$. I primi problemi sorgono dal fatto che le stelle ne hanno aumentato la concentrazione, dunque si fanno misure del rapporto $\ce{^4He}/\ce{H}$ in regioni in cui è avvenuta poca o quasi nulla evoluzione stellare, ovvero galassie \textit{metal-poor}. Riportiamo in Figura \ref{0315_Hefrac} un esempio. A oggi si ha un valore di circa $Y_p \sim 0.25$.
 
 \begin{figure}[!h]
     \centering
@@ -58,7 +58,7 @@ Abbiamo ancora un problema da risolvere, ovvero che la carta dei nuclei presenta
     \label{0315_Hefrac}
 \end{figure}
 
-\noindent La misura del deuterio è anche più problematica: esso infatti è \vir{fragile}, per cui vanno evitate le stelle e gli oggetti densi, anzi si fanno osservazioni del mezzo interstellare.\\
+\noindent La misura del deuterio è anche più problematica: esso infatti è \vir{fragile}, per cui vanno evitate le stelle e gli oggetti densi, anzi si fanno osservazioni nel mezzo interstellare.\\
 Il 1973 il satellite Copernico riuscì a dare dei limiti (superiori e inferiori), ma non a raccogliere dei veri e propri dati. Successivamente, nel 1998, Tytler e Burles ebbero un'idea, ovvero quella di misurare $d/\ce{H}$ nelle \textit{hydrogen clouds} ad alto \textit{redshift}\index{redshift@\textit{redshift}} ($z>3$, oggetti molto vecchi): si osservano le linee di assorbimento della Ly$\alpha$\index{Lymann@Lymann $\alpha$} in \textit{quasi-stellar object}\index{quasi-stellar object@\textit{quasi-stellar object}} con metallicità $Z \sim \ord{-2}\div\ord{-3} Z\sol{}$ (per cui ci aspettiamo che l'abbondanza sia quella primordiale). A oggi il valore più accurato riporta $d/\ce{H} = (2.527 \pm 0.030)\cdot\ord{-5}$; questa accuratezza deriva dal fatto che l'abbondanza di deuterio è particolarmente sensibile alla densità di barioni.\\
 Per quanto riguarda $\ce{^3He}$, anche questo è molto fragile e non dev'essere cercato nel mezzo interstellare, tuttavia la sua misurazione è complicata.\\
 Il $\ce{^7Li}$, invece, viene ricercato nelle atmosfere stellari di stelle di popolazione II\index{popolazione II}, ovvero \textit{low-metallicity stars}\index{low-metallicity stars@\textit{low-metallicity stars}} (che si possono osservare nell'alone della nostra galassia). In Figura \ref{0315_LiH} riportiamo i dati sperimentali per il rapporto $\ce{^7Li}/\ce{H}$: notiamo dei dati (sulla destra) molto \textit{scatterati} che però non sono di interesse poiché si riferiscono a metallicità alte; per quanto riguarda gli altri dati (sulla sinistra) vi è tuttora ancora discussione riguardo il valore di $\ce{Fe}/\ce{H}$ oltre il quale fermarsi per il fit. Negli ultimi tempi queste misure sono diventate più accurate e hanno portato a un valore stimato di $\Omega_B h^2$ diverso da quello ottenuto dal $(\ce{^4He},d)$, dando vita a quello che oggi viene definito \textit{$\ce{Li}$-problem} (o \textit{puzzle}) della BBN\index{Li-problem@\textit{$\ce{Li}$-problem}}\index{Li-puzzle@\textit{$\ce{Li}$-puzzle}}.
@@ -84,7 +84,7 @@ Abbiamo quindi un maggior numero di neutroni e questo comporta una densità di $
     \label{0315_Hefrac2}
 \end{figure}
 \section{La BNN oggi}
-La teoria della BBN a oggi si basa sul modello cosmologico standard\index{modello cosmologico standard@modello cosmologico standard $\Lambda CDM$} $\Lambda CDM$\footnote{La sigla indica:%
+La teoria della BBN a oggi si basa sul modello cosmologico standard\index{modello cosmologico standard@modello cosmologico standard $\Lambda CDM$} $\Lambda CDM$\footnote{L'acronimo:%
 \begin{itemize}
     \item[$\Lambda$] sta per la costante cosmologica\index{costante cosmologica@costante cosmologica $\Lambda$}.
     \item[$CDM$] sta per \textit{Cold Dark Matter}.
@@ -108,7 +108,7 @@ Quello che si misura effettivamente è il \textbf{fattore astrofisico}\index{fat
     \label{0315_astr}
 \end{figure}
 \newpage
-\noindent Recentemente in Italia si sono fatte altre prese dati grazie all'esperimento LUNA\esperimento{LUNA} \footnote{che discuteremo ampiamente nella sezione \secrif{sec-LUNA}.}, che ha raggiunto un'incertezza del 3\%. Riportiamo i risultati in Figura \ref{0315_astr2}. Rispetto al precedente, il rate di presa dati era molto maggiore e le misure molto più accurate, grazie un codice numerico detto \textit{PArthENoPE}\index{PArthENoPE@\textit{PArthENoPE}}\footnote{Per info: \url{http://parthenope.na.infn.it}.}, che ritorna le funzioni di \textit{likehood} riportate in Figura \ref{0315_parthenope}\footnote{La differenza tra il calcolo delle linee segnate come \textit{Marcucci} è dovuta alle funzioni d'onda di scattering; si osserva che le misure del 2016 sono più accurate, tuttavia non se ne conosce il motivo.}.
+\noindent Recentemente in Italia si sono fatte altre prese dati grazie all'esperimento LUNA\esperimento{LUNA}\footnote{che discuteremo ampiamente nella sezione \secrif{sec-LUNA}.}, che ha raggiunto un'incertezza del 3\%. Riportiamo i risultati in Figura \ref{0315_astr2}. Rispetto al precedente, il rate di presa dati era molto maggiore e le misure molto più accurate, grazie un codice numerico detto \textit{PArthENoPE}\index{PArthENoPE@\textit{PArthENoPE}}\footnote{Per info: \url{http://parthenope.na.infn.it}.}, che ritorna le funzioni di \textit{likehood} riportate in Figura \ref{0315_parthenope}\footnote{La differenza tra il calcolo delle linee segnate come \textit{Marcucci} è dovuta alle funzioni d'onda di scattering; si osserva che le misure del 2016 sono più accurate, tuttavia non se ne conosce il motivo.}.
 
 \begin{figure}[h]
     \centering

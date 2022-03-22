@@ -59,32 +59,32 @@ $\psi_{np}^{(LS\Lambda\Lambda_z)}$ ha $\Lambda$ ben definito, quindi è un'ottim
 %
 \oss{\psi_{1s_d}}{J_\lambda(\vec{q})}{\psi_{s_p s_n}(\vec{p})} &\equiv \sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) \\
 j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) &\equiv \oss{\psi_{1s_d}}{\int d^3x \; e^{-i\vec{q}\cdot\vec{x}}\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}(\vec{x})}{\psi_{np}(\ce{^1S_0})} = \\
-&= -\sqrt{2\pi} \sum_{\Lambda\geq 1} (-i)^\Lambda \sqrt{2\Lambda +1} \oss{\psi_{1s_d}}{E_{\Lambda-\lambda}(q)  + \lambda \, M_{\Lambda-\lambda}(q)}{\psi_{np}(\ce{^1S_0})}
+&= -\sqrt{2\pi} \sum_{\Lambda'\geq 1} (-i)^{\Lambda'} \sqrt{2\Lambda' +1} \oss{\psi_{1s_d}}{E_{\Lambda'-\lambda}(q)  + \lambda \, M_{\Lambda'-\lambda}(q)}{\psi_{np}(\ce{^1S_0})}
 \end{aligned}
 \end{displaymath}
-dove abbiamo prima definito $j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q})$ e poi sviluppato in multipoli come nel decadimento $\gamma$\footnote{Guarda \secrif{sec-gamma-multipoli}.}.
-La parità dei singoli termini è data da $\pi(E\Lambda)=(-1)^\Lambda$ e $\pi(M\Lambda)=(-1)^{\Lambda+1}$, per cui, poiché deve valere $\vec{\Lambda}+\vec{J}_i = \vec{J}_f$\footnote{Qui con $J$ si indica il momento angolare totale.}, per $J_f = 1$, $J_i = 0$ e $\pi_i=\pi_f=+$ allora $\Lambda = 1$ e solo $M1$ sarà rilevate ai fini del calcolo al primo ordine:
+dove abbiamo prima definito $j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q})$ e poi sviluppato in multipoli come nel decadimento $\gamma$\footnote{Guarda \secrif{sec-gamma-multipoli}.} (chiamando $\Lambda'$ l'ordine del multipolo per distinguerlo da $\Lambda$).
+La parità dei singoli termini è data da $\pi(E\Lambda)=(-1)^\Lambda$ e $\pi(M\Lambda)=(-1)^{\Lambda+1}$, per cui, poiché deve valere $\vec{\Lambda}+\vec{J}_i = \vec{J}_f$\footnote{Qui con $J$ si indica il momento angolare totale e con $\Lambda$ quello del fotone e quindi l'ordine di multipolo.}, per $J_f = 1$, $J_i = 0$ e $\pi_i=\pi_f=+$ allora $\Lambda = 1$ e solo $M1$ sarà rilevate ai fini del calcolo al primo ordine:
 \begin{displaymath}
 \begin{aligned}
-\sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) &= \sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\: \oss{\psi_{1s_d}}{-\sqrt{2\pi}(-i) \sqrt{3} (\lambda\,M_{1-\lambda}(q))}{\psi_{np}(\ce{^1S_0})}\simeq\\
-&\simeq i\sqrt{6\pi} \lambda \oss{\psi_{1s_d}}{M_{1\lambda}}{\psi_{np}(\ce{^1S_0})} =\\
-&= i \sqrt{6\pi} \lambda \:\underbrace{ \frac{\clebs{00,1\lambda}{1s_d}}{\sqrt{1}}}_\text{Dal teo. di W-E} \: \underbrace{\bigl \langle \, \psi_{1s_d}\,||\,M_1\,||\,\psi_{np}(\ce{^1S_0})}_\text{Reduced Matrix} = \\
-&= i \sqrt{6\pi} \lambda \: \delta_{\lambda s_d} \: |M_1(q)|
+\sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) &= \sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\: \oss{\psi_{1s_d}}{-\sqrt{2\pi}(-i) \sqrt{3} (\lambda\,M_{1-\lambda}(q))}{\psi_{np}(\ce{^1S_0})}\\
+j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q})&\simeq i\sqrt{6\pi} \lambda \oss{\psi_{1s_d}}{M_{1\,-\lambda}}{\psi_{np}(\ce{^1S_0})} =\\
+&= i \sqrt{6\pi} \lambda \:\underbrace{ \frac{\clebs{00,1-\lambda}{1s_d}}{\sqrt{1}}}_\text{Dal teo. di W-E} \: \underbrace{\bigl \langle \, \psi_{1s_d}\,||\,M_1\,||\,\psi_{np}(\ce{^1S_0})\rangle}_\text{El. di matrice ridotta} = \\
+&= i \sqrt{6\pi} \lambda \: \delta_{-\lambda s_d} \: |M_1(q)|
 \end{aligned}
 \end{displaymath}
 dove abbiamo trascurato il segno di $\lambda$ perché siamo interessati alla somma su tutte le polarizzazioni (per cui $\sum_{\lambda=\pm 1}$) e abbiamo applicato il teorema di \WE\index{teorema di \WE}.
 $$\sum_{s_ns_p,\lambda s_d}|\sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q})|^2 = 4\pi \underbrace{\sum_{s_ns_p}|\clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}|^2}_{=1} \; \sum_{\lambda s_d} 6\pi \delta_{\lambda s_d}\,|M_1|^2 = 48\pi^2 |M_1|^2$$
-dove abbiamo usato $\sum_{\lambda s_d}\delta_{\lambda s_d}=\delta_{11} + \delta_{-1-1} =2$. Dobbiamo calcolare $M_1(q)$, ma dal momento che questo non dipende da $\lambda$ possiamo stimarlo per qualsiasi valore di $\lambda$ (per esempio $\lambda = +1$):
+dove abbiamo usato $\sum_{\lambda s_d}\delta_{\lambda s_d}=\delta_{11} + \delta_{-1-1} =2$. Dobbiamo calcolare $M_1(q)$, ma dal momento che questo non dipende da $\lambda$ possiamo stimarlo per qualsiasi valore di $\lambda$ (per esempio $\lambda = -1$):
 \begin{displaymath}
 \begin{aligned}
-j^{\ce{^1S_0}}_{\lambda\lambda} &= i \sqrt{6\pi} \lambda M_1(q)\\
-M_1(q) &= \frac{-i}{\sqrt{6\pi}} j^{\ce{^1S_0}}_{\lambda\lambda} (\vec{q}) \\
-\frac{d\sigma}{d\Omega_{\hat{q}}} &\propto \frac{1}{v_{rel}} \frac{\bar{q}}{1+\bar{q}/m_d} \, |j^{\ce{^1S_0}}_{\lambda\lambda}(\vec{\bar{q}})|^2 \\
-\sigma_{tot} &= \int \frac{d\sigma}{d\Omega_{\hat{q}}} d\Omega_{\hat{q}} \propto \frac{4\pi}{v_{rel}} \frac{\bar{q}}{1+\bar{q}/m_d} |j^{\ce{^1S_0}}_{\lambda\lambda}(\vec{\bar{q}})|^2
+j^{\ce{^1S_0}}_{-\lambda\lambda} &= i \sqrt{6\pi} \lambda M_1(q)\\
+M_1(q) &= \frac{-i}{\sqrt{6\pi}} j^{\ce{^1S_0}}_{-\lambda\lambda} (\vec{q}) \\
+\frac{d\sigma}{d\Omega_{\hat{q}}} &\propto \frac{1}{v_{rel}} \frac{\bar{q}}{1+\bar{q}/m_d} \, |j^{\ce{^1S_0}}_{-\lambda\lambda}(\vec{\bar{q}})|^2 \\
+\sigma_{tot} &= \int \frac{d\sigma}{d\Omega_{\hat{q}}} d\Omega_{\hat{q}} \propto \frac{4\pi}{v_{rel}} \frac{\bar{q}}{1+\bar{q}/m_d} |j^{\ce{^1S_0}}_{-\lambda\lambda}(\vec{\bar{q}})|^2
 \end{aligned}
 \end{displaymath}
-Abbiamo così isolato la parte nucleare e il problema si riduce al calcolo di $j^{\ce{^1S_0}}_{11}$:
-$$j^{\ce{^1S_0}}_{11} = \int d^3r_1 d^3r_2 \;\: \psi_{11}^+(\vec{r}_1,\vec{r}_2)\: \vec{J}_1(\vec{r}_1,\vec{r}_2)\:\psi^{\ce{^1S_0}}(\vec{r}_1,\vec{r}_2)$$
+Abbiamo così isolato la parte nucleare e il problema si riduce al calcolo di $j^{\ce{^1S_0}}_{-11}$:
+$$j^{\ce{^1S_0}}_{-11} = \int d^3r_1 d^3r_2 \;\: \psi_{11}^*(\vec{r}_1,\vec{r}_2)\: \vec{J}_{-1}(\vec{r}_1,\vec{r}_2)\:\psi^{\ce{^1S_0}}(\vec{r}_1,\vec{r}_2)$$
 A questo punto abbiamo bisogno della funzione d'onda del deutone, di quella di scattering $np$, del potenziale nucleare e di un metodo numerico che risolva l'equazione di \Sch{} sia per lo stato legato che per quello di scattering. Questo non è però sufficiente, è necessario anche un modello per la corrente elettromagnetica\footnote{Attenzione: in $J_{\lambda,i}$ l'indice $i$ indica l'$i$-esimo nucleone e non ha niente a che vedere con il momento angolare totale iniziale. Si invita il lettore da qui in poi a cercare di capire dal contesto il significato delle notazioni.} e ne avevamo uno:\index{corrente di convezione}
 $$\vec{J}_{\lambda,i} = \frac{1}{2m} \underbrace{\varepsilon_i \PPg{\vec{p}_i,\:e^{i\vec{q}\cdot\vec{r}_i}}}_\text{corrente di convezione} - \frac{i}{2m} \mu_i \, \vec{q}\times \vec{\sigma}_i\, e^{i\vec{q}\cdot\vec{r}_i}$$
 $$\varepsilon_i \simeq \frac{1}{2}(1+\tau_{z,i})$$
@@ -102,11 +102,11 @@ $$\psi^{\ce{^1S_0}} = \PPq{\frac{1}{\sqrt{4\pi}}\frac{u_S(r)}{r}\chi_{00}\zeta_{
 La corrente sarà quindi data da:
 $$\vec{J}_i = -\frac{i}{2m} \mu_i\: \vec{q}\times \vec{\sigma}_i\, e^{i\vec{q}\cdot \vec{r}_i}$$
 Notiamo che $\zeta_{00}^+\, \mu_S\, \zeta_{10} = 0$ perché le due funzioni sono ortogonali fra loro, dunque sopravvive solo il pezzo con $\mu_V$ nella corrente:
-$$\vec{J}_{\lambda=+1} = -\frac{i}{4m} \mu_V \PPq{(\vec{q}\times\vec{\sigma}_1)_{\lambda=+1} e^{i\vec{q}\cdot\vec{r}_1}\tau_{z,1} + (\vec{q}\times\vec{\sigma}_2)_{\lambda=+1} e^{i\vec{q}\cdot\vec{r}_2}\tau_{z,2}} $$
+$$\vec{J}_{\lambda=-1} = -\frac{i}{4m} \mu_V \PPq{(\vec{q}\times\vec{\sigma}_1)_{\lambda=-1} e^{i\vec{q}\cdot\vec{r}_1}\tau_{z,1} + (\vec{q}\times\vec{\sigma}_2)_{\lambda=-1} e^{i\vec{q}\cdot\vec{r}_2}\tau_{z,2}} $$
 Studiamo adesso la componente del prodotto vettoriale:
 \begin{displaymath}
 \begin{aligned}
-(\vec{q}\times\vec{\sigma}_i)_{\lambda=+1} &= \widehat{\varepsilon}_{\lambda=+1} \cdot \vec{q}\times\vec{\sigma}_i =\\
+(\vec{q}\times\vec{\sigma}_i)_{\lambda=-1} &= \widehat{\varepsilon}_{\lambda=-1}^* \cdot \vec{q}\times\vec{\sigma}_i =\\
 &= -(\widehat{\varepsilon}_{\lambda=+1} \times \vec{q})\cdot\vec{\sigma}_i =\\
 &=-(-\frac{\hat{e}_x + i\hat{e}_y}{\sqrt{2}} \times q\hat{e}_z)\cdot\vec{\sigma}_i =\\
 &= i \frac{q}{\sqrt{2}} (\hat{e}_x + i\hat{e}_y)\cdot (\sigma_{x,i}\,\hat{e}_x + \sigma_{y,i}\,\hat{e}_y)=\\
@@ -122,11 +122,11 @@ s_{+}\ket{\uparrow} &= 0 & \tau_z \ket{n} &= -\ket{n}
 \end{aligned}
 \end{displaymath}%
 }; per la corrente avremo allora:
-$$\vec{J}_{\lambda=+1} = \frac{q\sqrt{2}}{4m} \mu_V \PPq{e^{i\vec{q}\cdot\vec{r}_1}s_{+,1}\,\tau_{z,1} + e^{i\vec{q}\cdot\vec{r}_2}s_{+,2}\,\tau_{z,2}} $$
+$$\vec{J}_{\lambda=-1} = \frac{q\sqrt{2}}{4m} \mu_V \PPq{e^{i\vec{q}\cdot\vec{r}_1}s_{+,1}\,\tau_{z,1} + e^{i\vec{q}\cdot\vec{r}_2}s_{+,2}\,\tau_{z,2}} $$
 Nel calcolo di $j^{\ce{^1S_0}}$ abbiamo:
 \begin{displaymath}
 \begin{aligned}
-j^{\ce{^1S_0}}_{11}(\vec{q}) = \int d^3r_1d^3r_2\; \frac{1}{4\pi}\frac{u(r)}{r}\frac{u_S(r)}{r}\ppc{\frac{\mu_V\sqrt{2}q}{4m}}e^{i(\vec{p}_d-\vec{p}_{CM})\cdot \vec{R}} &\Bigl [ \chi_{11}^+\zeta_{00}^+\, s_{+,1} \tau_{z,1}\, \chi_{00}\zeta_{10}\:e^{i\vec{q}\cdot\vec{r}_1} \\
+j^{\ce{^1S_0}}_{-11}(\vec{q}) = \int d^3r_1d^3r_2\; \frac{1}{4\pi}\frac{u(r)}{r}\frac{u_S(r)}{r}\ppc{\frac{\mu_V\sqrt{2}q}{4m}}e^{i(\vec{p}_d-\vec{p}_{CM})\cdot \vec{R}} &\Bigl [ \chi_{11}^+\zeta_{00}^+\, s_{+,1} \tau_{z,1}\, \chi_{00}\zeta_{10}\:e^{i\vec{q}\cdot\vec{r}_1} \\
 &+ \chi_{11}^+\zeta_{00}^+\, s_{+,2} \tau_{z,2}\, \chi_{00}\zeta_{10}\:e^{i\vec{q}\cdot\vec{r}_2}\Bigr ]
 \end{aligned}
 \end{displaymath}
@@ -136,12 +136,12 @@ j^{\ce{^1S_0}}_{11}(\vec{q}) = \int d^3r_1d^3r_2\; \frac{1}{4\pi}\frac{u(r)}{r}\
 \zeta_{00}^+\, \tau_{z,2}\, \zeta_{10} &= \frac{1+1}{2} = 1 & \chi_{11}^+\, s_{+,2}\, \chi_{00} &= -\frac{1}{\sqrt{2}} 
 \end{aligned}
 \end{displaymath}
-$$j^{\ce{^1S_0}}_{11}(\vec{q}) = \int d^3r_1d^3r_2\; \frac{1}{4\pi}\frac{u(r)}{r}\frac{u_S(r)}{r}\ppc{\frac{\mu_V\sqrt{2}q}{4m}}e^{i(\vec{p}_d-\vec{p}_{CM})\cdot \vec{R}}(-\frac{1}{\sqrt{2}})(e^{i\vec{q}\cdot\vec{r}_1}+e^{i\vec{q}\cdot\vec{r}_2})$$
+$$j^{\ce{^1S_0}}_{-11}(\vec{q}) = \int d^3r_1d^3r_2\; \frac{1}{4\pi}\frac{u(r)}{r}\frac{u_S(r)}{r}\ppc{\frac{\mu_V\sqrt{2}q}{4m}}e^{i(\vec{p}_d-\vec{p}_{CM})\cdot \vec{R}}(-\frac{1}{\sqrt{2}})(e^{i\vec{q}\cdot\vec{r}_1}+e^{i\vec{q}\cdot\vec{r}_2})$$
 dove $u(r)$ è la funzione ridotta del deutone e $u_S(r)$ è quella della funzione di scattering. Cambiamo variabili\footnote{$\vec{R}=(\vec{r}_1+\vec{r}_2)/2$ e $\vec{r}=\vec{r}_1-\vec{r}_2$.} per cui $\vec{r}_1 = \vec{R}+\vec{r}/2$ e $\vec{r}_2 = \vec{R}-\vec{r}/2$:
 $$j^{\ce{^1S_0}}_{11}(\vec{q}) = \int d^3Rd^3r\; \frac{1}{4\pi}\frac{u(r)}{r}\frac{u_S(r)}{r}\ppc{\frac{\mu_V q}{4m}}\: \underbrace{e^{i(\vec{p}_d-\vec{p}_{CM}+\vec{q})\cdot \vec{R}}}_{\delta \text{ per } \vec{p}_d-\vec{p}_{CM}+\vec{q}}\:
 \PPq{e^{i\vec{q}\cdot\vec{r}/2}+e^{-i\vec{q}\cdot\vec{r}/2}}$$
 L'ultimo termine tra parentesi è simmetrico rispetto a parità $\vec{r}\to -\vec{r}$ e dal momento che la funzione del deutone si annulla per grandi raggi allora $\mean{\vec{q}\cdot\vec{r}}\sim 0$ e quindi $\exp{(i\vec{q}\cdot\vec{r}/2)}\sim 1$.
-$$j^{\ce{^1S_0}}_{11}(\vec{q}) = \frac{\mu_V q}{4m\,4\pi}\; 2\int_0^{+\infty} 4\pi r^2 dr \, \frac{u(r)}{r}\frac{u_S(r)}{r} = \frac{\mu_V q}{2m} \int_0^{+\infty} dr \, u(r) u_S(r)$$
+% $$j^{\ce{^1S_0}}_{-11}(\vec{q}) = \frac{\mu_V q}{4m\,4\pi}\; 2\int_0^{+\infty} 4\pi r^2 dr \, \frac{u(r)}{r}\frac{u_S(r)}{r} = \frac{\mu_V q}{2m} \int_0^{+\infty} dr \, u(r) u_S(r)$$
 $$\sigma = \frac{4\pi\alpha}{v_{rel}}\frac{\mu^2_V q^3}{4m^2} \Bigl |\int_0^{+\infty} dr \, u(r) u_S(r)\Bigr |^2$$
 
 

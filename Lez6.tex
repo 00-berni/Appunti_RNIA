@@ -11,7 +11,7 @@ Se $k\ll 1$ (situazione frequente) allora sarà dominante in $E$ il termine di c
 
 \paragraph{Stima del dipolo} Consideriamo adesso i termini di dipolo. Poiché $k< 1$ MeV (spesso si prende dell'ordine del keV) si ha che $\mean{\vec{k}\cdot\vec{r}_i}/\hbar c\simeq 10/200 = 1/20\ll 1$, quindi è ragionevole assumere la \textbf{Long Wavelength Approximation}\index{long wavelength approximation}; sfruttando la $\delta^3(\vec{x}-\vec{r}_i)$ che compare nell'espressione della corrente possiamo approssimare $\exp{(i\vec{k}\cdot\vec{x}_i)}\sim 1$ nel calcolo dell'elemento di matrice, per cui\footnote{Da qui in poi chiameremo il versore di polarizzazione $\widehat{\varepsilon}$ con $\hat{e}$ per semplicità di scrittura.}:
 $$\int d^3x\; \hat{e}_{k\lambda}^* \cdot \vec{J}(\vec{x}) = \int d^3x\; \hat{e}_{k\lambda_i}^*  (\vec{J}(\vec{x})\cdot \vec{\nabla})\,x_i = - \int d^3x \; \hat{e}_{k\lambda}^* \cdot \vec{x}\, (\vec{\nabla}\cdot\vec{J}(\vec{x})) $$
-dove abbiamo usato $\nabla_j x_i = \delta_{ji}$ e abbiamo integrato per parti. Dall'equazione di continuità per la carica elettrica si ha $\mean{\vec{\nabla}\cdot\vec{J}(\vec{x})} = -i\mean{[H,\rho]} = -i(E_f-E_i)\rho = -i E_\gamma \rho$  valutato sugli stati iniziale e finale, quindi possiamo riscrivere l'equazione precedente come:
+dove abbiamo usato $\partial_j x_i = \delta_{ji}$ e abbiamo integrato per parti. Dall'equazione di continuità per la carica elettrica si ha $\mean{\vec{\nabla}\cdot\vec{J}(\vec{x})} = -i\mean{[H,\rho]} = -i(E_f-E_i)\mean{\rho} = -i E_\gamma \mean{\rho}$  valutato sugli stati iniziale e finale, quindi possiamo riscrivere l'equazione precedente come:
 $$\oss{J_fM_f}{\int d^3x \; \hat{e}^*_{k\lambda}\cdot \vec{J}(\vec{x})}{J_iM_i} = iE_\gamma \, \oss{J_fM_f}{\int d^3x \; \hat{e}^*_{k\lambda}\cdot \vec{x}\rho}{J_iM_i} = i E_\gamma \, \hat{e}^*_{k\lambda} \cdot \vec{\mathrm{d}}_{fi}$$
 $$\vec{\mathrm{d}}_{fi} \equiv \oss{J_fM_f}{\int d^3x \; \vec{x}\rho}{J_iM_i}$$
 dove $\vec{\mathrm{d}}_{fi}$ è l'\textbf{operatore di dipolo elettrico}\index{operatore di dipolo elettrico}.\\
@@ -54,7 +54,7 @@ p_\gamma = \hbar k \;\; E_\gamma = p_\gamma c &\qquad\frac{p^2_\gamma dp_\gamma}
 \frac{d\lambda}{d\hat{k}} &= \frac{1}{\hbar} \frac{\alpha}{2\pi}\,E_\gamma^3 \, \frac{\mathrm{d}_{fi}^2 \sin^2(\theta)}{( \hbar c)^2}
 \end{aligned}
 \end{displaymath}
-dove nel penultimo passaggio abbiamo integrato la $\delta$ per cui $E_\gamma = E_i - E_f$ e nell'ultimo abbiamo sostituito la costante di struttura fine\index{costante di struttura fine@$\alpha$-costante di struttura fine} $\alpha$. Possiamo notare che abbiamo riottenuto un andamento del tipo $E^3_\gamma \sin^2(\theta)$ come nel caso classico.
+dove nel penultimo passaggio abbiamo integrato la $\delta$ per cui $E_\gamma = E_i - E_f$ e nell'ultimo abbiamo sostituito la costante di struttura fine\index{costante di struttura fine@$\alpha$-costante di struttura fine} $\alpha$. Possiamo notare che abbiamo ottenuto un andamento del tipo $E^3_\gamma \sin^2(\theta)$ come nel caso classico.
 
 \subsubsection{Riassunto}
 Riassumiamo i concetti base del decadimento $\gamma$ che abbiamo visto nei paragrafi precedenti.
@@ -68,7 +68,7 @@ Riassumiamo i concetti base del decadimento $\gamma$ che abbiamo visto nei parag
     \item Se $\pi_i = \pi_f$: allora per $M$ ho $J$ dispari e per $E$ ho $J$ pari.
     \item Se $\pi_i \not = \pi_f$: allora per $E$ ho $J$ dispari e per $M$ ho $J$ pari.
 \end{itemize}
-Notiamo che $J\geq 0$ anche se $J_i=J_f$, infatti se così non fosse (ovvero $J=0$) allora avremmo un fotone emesso lungo $\hat{k}$, ma questo non è possibile perché può avere solo polarità $\pm 1$. Dunque le transizioni $0\to 0$ non sono ammesse\footnote{Queste si vedono, ma sono dovute a un processo differente, ovvero avvengono per \textbf{conversione interna}: il nucleo interagisce con un elettrone dell'atomo e quest'ultimo viene emesso.}.
+Notiamo che $J > 0$ anche se $J_i=J_f$, infatti se così non fosse (ovvero $J=0$) allora avremmo un fotone emesso lungo $\hat{k}$, ma questo non è possibile perché può avere solo polarizzazione $\pm 1$. Dunque le transizioni $0\to 0$ non sono ammesse\footnote{Queste si vedono, ma sono dovute a un processo differente, ovvero avvengono per \textbf{conversione interna}: il nucleo interagisce con un elettrone dell'atomo e quest'ultimo viene emesso.}.
 
 \subsubsection{Alcuni esempi}
 \paragraph{Primo esempio}
