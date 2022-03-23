@@ -24,7 +24,7 @@ A questo punto si utilizza la proprietà della Bessel:
 	\grad\land\mathrm{j}\vec{\mathcal{Y}}_{JJ1}^\lambda &= ik \Biggl [ \overbrace{\ppc{\frac{d}{d(kx)} - \frac{J}{kx}} \mathrm{j}_{J}(kx) }^{\mathrm{j}_{J+1}(kx)}\, \sqrt{\frac{J}{2J+1}}\, \vec{\mathcal{Y}}_{J,J+1,1}^\lambda + \\
 	&+ \underbrace{\ppc{\frac{d}{d(kx)} - \frac{J+1}{kx}} \mathrm{j}_{J}(kx) }_{\mathrm{j}_{J-1}(kx)}\, \sqrt{\frac{J+1}{2J+1}}\, \vec{\mathcal{Y}}_{J,J-1,1}^\lambda \Biggr ]
 \end{align*}
-\subsection{Proprietà armonica vettoriale}
+\subsection{Proprietà armonica vettoriale}\label{compl-passaggi-armonica}
 Deriviamo la proprietà\footnote{Ricordarsi che $\widehat{\varepsilon}_{\vec{k}\lambda}^* = (-)^\lambda \; \widehat{\varepsilon}_{\vec{k},-\lambda}$ e che $\clebs{\ell m, S S_z}{J M} = (-)^{\ell+S-J} \clebs{\ell\, -m, S\, -S_z}{J \,-M} $}:
 $$(\vec{\mathcal{Y}}_{JJ1}^\lambda)^* = (-)^{\lambda+1}\,\vec{\mathcal{Y}}^{-\lambda}_{JJ1}$$
 \begin{align*}
@@ -32,7 +32,7 @@ $$(\vec{\mathcal{Y}}_{JJ1}^\lambda)^* = (-)^{\lambda+1}\,\vec{\mathcal{Y}}^{-\la
 	&= (-)^\lambda \: \clebs{J0,1\lambda}{J\lambda} \, \mathcal{Y}_{J0} \, \widehat{\varepsilon}_{\vec{k},-\lambda} = \\
 	&= (-)^{\lambda+1} \: \underbrace{\clebs{J0,1\,-\lambda}{J\,-\lambda} \, \mathcal{Y}_{J0} \, \widehat{\varepsilon}_{\vec{k},-\lambda}}_{\vec{\mathcal{Y}}_{JJ1}^{-\lambda}}
 \end{align*}
-
+Nel caso $|\lambda|=1$ allora $(\vec{\mathcal{Y}}_{JJ1}^\lambda)^* = \vec{\mathcal{Y}}_{JJ1}^{-\lambda}$.
 
 \section{CRM: indipendeza dal parametro $B$}\label{compl-CRM-dim}
 Nel discutere il metodo della \textit{Calculable} $R$ MATRIX (sezione \secrif{sec-RM-C}) siamo arrivati all'espressione:
