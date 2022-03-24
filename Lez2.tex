@@ -1,12 +1,15 @@
 %\part*{Lezione 01/03/2021}
 \chapter{Modelli nucleari}
-Se il sistema a due nucleoni è complicato, quando $A$ diviene proibitivo è necessario ricorrere a modelli\footnote{Una trattazione che riprende quella adottata in questi appunti riguardo ai modelli nucleari si trova in Krane, K., S., \textit{\vir{Introductory Nuclear Physics}}, USA, John Wiley \& Sons, 1988.}.
-\section{Introduzione al modello \textit{a shell}}
-Nel caso della fisica atomica un modello \textit{a shell} è supportato dagli andamenti del raggio atomico e dell'energia di ionizzazione (Figura \ref{0301_rE}), i cui salti possono essere associati  appunto alla \vir{chiusura} di uno \textit{shell}. In questo modello gli elettroni si muovono in un campo esterno generato dal nucleo senza collidere.\\
+In questo capitolo introduciamo e discutiamo i modelli nucleari \textit{a shell} e \textit{a goccia}. Il capitolo copre le Lezioni del 01/03/2021 e del 03/03/2021.
+
+\paragraph{Introduzione} Se il sistema a due nucleoni è \vir{complicato}, quando $A$ diviene proibitivo è necessario ricorrere a modelli per descrivere le proprietà nucleari\footnote{Per un testo di riferimento sull'argomento vedi \complrif{compl-krane}.}. Dall'analogia con la fisica atomica, il modello \vir{più semplice} che approfondiremo per primo è appunto un modello di tipo \textit{a shell}.
+
+\section{Primi passi per il modello \textit{a shell}}
+Nel caso della fisica atomica un modello \textit{a shell} è supportato dagli andamenti del raggio atomico e dell'energia di ionizzazione (Figura \ref{0301_rE}), i cui salti possono essere associati  appunto alla \vir{chiusura} di uno \textit{shell}. In questo modello gli elettroni si muovono in un campo esterno generato dal nucleo, senza collidere tra loro.\\
 Applicare tutto ciò alla fisica nucleare non è immediato: i nucleoni, infatti, \vir{vivono} in un potenziale che non è esterno, ma generato da essi stessi e le loro dimensioni non sono trascurabili rispetto alle dimensioni del nucleo.
 \begin{figure}[!h]
     \centering
-    \includegraphics[scale=0.23]{Immagini/ratm-Eion.png}
+    \includegraphics[scale=0.2]{Immagini/ratm-Eion.png}
     \caption{Andamento in alto del raggio atomico e in basso dell'energia di ionizzazione al variare del numero atomico. I salti sono ben spiegati da un modello \textit{a shell}.}
     \label{0301_rE}
 \end{figure}
@@ -15,7 +18,7 @@ Tuttavia, vi sono alcune evidenze sperimentali a favore di tale modello. Innanzi
 $$2,8,20,28,50,82,126$$
 \begin{figure}[!h]
     \centering
-    \includegraphics[scale=0.3]{Immagini/mag-num.png}
+    \includegraphics[scale=0.2]{Immagini/mag-num.png}
     \caption{In alto l'andamento dell'energia di separazione degli isotoni $S_n$ e in basso quello dell'energia di separazione degli isotopi $S_p$. Al centro sono riportati i numeri magici.}
     \label{diffeng}
 \end{figure}
@@ -32,8 +35,8 @@ $$2,8,20,28,50,82,126$$
 \section{Modello \textit{a shell}}
 \index{modelli nucleari! a shell@\textit{a shell}}
 \subsection{Sciogliamo i nodi} 
-Innanzitutto risolviamo i problemi che ci eravamo posti nella formulazione del modello.\\
-Assumiamo che il moto del singolo nucleone sia governato dal potenziale generato da tutti gli altri, con i quali interagisce, escluso esso stesso. Per quanto riguarda gli urti, essendo i nucleoni fermioni se avvenisse una collisione (quindi un trasferimento di energia) questo comporterebbe una promozione a un livello di valenza (unico disponibile per Pauli), ma le energie richieste per far ciò sono notevolmente maggiori di quelle scambiabili attraverso l'urto. Dunque, assumeremo che gli urti non avvengono.
+Innanzitutto risolviamo i problemi che ci eravamo posti nella formulazione del modello.
+Assumiamo che il moto del singolo nucleone sia governato dal potenziale generato da tutti gli altri, con i quali interagisce, escluso esso stesso. Per quanto riguarda gli urti, essendo i nucleoni fermioni se avvenisse una collisione (quindi un trasferimento di energia) questo comporterebbe una promozione a un livello di valenza (unico disponibile per Pauli), ma le energie richieste per far ciò sono notevolmente maggiori di quelle scambiabili attraverso l'urto. Dunque, assumeremo che gli urti non avvengono.\\[-1.3cm]
 \paragraph{Calcolo della funzione d'onda} Dobbiamo ovviamente soddisfare all'equazione di \Sch, tuttavia per semplificare il calcolo possiamo prima rimaneggiare l'hamiltoniana del sistema $H=\sum_i T_i + \sum_{i<j}V_{ij}$ (dove $T_i$ è l'energia cinetica e $V_{ij}$ il potenziale di interazione), sommando e sottraendo il potenziale $U_i$ che sente la $i$-esima particella a causa degli altri $j\not =i$ nucleoni:
 \begin{displaymath}
 \begin{aligned}
