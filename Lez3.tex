@@ -1,6 +1,7 @@
 %\part*{Lezione 03/03/2021}
-\section{Difficoltà del modello \textit{a shell}}
-Torniamo sulle problematiche del modello \textit{a shell}. Prendiamo $\ce{^{130}_{50}Sn_{80}}$, è un pari-pari per cui ci aspettiamo che lo stato fondamentale sia uno $0^+$. I problemi nascono quando cerchiamo di spiegare lo stato $2^+$ a 1 MeV dal fondamentale. Non ho protoni spaiati perché 50 è un numero magico; per quanto riguarda i neutroni, ne mancano 2 per fare il numero magico 82, allora potremmo provare a promuovere un neutrone da uno degli strati inferiori. Tuttavia, poiché il salto dev'essere di 1 MeV non può certo venire da $1g_{9/2}$, per cui supponiamo inizialmente provenga da $3s_{1/2}$: $5\leq j_{3s} + j_{1h}\leq6$, non posso quindi avere $2^+$. Anche se si prova a cercare un altro stato da cui prendere il neutrone non si riesce a trovarne uno che spieghi $J^\pi=2^+$ e il salto di 1 MeV, poiché è sempre necessario \vir{rompere} una coppia di nucleoni (circa 2 MeV). Inoltre, si osserva la presenza di questo stato per ogni nucleo pari-pari con circa $150<A<200$, come in Figura \ref{graf2+} e \ref{graf2+1}.
+\section{Modello \textit{a goccia}}
+\subsection{Incompatibilità del modello \textit{a shell}}
+Torniamo sulle problematiche del modello \textit{a shell}. Prendiamo $\ce{^{130}_{50}Sn_{80}}$: è un pari-pari per cui ci aspettiamo che lo stato fondamentale sia uno $0^+$. I problemi del modello compaiono quando cerchiamo di spiegare lo stato $2^+$ a 1 MeV dal fondamentale. Non ho protoni spaiati perché 50 è un numero magico; per quanto riguarda i neutroni, ne mancano 2 per fare il numero magico 82, allora potremmo provare a promuovere un neutrone da uno dei livelli inferiori. Tuttavia, poiché il salto dev'essere di 1 MeV non può certo venire da $1g_{9/2}$, allora supponiamo inizialmente provenga da $3s_{1/2}$: $5\leq j_{3s} + j_{1h}\leq6$, non portano ad avere un $2^+$. Anche se si prova a cercare un altro stato da cui prendere il neutrone non si riesce a trovarne uno che spieghi $J^\pi=2^+$ e il salto di 1 MeV, poiché è sempre necessario \vir{rompere} una coppia di nucleoni (circa 2 MeV). Inoltre, si osserva la presenza di questo stato (a energie minori) per ogni nucleo pari-pari con circa $150<A<200$, come in Figura \ref{graf2+}.
 
 \begin{figure}[h]
     \centering
@@ -15,8 +16,8 @@ Torniamo sulle problematiche del modello \textit{a shell}. Prendiamo $\ce{^{130}
     \label{graf2+1}
 \end{figure}
 
-\subsection{Modello \textit{a goccia} e fononi}
-Per spiegare questo comportamento per gli stati eccitati, in particolar modo i momenti di dipolo magnetico e di quadrupolo elettrico, si introduce un nuovo modello detto \textbf{\textit{Liquid Drop Model}}\index{modelli nucleari! a goccia@\textit{a goccia}}: si spiegano gli stati del nucleo come \vir{vibrazioni} della configurazione sferica di equilibrio ed è quindi necessario introdurre stati collettivi (al contrario di quanto prevedeva il modello \textit{a shell}). Pensiamo allora a una \vir{goccia} sferica che si deforma e definiamo $R(t)$ il raggio in funzione del tempo come:
+\subsection{Stati vibrazionali}
+Per spiegare questo comportamento per gli stati eccitati, in particolar modo i momenti di dipolo magnetico e di quadrupolo elettrico (in Figura \ref{graf2+1}), si introduce un nuovo modello detto \textbf{\textit{Liquid Drop Model}}\index{modelli nucleari! a goccia@\textit{a goccia}}: si spiegano gli stati del nucleo come \vir{vibrazioni} della configurazione sferica di equilibrio ed è quindi necessario introdurre stati collettivi (al contrario di quanto prevedeva il modello \textit{a shell}). Pensiamo allora a una \vir{goccia} sferica che si deforma e definiamo $R(t)$ il raggio in funzione del tempo come:
 $$R(t) = R_{av} + \sum_{\lambda\geq 1,\; \mu=-\lambda \dots \lambda}\alpha_{\lambda \mu}(t) Y_{\lambda\mu}(\theta,\varphi)$$
 con simmetria per riflessione $\alpha_{\lambda\mu} = \alpha_{\lambda\,-\mu}$ e dove abbiamo contato $\lambda=0$ nel raggio medio $R_{av}=R_0\,A^{1/3}$. Per $\lambda=1$ (dipolo) abbiamo una semplice traslazione del centro della sfera (vettore spostamento del $R_{CM}$), mentre per $\lambda = 2$ si ha $Y_{2\mu}$ che è legato a un quadrupolo e quindi a una deformazione della struttura.
 
@@ -55,7 +56,8 @@ Il $2^+$ è allora il primo stato eccitato vibrazionale del nucleo, anche se l'e
 \end{displaymath}
 \noindent Mi aspetto allora un tripletto $0^+,2^+,4^+$ degenere con energia circa il doppio di quella del $2^+$ di un solo fonone. Ci sono evidenze di questo, per esempio, nel $\ce{^{120}_{52}Te_{68}}$, dove però compaiono\footnote{Non è stato inserito il disegno dei livelli.}, oltre al $2^+$ e al tripletto, il quintetto $2^+,0^+,3^+,4^+,6^+$ (dovuto a 3 fononi) e il $3^-$ (ovvero un ottupolo $\ell=3$).
 
-\paragraph{Bande rotazionali} Con questo modello abbiamo spiegato gli stati $2^+$ e $4^+$, tuttavia non abbiamo ancora chiarito i problemi per i nuclei con $150<A<200$, in particolar modo per quanto riguarda il loro momento di quadrupolo, molto maggiore rispetto a quello dei nuclei con $A<150$ (come in Figura \ref{Q}). \\
+\subsection{Bande rotazionali} 
+Con questo modello abbiamo spiegato gli stati $2^+$ e $4^+$, tuttavia non abbiamo ancora chiarito i problemi per i nuclei con $150<A<200$, in particolar modo per quanto riguarda il loro momento di quadrupolo, molto maggiore rispetto a quello dei nuclei con $A<150$ (come in Figura \ref{Q}). \\
 Ci aspettiamo quindi nuclei fortemente deformati rispetto alla simmetria sferica dello $0^+$, per cui li descriviamo come ellissodi:
 $$R(\theta,\phi) = R_{av}(1+\beta Y_{20}(\theta,\phi))$$
 $$\beta = \frac{4}{3}\sqrt{\frac{\pi}{5}} \frac{\Delta R}{R_{av}}$$
@@ -108,7 +110,7 @@ L'ultimo risultato è interessante dal momento che è il valore esatto per i rap
 
 
 \chapter{Decadimenti}\label{sec-decadimenti}
-In questo capitolo descriveremo in modo rigoroso i decadimenti $\beta$ e $\gamma$. Il capitolo copre le lezioni 03/03/2021, 04/03/2021, 08/03/2021 e 10/03/2021
+In questo capitolo descriveremo in modo rigoroso i decadimenti $\beta$ e $\gamma$\footnote{Per un testo di riferimento sull'argomento vedi \complrif{compl-krane}.}. Il capitolo copre le lezioni 03/03/2021, 04/03/2021, 08/03/2021 e 10/03/2021
 \section{Decadimento $\beta$}
 Esistono tre tipologie di \textbf{decadimento} $\beta$:
 \begin{itemize}
