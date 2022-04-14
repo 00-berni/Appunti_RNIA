@@ -9,6 +9,12 @@ Una trattazione che riprende quella adottata in questi appunti riguardo ai model
 \subsection{Decadimento $\varepsilon$}\label{compl-epsilon}
 Nel calcolo del $Q$-value in \secrif{sec-qvalue} per la cattura $\varepsilon$ compare a sottrarre l'energia di legame del'elettrone catturato nell'$n$-esimo shell $B_n$, dove $n$ raccoglie tutti i numeri quantici che identificano tale particella. La ragione della presenza di questo termine è ben spiegata in (Krane, 1988), per cui ne riportiamo un piccolo riassunto: subito dopo la cattura il nucleo prodotto si trova in uno stato eccitato, per cui se l'elettrone occupava lo shell (interno) $k$ (identificato da $n=k,L,\dots$) il \vir{vuoto} da esso lasciato verrà subito \vir{riempito} da un elettrone di shell superiore; nel diseccitarsi l'elettrone emette un fotone di energia pari all'energia di legame $B_n$, che viene quindi persa.
 
+\section{Regola d'oro di Fermi}\label{compl-orofermi}
+Nei calcoli del rate molto spesso dall'espressione $\lambda$ si passa a quella differenziata $d\lambda$. Si tratta di una questione puramente formale e si rimanda alla lettura del paragrafo \textbf{Commenti sulla regola di Fermi} della sezione 20.2 \textit{Transizioni nel continuo e rate di un processo} delle dispense del professor G. Paffuti, \textit{Note di Meccanica Quantistica, anno accademico: 2017-2018}.\\
+Tuttavia, per avere un'idea\footnote{Questa è una spiegazione sicuramente non rigorosa e particolarmente lacunosa, si consiglia la lettura del testo.} della giustificazione, si consideri l'espressione in \secrif{sec-teofermi}:
+$$\lambda = \frac{2\pi}{\hbar}g^2 \Bigl |\int \phi_f^* O_X \phi_i d\Omega\Bigr |^2 \frac{p^2 dp 4\pi}{h^3}\frac{q^2dq4\pi}{h^3}\frac{1}{dE_f}$$
+dove abbiamo fissato l'impulso $p$ dell'elettrone. Sarebbe quindi più corretto indicare $\lambda \to \lambda_p$ poiché è definito per quel particolare valore dell'energia dell'elettrone. Il rate totale sarà invece dato dalla somma su tutti gli impulsi possibili dell'elettrone finale; dal momento che l'impulso è una variabile continua si ha $\lambda_p \to d\lambda$. In altre parole, nella scrittura del rate si sottintende l'integrazione su $p$ per poi esplicitarla al momento opportuno.
+ 
 \section{Sul numero di neutrini}\label{compl-neutrini}
 Come spiegato in \secrif{sec-nu-mass}, quando $T_e \to Q$ il neutrino non è più relativistico per cui $T_\nu\sim q^2/2m_\nu$ e $dq/dE_\nu = m_\nu/q$. Abbiamo allora che:
 $$N(p)\propto p^2 \: \sqrt{Q-\sqrt{p^2+m_e^2} + m_e}$$ 
