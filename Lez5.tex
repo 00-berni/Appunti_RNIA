@@ -2,10 +2,10 @@
 \section{Decadimento $\gamma$}
 Questo tipo di decadimento è simile a quello che accade sugli stati atomici; spesso, infatti, il nucleo figlio in un certo processo (per esempio nei decadimenti $\beta$, appena visti) si trova in uno stato eccitato, che decade nel fondamentale liberando un fotone (da cui il nome del decadimento):
 $$\nuc{X}{A}{Z}{N}^* \to \nuc{X}{A}{Z}{N} + \gamma $$
-L'ordine di grandezza delle energie in gioco è $0.1 \div 10$ MeV. Spesso questo tipo di decadimento viene usato per determinare il $J^\pi$ degli stati eccitati, dal momento che questo è legato a quello del fondamentale.\\
+L'ordine di grandezza delle energie in gioco è $0.1 \div 10$ MeV. Questo tipo di decadimento viene solitamente usato per determinare il $J^\pi$ degli stati eccitati, essendo legato a quello del fondamentale.\\
 Anche se si ha la produzione di un fotone, alcuni processi in fisica sono dei decadimenti $\gamma$ \vir{camuffati}, ovvero non sono dei decadimenti ma processi di scattering, come per $n+p\to d +\gamma$
 
-\paragraph{Energia dei livelli} Analizziamo a questo punto il processo di decadimento $\gamma$ dal punto di visto dell'equilibrio energetico.\\
+\paragraph{Energia dei livelli} Analizziamo a questo punto il processo di decadimento $\gamma$ dal punto di vista dell'equilibrio energetico.\\
 Nel sistema del centro di massa:
 $$\vec{P}_R + \vec{p}_\gamma = \vec{0}$$
 dove abbiamo indicato con $\vec{P}_R$ l'impulso del nucleo dovuto al rinculo, per cui $T_R = P_R^2/2M$; poiché i fotoni hanno energia\footnote{Come al solito $c=1$} dell'ordine di 10 MeV (quindi $E_\gamma=p_\gamma = P_R$) siamo in regime non relativistico per il nucleo X.
@@ -21,24 +21,24 @@ $\Delta E \equiv E_i-E_f$ e abbiamo scartato la soluzione negativa perché priva
 \begin{displaymath}
 \begin{aligned}
 E_\gamma &\simeq M\Bigl [ -1 + 1+ \frac{\Delta E}{M} -\frac{1}{2}(\frac{\Delta E}{M})^2 + \dots \Bigr] \\
-E_\gamma &\simeq \Delta E - \frac{\Delta E^2}{2M} \sim \Delta E
+E_\gamma &\simeq \Delta E - \frac{\Delta E^2}{2M} \sim \Delta E \simeq Q
 \end{aligned}
 \end{displaymath}
-Spesso anche il secondo ordine è trascurabile, per cui l'energia del fotone ci fornisce informazione sulla distanza tra i livelli di partenza e di arrivo.
+Spesso anche il secondo ordine è trascurabile, per cui l'energia del fotone ci fornisce informazione sulla separazione tra i livelli di partenza e di arrivo.
 
 \subsection{Teoria classica} A scopo illustrativo, studiamo dapprima il decadimento secondo una trattazione classica\footnote{In questa trattazione riprendiamo concetti classici di elettromagnetismo.}.\\
-Se supponiamo di avere una distribuzione di cariche e correnti statiche, avremo allora anche un campo elettrico e un campo magnetico statici che possiamo riscrivere in termini di momenti di multipolo. Se tali cariche e correnti non sono statiche, sarà sempre possibile lo sviluppo, ma avremo campi di radiazione. A titolo di esempio consideriamo il dipolo\footnote{Le espressioni di dipolo elettrico e magnetico sono quelle per le configurazioni più semplici (cariche $+q$ e $-q$ a una certa distanza $z(t)$ e spira di area $A$ percorsa da una corrente $i(t)$).}:
+Se supponiamo di avere una distribuzione di cariche e correnti statiche, avremo allora anche un campo elettrico e un campo magnetico statici che possiamo riscrivere in termini di momenti di multipolo. Se tali cariche e correnti non sono statiche, sarà sempre possibile lo sviluppo, ma avremo campi di radiazione. A titolo di esempio consideriamo il dipolo\footnote{Le espressioni di dipolo elettrico e magnetico sono quelle per le configurazioni più semplici (cariche $+q$ e $-q$ a una certa distanza $z(t)$ e spira di area $a$ percorsa da una corrente $i(t)$).}:
 \begin{displaymath}
 \begin{aligned}
 \text{\textbf{Dipolo} }&\text{\textbf{Elettrico}}\index{dipolo!elettrico} & \text{\textbf{Dipolo} }&\text{\textbf{Magnetico}}\index{dipolo!magnetico} \\
-d(t) &= qz \cos{\omega t} & \mu(t)&= i A \cos{\omega t} \\
+d(t) &= qz \cos{\omega t} & \mu(t)&= i a \cos{\omega t} \\
 \vec{r}&\to-\vec{r} & \vec{r}&\to-\vec{r} \\
  \vec{E}\to&\vec{E};\;\; \vec{B}\to-\vec{B}\quad & \vec{E}\to-&\vec{E}; \;\; \vec{B}\to\vec{B} \\
-\vec{B} &= k^2 (\vec{n}\times \vec{d}) \frac{e^{ikr}}{r} & \vec{B}&= ik\; \vec{n}\times \vec{A} \propto \vec{n} \times (\vec{n}\times \vec{\mu}) \\
+\vec{B} &= k^2 (\vec{n}\times \vec{d}) \frac{e^{ikr}}{r} & \vec{B}&= ik\; \vec{n}\times \vec{a} \propto \vec{n} \times (\vec{n}\times \vec{\mu}) \\
 \vec{E} &= \vec{B}\times \vec{n} & \vec{E} &= \vec{B}\times \vec{n} 
 \end{aligned}
 \end{displaymath}
-Poiché l'interazione tra cariche e campo è proporzionale al prodotto $\vec{v}\cdot\vec{A}$ e questo ha la stessa parità di $\vec{B}$, è il campo magnetico a determinare la parità del dipolo; si ha quindi: $\pi=-1$ per quello elettrico e $\pi=+1$ per quello magnetico.\\
+Poiché l'interazione tra cariche e campo è proporzionale al prodotto $\vec{v}\cdot\vec{A}$ e questo ha la stessa parità di $\vec{B}$, è il campo magnetico a determinare la parità del dipolo\footnote{$\vec{B} = \Rot{A}$ si ha allora che se la parità di $\vec{B}$ è $\pi$, la parità di $\vec{A}$ dev'essere $-\pi$ dal momento che $\grad \to -\grad$. Infine $\vec{v}\to -\vec{v}$ dunque $\pi(\vec{v}\cdot\vec{A}) = \pi(\vec{B})$.}; si ha quindi: $\pi=-1$ per quello elettrico e $\pi=+1$ per quello magnetico.\\
 Riassumiamo adesso alcuni concetti di Fisica III\footnote{Dal momento che sono solo rimandi, non ci soffermiamo molto sulle spiegazioni.}:
 \begin{enumerate}
     \item La potenza irradiata in $dA$ a $\theta$ dall'asse $z$ è proporzionale al $\sin^2{\theta}$.
