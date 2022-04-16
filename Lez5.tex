@@ -126,7 +126,7 @@ Il termine $e^2A^2/2m$ è quello dovuto alla transizione con 2 fotoni ed è molt
 dove ci siamo messi nella \textbf{gauge di Coulomb}\index{gauge di Coulomb} ($\vec{\nabla}\cdot\vec{A}=0$).\index{hamiltoniana di interazione}:
 $$H_I \simeq - \frac{e}{2m}\,(-2iA_i\nabla_i) = -\frac{e}{m}\, \vec{A}\cdot\vec{p}\:\Rightarrow\: -e \int d^3x \; \vec{A}(\vec{x})\cdot \vec{J}(\vec{x})$$
 dove abbiamo riespresso il tutto in termini di densità di hamiltoniana, con $\vec{J}(\vec{x})$ densità di corrente (nucleare\index{densità di corrente nucleare}\footnote{In questa espressione introduciamo l'indice $N$ per ricordare che si tratta della corrente nucleare.}), che per ora\footnote{Sono presenti infatti altri contributi che ricaveremo nel seguito.} introduciamo come:
-$$\vec{J}_N (\vec{x}) = \sum_{i=1}^Z \frac{1}{2m}\,\Biggl \{ \delta^3(\vec{x}-\vec{r}_i),\, \vec{p}_i \Biggr \}$$
+$$\vec{J}_N (\vec{x}) = \sum_{i=1}^Z \frac{1}{2m}\,\Biggl \{ \delta^3(\vec{x}-\vec{x}_i),\, \vec{p}_i \Biggr \}$$
 dove abbiamo indicato con $\bigl\{\:\bigr\}$ l'\textbf{anticommutatore}\index{anticommutatore}\footnote{L'anticommutatore di 2 operatori $A$ e $B$ è definito come:
 $$\Bigl\{A,B\Bigr\} = AB+BA$$}. Scriviamo l'espressione esplicita anche per il campo esterno:
 $$\vec{A}(\vec{x}) = \sum_k \frac{1}{\sqrt{2\omega_k\Omega}}\, \Bigl [ \underbrace{\widehat{\varepsilon}_{\vec{k}\lambda} a_{\vec{k}\lambda}\, e^{i\vec{k}\cdot\vec{x}}}_\text{Termine di assorbimento} + \underbrace{\widehat{\varepsilon}_{\vec{k}\lambda}^* a_{\vec{k}\lambda}^+\, e^{-i\vec{k}\cdot\vec{x}}}_\text{Termine di emissione}  \Bigr ]$$
@@ -183,7 +183,7 @@ E_{JM}(k) &= \frac{1}{k}\int d^3x\: [\vec{\nabla}\land \mathrm{j}_J (kx)\, \vec{
 M_{JM}(k) &= \int d^3x\: [\mathrm{j}_J (kx)\, \vec{\mathcal{Y}}^M_{JJ1}]\cdot \vec{J}(\vec{x}) \\
 \end{aligned}
 \end{displaymath}
-dove abbiamo introdotto i termini di multipolo elettrico $E_{JM}$\index{termini di multipolo!elettrico} e magnetico $M_{JM}$\index{termini di multipolo!magnetico}e abbiamo usato la proprietà $(\vec{\mathcal{Y}}^{\lambda}_{JJ1})^* = (-)^{\lambda+1}\,\vec{\mathcal{Y}}^{-\lambda}_{JJ1}$\footnote{Si ricordi che stavamo calcolando $\widehat{\varepsilon}_{\vec{k}\lambda}^*\, e^{-i\vec{k}\cdot\vec{x}})$. Per la proprietà dell'armonica vettoriale vedi \complrif{compl-passaggi-armonica}.}. La parità è data da\footnote{Abbiamo un $(-)^J$ dall'armonica sferica, un $(-)$ dalla corrente $\vec{J}$ e un $(-)$ dal $\grad$ (la Bessel dipende dal modulo di $r$ quindi non influisce).}:
+dove abbiamo introdotto i termini di multipolo elettrico $E_{JM}$\index{termini di multipolo!elettrico} e magnetico $M_{JM}$\index{termini di multipolo!magnetico}e abbiamo usato la proprietà $(\vec{\mathcal{Y}}^{\lambda}_{JJ1})^* = (-)^{\lambda+1}\,\vec{\mathcal{Y}}^{-\lambda}_{JJ1}$\footnote{Si ricordi che stavamo calcolando $\widehat{\varepsilon}_{\vec{k}\lambda}^*\, e^{-i\vec{k}\cdot\vec{x}} = (\widehat{\varepsilon}_{\vec{k}\lambda}\, e^{i\vec{k}\cdot\vec{x}})^*$. Per la proprietà dell'armonica vettoriale vedi \complrif{compl-passaggi-armonica}.}. La parità è data da\footnote{Abbiamo un $(-)^J$ dall'armonica sferica, un $(-)$ dalla corrente $\vec{J}$ e un $(-)$ dal $\grad$ (la Bessel dipende dal modulo di $r$ quindi non influisce).}:
 \begin{displaymath}
 \begin{array}{l}
     \pi(EJ) = (-)^J \\
@@ -197,7 +197,7 @@ $$\vec{J}_N(\vec{x}) = \sum_{i=1}^Z \vec{J}_C(\vec{x}_i) + \sum_{i=1}^A \vec{J}_
 Vediamo allora da dove deriva questa corrente. Scriviamo l'operatore di momento magnetico\index{operatore di momento magnetico} del singolo nucleone:
 \begin{displaymath}
 \begin{aligned}
-\mu_i (\vec{x}) &= \Bigl ( \mu_p \frac{1+\tau_z(i)}{2} + \mu_n \frac{1-\tau_z(i)}{2} \Bigr )\, \vec{\sigma}_i \mu_N \, \delta^3(\vec{x}-\vec{r}_i) \\
+\mu_i (\vec{x}) &= \Bigl ( \mu_p \frac{1+\tau_z(i)}{2} + \mu_n \frac{1-\tau_z(i)}{2} \Bigr )\mu_N\, \vec{\sigma}_i  \, \delta^3(\vec{x}-\vec{x}_i) \\
 \mu_N &= \frac{e\hbar}{2m_pc} \\
 \mu_p &= \frac{g_p}{2} = 2.79 \\
 \mu_n &= \frac{g_n}{2} = -1.91
