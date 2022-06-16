@@ -47,6 +47,16 @@ $$(\vec{\mathcal{Y}}_{JJ1}^\lambda)^* = (-)^{\lambda+1}\,\vec{\mathcal{Y}}^{-\la
 \end{align*}
 Nel caso $|\lambda|=1$ allora $(\vec{\mathcal{Y}}_{JJ1}^\lambda)^* = \vec{\mathcal{Y}}_{JJ1}^{-\lambda}$.
 
+\section{Effetto tunnel}\label{compl-tunnel}
+Dimostriamo come ottenere l'espressione della probabilità di attraversamento per effetto tunnel nella sezione \secrif{sec-tunnel}.
+\begin{align*}
+	P &\sim \exp\PPg{-\frac{2}{\hbar}\int_0^a \sqrt{2m (V-E)}} = \\
+	&= -\frac{2}{\hbar}\int_0^1 \sqrt{2mE}\frac{Z_1Z_2e^2}{E}\sqrt{\frac{1}{\rho}-1} \, d\rho = \\
+	&= -2\pi \,\sqrt{\frac{m}{2E}} \, \frac{Z_1Z_2e^2}{\hbar}	
+\end{align*} 
+dove $\rho \equiv rE/Z_1Z_2e^2$ e per risolvere abbiamo usato $\rho = \sin^2(\alpha)$.
+
+
 \section{CRM: indipendeza dal parametro $B$}\label{compl-CRM-dim}
 Nel discutere il metodo della \textit{Calculable} $R$ MATRIX (sezione \secrif{sec-RM-C}) siamo arrivati all'espressione:
 $$U_\ell = e^{2i\Phi_\ell} \, \frac{1+B\,R_\ell (E,B)-L_\ell^* \, R_\ell (E,B)}{1+B\,R_\ell(E,B)-L_\ell  \, R_\ell (E,B)}$$

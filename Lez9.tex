@@ -3,48 +3,55 @@
 Dopo il decadimento del neutrone, la prima reazione che avviene (secondo la Figura \ref{0315_net}) è:
 $$p + n \to d + \gamma$$
 Tra le reazioni del network questa è la più \vir{semplice}, ovvero $A=2$. 
-\subsection{Cinematica} Studiamo allora la sezione d'urto di questa reazione:
-$$d\sigma \overset{\text{Reg. d'Oro}}{=} \frac{\text{Probabilità di transizione}}{\text{Flusso incidente}} = \frac{\lambda}{v_{rel}}$$
-Concentriamoci sulla probabilità di transizione $W_{i\to f}$, mettendoci nel sistema del centro di massa\footnote{Usiamo la solita convenzione $c=\hbar = 1$, la notazione $\vec{q}$ per l'impulso del fotone e $\vec{P}_d$ per quello del deuterio e assumiamo volumi unitari.}.
+
+\subsection{Cinematica} 
+Studiamo allora la sezione d'urto di questa reazione:
+$$d\sigma \overset{\text{Reg. d'Oro}}{=} \frac{\text{Rate di transizione}}{\text{Flusso incidente}} = \frac{\lambda}{v_{rel}}$$
+Concentriamoci sulla probabilità di transizione $W_{i\to f}$, mettendoci nel sistema del c  entro di massa\footnote{Usiamo la solita convenzione $c=\hbar = 1$, la notazione $\vec{q}$ per l'impulso del fotone e $\vec{P}_d$ per quello del deuterio e assumiamo volumi unitari.}.
 $$W_{i\to f} = |V_{i\to f}|^2\:dn \qquad \text{con   } dn = \frac{d^3q}{(2\pi)^3}\frac{d^3P_d}{(2\pi)^3} (2\pi)^3 \delta^3(\vec{P}_d+\vec{q}) \Rightarrow \frac{d^3q}{(2\pi)^3}$$
-dove $V_{i\to f}$ è l'elemento di matrice di transizione, $T$ è il tempo di interazione e $dn$ è l'elemento infinitesimo di spazio delle fasi (in cui abbiamo risolto per la $\delta$). Dalla teoria perturbativa al primo ordine:
-$$V_{f\to i} = -i \int_0^T \oss{f}{V(t)}{i}\, e^{i(E-f-E_i)t} dt \qquad \text{dove } V(t) = -e \vec{A}(\vec{x}) \cdot \vec{J}(\vec{x}) $$
+dove $V_{i\to f}$ è l'elemento di matrice di transizione, $T$ è il tempo di interazione e $dn$ è l'elemento infinitesimo di spazio delle fasi (in cui abbiamo risolto per la $\delta$). Dalla teoria perturbativa al primo ordine\footnote{Dove $T$ è un tempo molto maggiore rispetto a quelli di evoluzione del sistema.}:
+$$V_{i\to f} = -i \int_0^T \oss{f}{V(t)}{i}\, e^{i(E_f-E_i)t} dt \qquad \text{dove } V(t) = -e \vec{A}(\vec{x}) \cdot \vec{J}(\vec{x}) $$
 \begin{displaymath}
 \begin{aligned}
-\oss{f}{V(t)}{i} &= - \int d^3x \; \oss{\gamma}{\vec{A}(\vec{x})}{0} \cdot \oss{d(\vec{P}_d,\sigma_d)}{\vec{J}(\vec{x})}{pn} = \\
+\oss{f}{V(t)}{i} &= - e\int d^3x \; \oss{\gamma}{\vec{A}(\vec{x})}{0} \cdot \oss{d(\vec{P}_d,\sigma_d)}{\vec{J}(\vec{x})}{pn} = \\
 &= -e \int \frac{\widehat{\varepsilon}^*(\vec{q},\lambda)}{\sqrt{2q}} \cdot \underbrace{e^{-i\vec{q}\cdot\vec{x}}\oss{d}{\vec{J}(\vec{x})}{pn}\: d^3x}_{\text{Definiamo questo } \vec{J}^+(\vec{q})} = \\
 &= -\frac{e}{\sqrt{2q}} \, \widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})
 \end{aligned}
 \end{displaymath}
-dove abbiamo assunto $\omega = E = q$. Per cui sostituendo nell'espressione dell'elemento matriciale:
-$$V_{i\to f} = \frac{ie}{\sqrt{2q}}\,\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})\, \int_0^T dt \, e^{i(E_f-E_i)t} $$
-$$\frac{|V_{f\to i}|^2}{T} = \frac{e^2}{2q} |\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})|^2\, 2\pi \delta(E_i - E_f)$$
-La $\delta$ rappresenta la conservazione dell'energia.\\
+dove\footnote{Si è fatto uso di un abuso di notazione esplicitando l'integrale racchiuso dal braket. Spesso faremo questo abuso per esplicitare su quale variabile integriamo.} abbiamo assunto $\omega = E = q$. Per cui sostituendo:
+\begin{align*}
+    V_{i\to f} &= \frac{ie}{\sqrt{2q}}\,\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})\, \int_0^T dt \, e^{i(E_f-E_i)t} = \\
+    &= \frac{ie}{\sqrt{2q}}\,\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})\,\frac{2\sin{(T (E_f-E_i)/2)}}{(E_f-E_i)} \, e^{i(E_f-E_i)T/2}
+\end{align*}
+$$\frac{|V_{f\to i}|^2}{T} = \frac{e^2}{2q} |\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})|^2\, 2\pi \delta(E_f - E_i)$$
+La $\delta$ rappresenta la conservazione dell'energia\footnote{La funzione $\sin^2(xT)/x^2 \to \pi T \delta$ per $T\to\infty$; dunque $T\gg \hbar/(E_f-E_i)$ come avevamo assunto.}.\\
 Possiamo allora scrivere la sezione d'urto differenziale:
 \begin{displaymath}
 \begin{aligned}
-d\sigma &= \frac{e^2}{2} |\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})|^2\, q dq \frac{d\Omega_{\hat{q}}}{(2\pi)^2}\, \delta(E_i - E_f) \frac{1}{v_{rel}} \\
+d\sigma &= \frac{e^2}{2} |\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})|^2\, q dq \frac{d\Omega_{\hat{q}}}{(2\pi)^2}\, \delta(E_f - E_i) \frac{1}{v_{rel}} \\
 \frac{d\sigma}{d\Omega_{\hat{q}}} &= \frac{e^2}{8\pi^2} |\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})|^2\, q dq \, \delta(E_p + E_n - m_d - \frac{q^2}{2m_d}-q) \frac{1}{v_{rel}}
 \end{aligned}
 \end{displaymath}
-Poiché vogliamo che la sezione d'urto sia mediata su tutte le polarizzazioni sommiamo su tutte quelle finali $\sum_{\lambda=\pm 1 ,\; \sigma_d = \pm 1, 0}$ e mediamo su quelle iniziali $\frac{1}{4}\sum_{\sigma_n,\sigma_p = \pm \frac{1}{2}}$, per cui:
+Poiché vogliamo che la sezione d'urto sia mediata su tutte le polarizzazioni sommiamo su tutte quelle finali $\sum_{\lambda=\pm 1 ,\; \sigma_d = \pm 1, 0}$ e mediamo su quelle iniziali $\frac{1}{4}\sum_{s_n,s_p = \pm \frac{1}{2}}$, per cui:
 $$\frac{d\sigma}{d\Omega_{\hat{q}}} = \frac{e^2}{4\pi}\frac{1}{8\pi v_{rel}}\sum_{\lambda=\pm 1 ,\; s_d = \pm 1, 0} \sum_{s_n,s_p = \pm \frac{1}{2}} \int q dq |\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})|^2\,\frac{\delta (q-\bar{q})}{1+\frac{\bar{q}}{m_d}}$$
 $$\frac{d\sigma}{d\Omega_{\hat{q}}}=\frac{e^2}{4\pi}\frac{1}{8\pi v_{rel}}\sum_{\lambda=\pm 1 ,\; s_d = \pm 1, 0} \sum_{s_n,s_p = \pm \frac{1}{2}}  |\widehat{\varepsilon}^*(\vec{\bar{q}},\lambda) \cdot \vec{J}^+(\vec{\bar{q}})|^2\,\frac{\bar{q}}{1+\frac{\bar{q}}{m_d}}$$
 dove abbiamo usato la proprietà della $\delta$\footnote{$$\delta (f(q)) = \sum_{i=0}^N\frac{\delta(q-\bar{q}_i)}{|f'(\bar{q}_i)|}$$
 con $\bar{q}_i$ zeri della funzione $f$.}, per cui $\bar{q} = m_d \ppc{-1+ \sqrt{1+2\Delta E/m_d}}$ con $\Delta E = E_p + E_n - m_d \overset{\text{CM}}{=} m_n+m_p-m_d + T_{rel}$. Notiamo che questa espressione è simile a quella del decadimento $\gamma$, infatti questo formalismo\footnote{Ovvero potremo sempre scrivere ${d\sigma}/{d\Omega_{\hat{q}}} \propto 1/(8\pi v_{rel})\; \sum \sum \, |\dots|^2\, {\bar{q}}/{(1+\bar{q}/m_c)}$.} vale per ogni decadimento del tipo $a+b\to c +\gamma$.\\
 Notiamo che $\sigma \propto 1/v_{rel} \sim 1/\sqrt{T_{rel}}$ ed è quindi l'energia cinetica relativa che fa da discrimine per far avvenire la reazione; questo andamento si ritrova in generale a basse energie per $n+a$.
 
-\subsection{Funzioni d'onda} Finora abbiamo trattato solo la cinematica della reazione, per continuare è necessario sviluppare le funzioni d'onda\footnote{Da qui in poi, ovviamente, i risultati trovati non varranno per ogni $a+b\to c +\gamma$.}.
+\subsection{Funzioni d'onda} 
+Finora abbiamo trattato solo la cinematica della reazione, per continuare è necessario sviluppare le funzioni d'onda\footnote{Da qui in poi, ovviamente, i risultati trovati non varranno per ogni $a+b\to c +\gamma$.}.
 \begin{displaymath}
 \begin{aligned}
 &\Bigl|\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})\Bigr|^2 = \\
-=& \Bigl|\oss{d}{\int d^3x \; e^{-i\vec{q}\cdot\vec{x}}\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}(\vec{x})}{pn}\Bigr|^2 =\\
-=& \Bigl | \oss{\psi_{1s_d}}{J_\lambda(\vec{q})}{\psi_{s_p s_n}(\vec{p})} \Bigr |^2
+=& \Bigl|\oss{d}{\int d^3x \; e^{-i\vec{q}\cdot\vec{x}}\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}(\vec{x})}{pn}\Bigr|^2 \equiv\\
+\equiv& \Bigl | \widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \oss{\psi_{1s_d}}{\vec{J}_\lambda(\vec{q})}{\psi_{s_p s_n}(\vec{p})} \Bigr |^2 \\
+\vec{J}_\lambda(\vec{q}) \equiv&\int d^3x \; e^{-i\vec{q}\cdot\vec{x}}\vec{J}(\vec{x})
 \end{aligned}
 \end{displaymath}
 per $\psi_{s_p s_n}(\vec{p})$ ci aspetteremo dei multipoli come avevamo visto nel decadimento $\gamma$. Per $\widehat{\varepsilon}$ consideriamo polarizzazione circolare:
 $$\widehat{\varepsilon}(\lambda) = \mp \frac{\widehat{e}_x \pm i\,\widehat{e}_y}{\sqrt{2}}\qquad \text{con } \vec{q} // \hat{z} $$
-Dal momento che $\vec{J}$ per gli stati iniziali non è ben definito non possiamo usare immediatamente l'espansione in multipoli, per cui prima sviluppiamo le funzioni d'onda in onde parziali\index{sviluppo in onde parziali}\footnote{Per non confondere $J$ corrente con $J$ momento denoteremo quest'ultimo con la lettera $\Lambda$.}:
+Dato che il momento $\vec{J}$ per gli stati iniziali non è ben definito non possiamo usare immediatamente l'espansione in multipoli, per cui prima sviluppiamo le funzioni d'onda in onde parziali\index{sviluppo in onde parziali}\footnote{Per non confondere $J$ corrente con $J$ momento denoteremo quest'ultimo con la lettera $\Lambda$.}:
 \begin{displaymath}
 \begin{aligned}
 \psi_{s_ps_n}(\vec{p}) &= 4\pi \sum_{S,S_z} \clebs{\frac{1}{2}s_n,\,\frac{1}{2}s_p}{S\,S_z}\, \sum_{L,Lz,\Lambda,\Lambda_z} \clebs{SS_z,\,LL_z}{\Lambda\,\Lambda_z} i^L \mathcal{Y}^*_{LL_z}(\widehat{p}) \, \psi_{np}^{(LS\Lambda\Lambda_z)} \\
@@ -55,41 +62,41 @@ Dal momento che $\vec{J}$ per gli stati iniziali non è ben definito non possiam
 $\psi_{np}^{(LS\Lambda\Lambda_z)}$ ha $\Lambda$ ben definito, quindi è un'ottima candidata per l'espansione in multipoli. Poiché le energie sono basse\footnote{Stiamo considerando una cattura termica\index{cattura termica} con neutroni, appunto, termici.}, possiamo allora considerare solo $\ce{^1S_0}$ ($S=L=\Lambda = 0$), ovvero le onde sferiche\index{armoniche sferiche}:
 \begin{displaymath}
 \begin{aligned}
-\psi_{s_p s_n}(\vec{p}) &= 4\pi \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, \underbrace{\frac{1}{\sqrt{4\pi}}}_\text{Arm. sfer.} \, \psi_{np}(\ce{^1S_0}) \\
+\psi_{s_p s_n}(\vec{p}) &= 4\pi \clebs{\frac{1}{2}s_n\,\frac{1}{2}s_p}{00}\, \underbrace{\frac{1}{\sqrt{4\pi}}}_\text{Arm. sfer.} \, \psi_{np}(\ce{^1S_0}) \\
 %
-\oss{\psi_{1s_d}}{J_\lambda(\vec{q})}{\psi_{s_p s_n}(\vec{p})} &\equiv \sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) \\
+\oss{\psi_{1s_d}}{J_\lambda(\vec{q})}{\psi_{s_p s_n}(\vec{p})} &\equiv \sqrt{4\pi} \clebs{\frac{1}{2}s_n\,\frac{1}{2}s_p}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) \\
 j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) &\equiv \oss{\psi_{1s_d}}{\int d^3x \; e^{-i\vec{q}\cdot\vec{x}}\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}(\vec{x})}{\psi_{np}(\ce{^1S_0})} = \\
 &= -\sqrt{2\pi} \sum_{\Lambda'\geq 1} (-i)^{\Lambda'} \sqrt{2\Lambda' +1} \oss{\psi_{1s_d}}{E_{\Lambda'-\lambda}(q)  + \lambda \, M_{\Lambda'-\lambda}(q)}{\psi_{np}(\ce{^1S_0})}
 \end{aligned}
 \end{displaymath}
 dove abbiamo prima definito $j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q})$ e poi sviluppato in multipoli come nel decadimento $\gamma$\footnote{Guarda \secrif{sec-gamma-multipoli}.} (chiamando $\Lambda'$ l'ordine del multipolo per distinguerlo da $\Lambda$).
-La parità dei singoli termini è data da $\pi(E\Lambda)=(-1)^\Lambda$ e $\pi(M\Lambda)=(-1)^{\Lambda+1}$, per cui, poiché deve valere $\vec{\Lambda}+\vec{J}_i = \vec{J}_f$\footnote{Qui con $J$ si indica il momento angolare totale e con $\Lambda$ quello del fotone e quindi l'ordine di multipolo.}, per $J_f = 1$, $J_i = 0$ e $\pi_i=\pi_f=+$ allora $\Lambda = 1$ e solo $M1$ sarà rilevate ai fini del calcolo al primo ordine:
+La parità\footnote{Qui con $J$ si indica il momento angolare totale e con $\Lambda$ quello del fotone e quindi l'ordine di multipolo.} dei singoli termini è data da $\pi(E\Lambda)=(-1)^\Lambda$ e $\pi(M\Lambda)=(-1)^{\Lambda+1}$, per cui, poiché deve valere $\vec{\Lambda}+\vec{J}_i = \vec{J}_f$, per $J_f = 1$, $J_i = 0$ e $\pi_i=\pi_f=+$ allora $\Lambda = 1$ e solo $M1$ sarà rilevate ai fini del calcolo al primo ordine:
 \begin{displaymath}
 \begin{aligned}
-\sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) &= \sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\: \oss{\psi_{1s_d}}{-\sqrt{2\pi}(-i) \sqrt{3} (\lambda\,M_{1-\lambda}(q))}{\psi_{np}(\ce{^1S_0})}\\
+\sqrt{4\pi} \clebs{\frac{1}{2}s_n\,\frac{1}{2}s_p}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q}) &\simeq \sqrt{4\pi} \clebs{\frac{1}{2}s_n\,\frac{1}{2}s_p}{00}\: \oss{\psi_{1s_d}}{-\sqrt{2\pi}(-i) \sqrt{3} (\lambda\,M_{1-\lambda}(q))}{\psi_{np}(\ce{^1S_0})}\\
 j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q})&\simeq i\sqrt{6\pi} \lambda \oss{\psi_{1s_d}}{M_{1\,-\lambda}}{\psi_{np}(\ce{^1S_0})} =\\
-&= i \sqrt{6\pi} \lambda \:\underbrace{ \frac{\clebs{00,1-\lambda}{1s_d}}{\sqrt{1}}}_\text{Dal teo. di W-E} \: \underbrace{\bigl \langle \, \psi_{1s_d}\,||\,M_1\,||\,\psi_{np}(\ce{^1S_0})\rangle}_\text{El. di matrice ridotta} = \\
-&= i \sqrt{6\pi} \lambda \: \delta_{-\lambda s_d} \: |M_1(q)|
+&= i \sqrt{6\pi} \lambda \:\underbrace{ \frac{\clebs{00,1-\lambda}{1s_d}}{\sqrt{3}}}_\text{Dal teo. di W-E} \: \underbrace{\bigl \langle \, \psi_{1s_d}\,||\,M_1\,||\,\psi_{np}(\ce{^1S_0})\rangle}_\text{El. di matrice ridotta} = \\
+&= i \sqrt{2\pi} \lambda \: \delta_{-\lambda s_d} \: |M_1(q)|
 \end{aligned}
 \end{displaymath}
-dove abbiamo trascurato il segno di $\lambda$ perché siamo interessati alla somma su tutte le polarizzazioni (per cui $\sum_{\lambda=\pm 1}$) e abbiamo applicato il teorema di \WE\index{teorema di \WE}.
-$$\sum_{s_ns_p,\lambda s_d}|\sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q})|^2 = 4\pi \underbrace{\sum_{s_ns_p}|\clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}|^2}_{=1} \; \sum_{\lambda s_d} 6\pi \delta_{\lambda s_d}\,|M_1|^2 = 48\pi^2 |M_1|^2$$
+dove abbiamo applicato il teorema di \WE\index{teorema di \WE}. Il segno di $\lambda$ non è importante in questa trattazione perché siamo interessati alla somma su tutte le polarizzazioni (per cui $\sum_{\lambda=\pm 1}$):
+$$\sum_{s_ns_p,\lambda s_d}|\sqrt{4\pi} \clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}\, j^{\ce{^1S_0}}_{\lambda s_d} (\vec{q})|^2 = 4\pi \underbrace{\sum_{s_ns_p}|\clebs{\frac{1}{2}s_p\,\frac{1}{2}s_n}{00}|^2}_{=1} \; \sum_{\lambda s_d} 2\pi \delta_{\lambda s_d}\,|M_1|^2 = 16\pi^2 |M_1|^2$$
 dove abbiamo usato $\sum_{\lambda s_d}\delta_{\lambda s_d}=\delta_{11} + \delta_{-1-1} =2$. Dobbiamo calcolare $M_1(q)$, ma dal momento che questo non dipende da $\lambda$ possiamo stimarlo per qualsiasi valore di $\lambda$ (per esempio $\lambda = -1$):
 \begin{displaymath}
 \begin{aligned}
-j^{\ce{^1S_0}}_{-\lambda\lambda} &= i \sqrt{6\pi} \lambda M_1(q)\\
-M_1(q) &= \frac{-i}{\sqrt{6\pi}} j^{\ce{^1S_0}}_{-\lambda\lambda} (\vec{q}) \\
-\frac{d\sigma}{d\Omega_{\hat{q}}} &\propto \frac{1}{v_{rel}} \frac{\bar{q}}{1+\bar{q}/m_d} \, |j^{\ce{^1S_0}}_{-\lambda\lambda}(\vec{\bar{q}})|^2 \\
-\sigma_{tot} &= \int \frac{d\sigma}{d\Omega_{\hat{q}}} d\Omega_{\hat{q}} \propto \frac{4\pi}{v_{rel}} \frac{\bar{q}}{1+\bar{q}/m_d} |j^{\ce{^1S_0}}_{-\lambda\lambda}(\vec{\bar{q}})|^2
+j^{\ce{^1S_0}}_{\lambda,-\lambda} &= i \sqrt{2\pi} \lambda M_1(q)\\
+M_1(q) &= \frac{-i}{\sqrt{2\pi}} j^{\ce{^1S_0}}_{-11} (\vec{q}) \\
+\frac{d\sigma}{d\Omega_{\hat{q}}} &\propto \frac{1}{v_{rel}} \frac{\bar{q}}{1+\bar{q}/m_d} \, |j^{\ce{^1S_0}}_{-11}(\vec{\bar{q}})|^2 \\
+\sigma_{tot} &= \int \frac{d\sigma}{d\Omega_{\hat{q}}} d\Omega_{\hat{q}} \propto \frac{4\pi}{v_{rel}} \frac{\bar{q}}{1+\bar{q}/m_d} |j^{\ce{^1S_0}}_{-11}(\vec{\bar{q}})|^2
 \end{aligned}
 \end{displaymath}
 Abbiamo così isolato la parte nucleare e il problema si riduce al calcolo di $j^{\ce{^1S_0}}_{-11}$:
-$$j^{\ce{^1S_0}}_{-11} = \int d^3r_1 d^3r_2 \;\: \psi_{11}^*(\vec{r}_1,\vec{r}_2)\: \vec{J}_{-1}(\vec{r}_1,\vec{r}_2)\:\psi^{\ce{^1S_0}}(\vec{r}_1,\vec{r}_2)$$
+$$j^{\ce{^1S_0}}_{-11} = \int d^3r_1 d^3r_2 \;\: \psi_{11}^*(\vec{r}_1,\vec{r}_2)\: \widehat{\varepsilon}^*(\vec{q},-1) \cdot\vec{J}_{-1}\:\psi^{\ce{^1S_0}}(\vec{r}_1,\vec{r}_2)$$
 A questo punto abbiamo bisogno della funzione d'onda del deutone, di quella di scattering $np$, del potenziale nucleare e di un metodo numerico che risolva l'equazione di \Sch{} sia per lo stato legato che per quello di scattering. Questo non è però sufficiente, è necessario anche un modello per la corrente elettromagnetica\footnote{Attenzione: in $J_{\lambda,i}$ l'indice $i$ indica l'$i$-esimo nucleone e non ha niente a che vedere con il momento angolare totale iniziale. Si invita il lettore da qui in poi a cercare di capire dal contesto il significato delle notazioni.} e ne avevamo uno:\index{corrente di convezione}
 $$\vec{J}_{\lambda,i} = \frac{1}{2m} \underbrace{\varepsilon_i \PPg{\vec{p}_i,\:e^{i\vec{q}\cdot\vec{r}_i}}}_\text{corrente di convezione} - \frac{i}{2m} \mu_i \, \vec{q}\times \vec{\sigma}_i\, e^{i\vec{q}\cdot\vec{r}_i}$$
 $$\varepsilon_i \simeq \frac{1}{2}(1+\tau_{z,i})$$
 $$\mu_i \simeq \frac{1}{2}(1+\tau_{z,i})\mu_p + \frac{1}{2}(1-\tau_{z,i})\mu_n = \frac{1}{2} (\mu_S +\mu_V \tau_{z,i}) $$
-dove $\varepsilon_i$ e $\mu_i$ sono proiettori e $\mu_S = \mu_p + \mu_n = 0.88\: \mu_N $ e $\mu_V = \mu_p - \mu_n = 4.706 \: \mu_N$ sono rispettivamente la combinazione isoscalare\index{combinazione isoscalare} e quella vettoriale \index{combinazione vettoriale}. In generale, l'integrale scritto precedentemente per $j_{11}^{\ce{^1S_0}}$ viene risolto numericamente in $d^3r_{rel}d^3r_{CM}$, ma dal momento che siamo interessati alla soluzione analitica e ci troviamo nel caso di basse energie (cattura di neutroni termici, quindi $\vec{p}_i\sim 0$, corrente di convezione\index{corrente di convezione} trascurabile) possiamo studiare solo l'onda $s$\footnote{Abbiamo indicato con $\chi$ la funzione di \textit{spin} e con $\zeta$ quella di \textit{isospin}:%
+dove $\varepsilon_i$ e $\mu_i$ sono proiettori e $\mu_S = \mu_p + \mu_n = 0.88\: \mu_N $ e $\mu_V = \mu_p - \mu_n = 4.706 \: \mu_N$ sono rispettivamente la combinazione isoscalare\index{combinazione isoscalare} e quella vettoriale \index{combinazione vettoriale}. In generale, l'integrale scritto precedentemente per $j_{-11}^{\ce{^1S_0}}$ viene risolto numericamente in $d^3r_{rel}d^3r_{CM}$, ma dal momento che siamo interessati alla soluzione analitica e ci troviamo nel caso di basse energie (cattura di neutroni termici, quindi $\vec{p}_i\sim 0$, corrente di convezione\index{corrente di convezione} trascurabile) possiamo studiare solo l'onda $s$\footnote{Abbiamo indicato con $\chi$ la funzione di \textit{spin} e con $\zeta$ quella di \textit{isospin}:%
 \begin{displaymath}
 \begin{aligned}
 \zeta_{00} &= \frac{\ket{np}-\ket{pn}}{\sqrt{2}} & \chi_{11} &= \ket{\uparrow\uparrow} \\
@@ -100,7 +107,7 @@ dove $\varepsilon_i$ e $\mu_i$ sono proiettori e $\mu_S = \mu_p + \mu_n = 0.88\:
 $$\psi_{11} = \underbrace{\PPq{\frac{1}{\sqrt{4\pi}}\frac{u(r)}{r}\chi_{11}\zeta_{00}}}_\text{deutone fermo}\, \underbrace{e^{-i\vec{p}_d\cdot\vec{R}}}_\text{moto}$$
 $$\psi^{\ce{^1S_0}} = \PPq{\frac{1}{\sqrt{4\pi}}\frac{u_S(r)}{r}\chi_{00}\zeta_{10}}\, e^{-i\vec{p}_{CM}\cdot\vec{R}}$$
 La corrente sarà quindi data da:
-$$\vec{J}_i = -\frac{i}{2m} \mu_i\: \vec{q}\times \vec{\sigma}_i\, e^{i\vec{q}\cdot \vec{r}_i}$$
+$$\vec{J}_i \simeq -\frac{i}{2m} \mu_i\: \vec{q}\times \vec{\sigma}_i\, e^{i\vec{q}\cdot \vec{r}_i}$$
 Notiamo che $\zeta_{00}^+\, \mu_S\, \zeta_{10} = 0$ perché le due funzioni sono ortogonali fra loro, dunque sopravvive solo il pezzo con $\mu_V$ nella corrente:
 $$\vec{J}_{\lambda=-1} = -\frac{i}{4m} \mu_V \PPq{(\vec{q}\times\vec{\sigma}_1)_{\lambda=-1} e^{i\vec{q}\cdot\vec{r}_1}\tau_{z,1} + (\vec{q}\times\vec{\sigma}_2)_{\lambda=-1} e^{i\vec{q}\cdot\vec{r}_2}\tau_{z,2}} $$
 Studiamo adesso la componente del prodotto vettoriale:
