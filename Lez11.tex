@@ -82,7 +82,7 @@ La dipendenza di $\sigma$ da $E$ dipende principalmente da tre fattori:
 \end{enumerate}
 Tutti e tre infatti dipendono dall'energia. Studiamo prima le reazioni non-risonanti: per il contributo 2. dalla meccanica quantistica sappiamo che la probabilità di interazione è proporzionale a\footnote{$\pi\lambda_{DB}^2$ non è altro che la sezione d'urto.} $\pi \lambda^2_{DB}\sim p^{-2} \sim E^{-1}$\index{lunghezza d'onda di De Broglie@lunghezza d'onda di De Broglie $\lambda_{DB}$}; per il contributo 1. l'espressione è un po' più complessa, ma nel Sole ho tutte particelle cariche quindi:
 $$V = \frac{Z_1 Z_2 e^2}{r} \simeq 1.44 \, \frac{Z_1Z_2}{r[\mbox{fm}]} [\mbox{MeV}] \underset{\text{per }pp}{\sim} 1.44\unit{MeV}$$
-L'energia di agitazione termica media $\mean{E}\sim kT \sim 9\cdot\ord{-8} \, T[\mbox{K}]\,[\mbox{keV}]$ per la temperatura interna del Sole ($T\sim 1.5\cdot\ord{7}$ K) è dell'ordine del keV, quindi trascurabile rispetto alla barriera. Valutiamo allora la probabilità di attraversamento per effetto tunnel\index{effetto tunnel}\footnote{Per il calcolo guarda \complementi{compl-tunnel}.}:\label{sec-tunnel}
+L'energia di agitazione termica media $\mean{E}\sim kT \sim 9\cdot\ord{-8} \, T[\mbox{K}]\,[\mbox{keV}]$ per la temperatura interna del Sole ($T\sim 1.5\cdot\ord{7}$ K) è dell'ordine del keV, quindi trascurabile rispetto alla barriera. Valutiamo allora la probabilità di attraversamento per effetto tunnel\index{effetto tunnel}\footnote{Per il calcolo guarda \complrif{compl-tunnel}.}:\label{sec-tunnel}
 \begin{displaymath}
 \begin{aligned}
 P &\sim \exp{\PPc{-2\pi \frac{Z_1Z_2 e^2}{\hbar v}}} =\\
@@ -92,14 +92,14 @@ P &\sim \exp{\PPc{-2\pi \frac{Z_1Z_2 e^2}{\hbar v}}} =\\
 \end{displaymath}
 detto \textbf{fattore di penetrazione di Gamow}\index{fattore di penetrazione di Gamow}. Per quanto riguarda i vari contributi nucleari possiamo raccoglierli tutti in un fattore $S(E)$ che chiamiamo \textbf{fattore astrofisico}\index{fattore astrofisico@fattore astrofisico $S(E)$}; abbiamo allora:
 $$\sigma (E) = \frac{1}{E}\,\exp{\PPc{-\sqrt{2\mu}\pi\, \frac{Z_1Z_2 e^2}{\hbar \sqrt{E}}}}\, S(E)$$
-\noindent A titolo di esempio riportiamo l'andamento di $\sigma(E)$ per la reazione $\ce{^{12}C}+p\to \ce{^{13}N}+\gamma$ in Figura \ref{0322_cross}. Si osserva una risonanza per circa mezzo MeV e che la sezione precipita sotto 0.3 MeV (è dovuto al fattore di Gamow); in rosso è segnato il range di energie di interesse astrofisico.
+\noindent A titolo di esempio riportiamo l'andamento di $\sigma(E)$ per la reazione $\ce{^{12}C}+p\to \ce{^{13}N}+\gamma$ in Figura \ref{0322_cross}. Si osserva una risonanza per circa $0.5$ MeV e la drastica pendenza della sezione d'urto sotto $0.3$ MeV (dovuta al fattore di Gamow); in rosso è segnato il range di energie di interesse astrofisico.
 \begin{figure}[!h]
     \centering
     \includegraphics[scale=0.2]{Immagini/0322_crosssection.png}
     \caption{Leggere la didascalia. In rosso il range di energie di interesse astrofisico.}
     \label{0322_cross}
 \end{figure}\\
-\noindent Dall'espressione per la sezione d'urto possiamo invertire così da ottenere l'andamento del fattore astrofisico $S(E) = E \sigma(E)\exp(\dots)$ come mostrato in Figura \ref{0322_fatastr}. Si nota che in questo caso la pendenza per basse energie è più \vir{dolce} (maggior stabilità).
+\noindent Dall'espressione per la sezione d'urto possiamo invertire così da ottenere l'andamento del fattore astrofisico $S(E) = E \sigma(E)\exp(\dots)$ come mostrato in Figura \ref{0322_fatastr}. Si nota che in questo caso l'andamento per basse energie è più \vir{dolce}.
 
 \begin{figure}[h]
     \centering
