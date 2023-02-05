@@ -1,6 +1,6 @@
 %\part*{Lezione 12/04/2021}
 \chapter{$R$-MATRIX}\label{sec-R-mat}
-In questo capitolo viene presentato il metodo del $R$-Matrix sia \textit{calculable} che \textit{phenomenological} con alcuni esempi di applicazione. Il capitolo copre le lezioni 12/04/2021, 14/04/2021, 
+In questo capitolo viene presentato il metodo della $R$-Matrix sia \textit{calculable} che \textit{phenomenological} con alcuni esempi di applicazione. Il capitolo copre le lezioni 12/04/2021, 14/04/2021, 
 
 \paragraph{Introduzione} Finora abbiamo visto che i metodi \textit{ab-initio}\index{metodo ab-initio@metodo \textit{ab-initio}} permettono di calcolare la sezione d'urto partendo da una buona base teorica senza la necessità di \vir{aggiustare} i risultati con osservazioni per ottenere le corrette relazioni, tuttavia dipendono fortemente dal metodo di calcolo delle funzioni d'onda, il quale diviene sempre più complesso al crescere di $A$. In questo capitolo tratteremo quindi le caratteristiche principali di un metodo alternativo a quello \textit{ab-initio} detto metodo della $R$-MATRIX (RM)\index{metodo Rmatrix@metodo $R$-MATRIX} seguendo l'articolo di Descouvemont \& Baye\footnote{\label{0412_art} Descouvemont, P. \& Baye, D., Rep. Prog. Phys., 2010, vol.3, \texttt{DOI:} \doi{10.1088/0034-4885/73/3/036301}, \texttt{arXiv:} \url{https://arxiv.org/abs/1001.0678}.\articolo{Descouvemont \& Baye}}.\\ 
 Esistono due principali versioni:
@@ -24,6 +24,7 @@ Raccogliendo i vari termini in $H_\ell\equiv T_\ell + V_C + V_N$ si ha:
 	\caption{Schema del potenziale usato: $V_N$ per $r<a$ e $V_C$ per $r>a$.}
 	\label{0412_pot}
 \end{figure}
+\newline
 \noindent Per quanto riguarda il potenziale una schematizzazione come quella in Figura \ref{0329_schema} è troppo semplice, prenderemo invece un potenziale simile a quello in Figura \ref{0412_pot} con un certo raggio $a$ detto \textit{channel radius}\index{channel radius@\textit{channel radius}} che separa la regione interna dove il contributo maggiore è dato da $V_N$ da quella esterna in cui domina $V_C$.\\ 
 Partiamo dalle soluzioni per $r>a$:
 $u_\ell^{ext} (r) \propto \cos{\delta_\ell} F_\ell (\eta, kr) + \sin{\delta_\ell}G_\ell (\eta,kr)$
@@ -97,7 +98,7 @@ $$ C_{ij}(E,B) = \oss{\varphi_i}{H_\ell + \mathscr{L}(B) - E}{\varphi_j} = C_{ij
 Sostituendo nella \eqref{0412_Rl2}:
 $$R_\ell (E,B) = \frac{\hbar^2}{2\mu a} \sum_{i,j =1}^N \varphi_i(r) \: \sum_{n=1}^{N} \frac{\bar{v}_{n\ell,i}\bar{v}^T_{n\ell,j}}{E_{n\ell}-E} \: \varphi_j$$ 
 
-\noindent Per rendere l'espressione più compatta\footnote{Questa è l'espressione che solitamente si trova per $R$, dove si evidenzia il fatto che è una funzione \textit{meromorfa}\index{funzione meromorfa}.} definiamo la \textit{reduced width}\index{reduced width@\textit{reduced width}} $\gamma_{n\ell} = \sqrt{\hbar^2/2\mu a} \: \phi_{n\ell}(a)$ dove abbiamo definito\footnote{Se $N$ è finito, allora $\phi_{n\ell}$ sono l'approssimazione variazionale delle autofunzioni dell'operatore $H+\mathscr{L}$ in $a$ e l'espressione per $R$ diviene un'approssimazione.} le funzioni d'onda $\phi_{n\ell}(r) = \sum_i \bar{v}_{n\ell,i}\varphi_i(r)$:
+\noindent Per rendere l'espressione più compatta\footnote{Questa è l'espressione che solitamente si trova per $R$, dove si evidenzia il fatto che è una funzione \textit{meromorfa}\index{funzione meromorfa}, cioè olomorfa ovunque eccetto in una serie di punti isolation.} definiamo la \textit{reduced width}\index{reduced width@\textit{reduced width}} $\gamma_{n\ell} = \sqrt{\hbar^2/2\mu a} \: \phi_{n\ell}(a)$ dove abbiamo definito\footnote{Se $N$ è finito, allora $\phi_{n\ell}$ sono l'approssimazione variazionale delle autofunzioni dell'operatore $H+\mathscr{L}$ in $a$ e l'espressione per $R$ diviene un'approssimazione.} le funzioni d'onda $\phi_{n\ell}(r) = \sum_i \bar{v}_{n\ell,i}\varphi_i(r)$:
 \begin{equation}\label{0412_Rl3}
 R_\ell (E,B) = \sum_{n=1}^N \frac{\gamma_{n\ell}^2}{E_{n\ell}-E}	
 \end{equation}
