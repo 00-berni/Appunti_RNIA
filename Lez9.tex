@@ -7,9 +7,9 @@ Tra le reazioni del network questa è la più \vir{semplice}, ovvero $A=2$.
 \subsection{Cinematica} 
 Studiamo allora la sezione d'urto di questa reazione:
 $$d\sigma \overset{\text{Reg. d'Oro}}{=} \frac{\text{Rate di transizione}}{\text{Flusso incidente}} = \frac{\lambda}{v_{rel}}$$
-Concentriamoci sulla probabilità di transizione $W_{i\to f}$, mettendoci nel sistema del centro di massa\footnote{Usiamo la solita convenzione $c=\hbar = 1$, la notazione $\vec{q}$ per l'impulso del fotone e $\vec{P}_d$ per quello del deuterio e assumiamo volumi unitari.}.
+Assumendo un certo tempo di interazione $T$, $\lambda = W_{i\to f}/T$, con $W_{i\to f}$ probabilità di transizione da $i$ a $f$. Studiamone allora l'espressione, mettendoci nel sistema del centro di massa\footnote{Usiamo la solita convenzione $c=\hbar = 1$, la notazione $\vec{q}$ per l'impulso del fotone e $\vec{P}_d$ per quello del deutone e assumiamo volumi unitari.}.
 $$W_{i\to f} = |V_{i\to f}|^2\:dn \qquad \text{con   } dn = \frac{d^3q}{(2\pi)^3}\frac{d^3P_d}{(2\pi)^3} (2\pi)^3 \delta^3(\vec{P}_d+\vec{q}) \Rightarrow \frac{d^3q}{(2\pi)^3}$$
-dove $V_{i\to f}$ è l'elemento di matrice di transizione, $T$ è il tempo di interazione e $dn$ è l'elemento infinitesimo di spazio delle fasi (in cui abbiamo risolto per la $\delta$). Dalla teoria perturbativa al primo ordine\footnote{Dove $T$ è un tempo molto maggiore rispetto a quelli di evoluzione del sistema.}:
+dove $V_{i\to f}$ è l'elemento di matrice di transizione e $dn$ è l'elemento infinitesimo di spazio delle fasi (in cui abbiamo risolto per la $\delta$). Dalla teoria perturbativa al primo ordine\footnote{Assumiamo $T$ molto maggiore rispetto al tempo di evoluzione del sistema. Da qui in poi il simbolo $\lambda$ si riferirà alla polarizzazione e non più al rate di transizione.}:
 $$V_{i\to f} = -i \int_0^T \oss{f}{V(t)}{i}\, e^{i(E_f-E_i)t} dt \qquad \text{dove } V(t) = -e \vec{A}(\vec{x}) \cdot \vec{J}(\vec{x}) $$
 \begin{displaymath}
 \begin{aligned}
@@ -18,14 +18,13 @@ $$V_{i\to f} = -i \int_0^T \oss{f}{V(t)}{i}\, e^{i(E_f-E_i)t} dt \qquad \text{do
 &= -\frac{e}{\sqrt{2q}} \, \widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})
 \end{aligned}
 \end{displaymath}
-dove\footnote{Si è fatto uso di un abuso di notazione esplicitando l'integrale racchiuso dal braket. Spesso faremo questo abuso per esplicitare su quale variabile integriamo.} abbiamo assunto $\omega = E = q$. Per cui sostituendo:
+dove\footnote{Si è fatto uso di un abuso di notazione esplicitando l'integrale racchiuso dal braket. Spesso faremo questo abuso per chiarire su quale variabile integriamo.} abbiamo assunto $\omega = E = q$. Per cui sostituendo:
 \begin{align*}
     V_{i\to f} &= \frac{ie}{\sqrt{2q}}\,\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})\, \int_0^T dt \, e^{i(E_f-E_i)t} = \\
     &= \frac{ie}{\sqrt{2q}}\,\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})\,\frac{2\sin{(T (E_f-E_i)/2)}}{(E_f-E_i)} \, e^{i(E_f-E_i)T/2}
 \end{align*}
 $$\frac{|V_{f\to i}|^2}{T} = \frac{e^2}{2q} |\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})|^2\, 2\pi \delta(E_f - E_i)$$
-La $\delta$ rappresenta la conservazione dell'energia\footnote{La funzione $\sin^2(xT)/x^2 \to \pi T \delta(x)$ per $T\to\infty$; dunque $T\gg \hbar/(E_f-E_i)$ come avevamo assunto.}.\\
-Possiamo allora scrivere la sezione d'urto differenziale:
+La $\delta$ rappresenta la conservazione dell'energia\footnote{La funzione $\sin^2(xT)/x^2 \to \pi T \delta(x)$ per $T\to\infty$; dunque $T\gg \hbar/(E_f-E_i)$ come avevamo assunto.}. Possiamo allora scrivere la sezione d'urto differenziale:
 \begin{displaymath}
 \begin{aligned}
 d\sigma &= \frac{e^2}{2} |\widehat{\varepsilon}^*(\vec{q},\lambda) \cdot \vec{J}^+(\vec{q})|^2\, q dq \frac{d\Omega_{\hat{q}}}{(2\pi)^2}\, \delta(E_f - E_i) \frac{1}{v_{rel}} \\
