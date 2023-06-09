@@ -17,3 +17,9 @@
 
 # Ignora vscode
 *.json
+
+# Ignora il makefile
+**/Makefile
+
+# Ignora python
+**/*.txt
