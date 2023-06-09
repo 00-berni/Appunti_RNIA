@@ -1,0 +1,173 @@
+%\part*{Lezione 21/04/2021}
+\paragraph{Analisi del metodo} Per comprendere meglio il procedimento che porta alla realizzazione della misura, discutiamo brevemente i singoli \textit{step} del metodo:
+\begin{enumerate}[\textbf{Step} I.]
+	\item Scegliamo un opportuno \vir{cavallo} (come studiato precedentemente).
+	\item \textit{Settiamo} l'energia del fascio e le condizioni iniziali così che:
+	\begin{enumerate}[(a)]
+		\item la velocità sia tale da superare la barriera coulombiana, ma rimanga vincolata dall'energia di Fermi.
+		\item la cinematica rimanga quasi-\textit{free}.
+	\end{enumerate}
+	\noindent Per quanto riguarda quest'ultimo punto prendiamo a esempio:
+	$$p + \ce{^{18}O} \to \ce{^{15}N} + \alpha $$
+	$$\underbrace{d}_{p-n} + \ce{^{18}O} \to \ce{^{15}N} + \alpha + n$$
+	Questo è il processo che vorremmo osservare, tuttavia se il neutrone non è spettatore potremmo avere gli stessi prodotti, ma con un'interazione differente, come riportato in Figura \ref{0421_sch}. 
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.5]{Immagini/0421_sch-cut1.png}
+		\includegraphics[scale=0.5]{Immagini/0421_sch-cut2.png}
+		\caption{Possibili processi di reazione di $d+\ce{^{18}O}$. Solo nel caso (a) il neutrone è spettatore, gli altri costituiscono il \textit{fondo}.}
+		\label{0421_sch}
+	\end{figure}
+	\noindent Questi processi, poiché non desiderati, \vir{sporcano} la misura, quindi è necessario trovare un modo per riconoscerli; notiamo che ognuno di essi passa per un \textit{compound nucleus}\index{compound nucleus@\textit{compound nucleus}} ($\ce{^{19}F}^*, \ce{^{16}N}^*,\ce{^5He}^*$) per cui sono facilmente individuabili attraverso gli \textit{energy correlation spectra}\index{energy correlation spectra@\textit{energy correlation spectra}} da un picco di risonanza\footnote{Per questi processi si osservano infatti delle regioni particolarmente dense nei grafici, per esempio, delle energie relative tra prodotti. Da queste si deducono possibili risonanze e quindi le zone da rimuovere nello studio della reazione.} che non compare nella reazione cercata. Ne riportiamo un esempio in Figura \ref{0421_spec-W} (a sinistra). Individuate le energie di risonanza si mettono dei tagli così si \vir{ripulisce} il fascio.
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.5]{Immagini/0421_eng.png}
+		\includegraphics[scale=0.5]{Immagini/0421_pn.png}
+		\caption{A sinistra \textit{energy correlation spectra}: energia relativa tra $\alpha$ e $\ce{^{15}N}$ contro quella tra $\alpha$ e $n$. Nel riquadro in basso i fasci orizzontali corrispondono agli stati eccitati del $\ce{^{19}F}^*$. A destra distribuzione dei momenti, con $\Phi\equiv W$: i pallini sono i dati sperimentali, in rosso tratteggiata è la teoria in PWBA, mentre in nero continua è un fit con parametri liberi.}
+		\label{0421_spec-W}
+	\end{figure}
+	\item Dobbiamo conoscere $|W(\vec{P}_{bx})|^2$ e per far questo ci sono 2 strade:
+	\begin{itemize}
+		\item viene calcolato (caso di nuclei leggeri);
+		\item oppure si sviluppa prima una teoria di scattering e poi si misura.
+	\end{itemize}
+	Nel secondo caso si può ottenere la misura facendo uno scattering in un certo range di energie. Prendiamo come esempio la reazione:
+	$$ \underbrace{d}_{p-n} + \ce{^{11}B} \to \ce{^{8}Be} +\alpha +n $$ 
+	I risultati sono riportati in Figura \ref{0421_spec-W} (a destra).
+%	\vspace{-1cm}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.5]{Immagini/0421_Se.png}
+		\caption{Fattore astrofisico per $\ce{^6Li} + \ce{^6Li}$: i puntini neri sono ottenuti con THM, i punti vuoti sono i dati sperimentali, la linea continua nera è un fit. Il \textit{gap} a basse energie è dovuto all'elettroscreening\index{elettroscreening}, non considerato dalla teoria del THM.}
+		\label{0421_Se}
+	\end{figure}	
+\end{enumerate}
+\paragraph{Fattore astrofisico} Effettivamente ciò che si misura è $\frac{d^3\sigma}{dE_c d\Omega_cd\Omega_{C}}$, da questa si stima $\frac{d\sigma^{TH}}{d\Omega_{Ax}}$ e infine si ottiene $S(E)$ da normalizzare.
+Per  normalizzare spesso quello che si fa è calcolare il fattore astrofisico anche per range in cui si riescono a fare misure dirette (anche se non è di interesse) e poi si \textit{matchano} i dati con la teoria.\\
+La prima reazione così studiata\footnote{Fu scelto il litio perché per questo $W$ è facile da calcolare e anche da misurare.} fu:
+$$ \underbrace{\ce{^6Li}}_{\alpha-d} + \ce{^6Li} \to \ce{^4He} + \ce{^4He} + \alpha $$
+e si ottennero i risultati in Figura \ref{0421_Se}: il fattore astrofisico è stato normalizzato con i dati raccolti nel range di energie tra 600 keV e 1 MeV. Osserviamo che il THM fornisce una misura della sezione d'urto senza il contributo dell'elettroscreening\index{elettroscreening}\footnote{Il metodo è ideato appunto per penetrare la barriera coulombiana.}, $\sigma_{bare}$, che può essere comunque stimato, per cui $U_e^{th}=186$ eV$\ll U_e = (340\pm 51)$ eV.
+\noindent Si fa allora un fit sviluppando\footnote{Seguiamo la notazione della tabella per cui:%
+\begin{align*}%
+	&S_1 \equiv S'(0) \\
+	&S_2 \equiv \frac{1}{2}S''(0) \\
+	&S_3 \equiv \frac{1}{6}S'''(0) 
+\end{align*}%
+} il fattore astrofisico in 0: $S(E) \simeq S(0) + S_1 \, E + S_2 \, E^2 + S_3 \, E^3$. I risultati sono riportati nella tabella in Figura \ref{0421_tab} per differenti valori del \textit{cutoff radius}\index{cutoff radius@\textit{cutoff radius}} $R$.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/0421_tab.png}
+	\caption{Valori dei parametri del fit per differenti raggi di \textit{cutoff}.}
+	\label{0421_tab}
+\end{figure}
+
+\noindent Si ha così un fattore astrofisico compreso tra $14.8$ MeV$\,$b e $16.8$ MeV$\,$b e questo dimostrò che il metodo funzionava, dando una stima per $S(E)$ e il suo errore.
+\newpage
+\subsection{\textit{Asymptotic Normalization Coefficients method}}\index{Asymptotic Normalization Coefficients method@\textit{Asymptotic Normalization Coefficients method}}
+\paragraph{Introduzione}
+Consideriamo anche questa volta un nucleo fortemente a cluster\footnote{La notazione è stata cambiata. Tale scelta è stata fatta affinché non si confondano i due metodi.} $X\equiv b+Y$. L'equazione di \Sch{} ridotta per $b+Y$ sarà:
+$$u_L'' + \ppc{-\frac{2\mu }{\hbar^2} V+ \frac{2\mu }{\hbar^2}E - \frac{L(L+1)}{r^2}}u_L =0$$
+Prendiamo uno stato legato $E<0$ e definiamo $k\in \mathbb{C}$ tale $E\equiv \hbar^2 k^2 / 2\mu$, da cui $k = i\, \sqrt{2\mu |E|/\hbar^2} \equiv i\,k_I$ con $k_I\in \mathbb{R}$. Il potenziale sarà quello coulombiano più quello dovuto all'interazione nucleare $V=V_{nucl} + Z_1Z_2 e^2 /r$; definiamo allora il parametro:
+$$\eta \equiv \frac{Z_1Z_2 e^2}{\hbar v} = \frac{Z_1Z_2 e^2}{\hbar}\frac{\mu}{\hbar k} = - i \, \frac{Z_1Z_2 e^2\mu}{\hbar^2 k_I} \equiv i\, \eta_I$$
+%%! CAPIRE IL DISCORSO CHE SEGUE
+A questo punto ci mettiamo a grande distanza ($V_{nucl} \simeq 0$ per $r>R_N$) e studiamo le soluzioni dell'equazione di \Sch{}, ovvero le funzioni di Coulomb\index{funzioni di Coulomb} \textit{in-going} e \textit{out-going}: $u^\pm_L (\eta,kr)$. In realtà, siccome siamo interessati solo alla soluzione asintotica prendiamo la \textit{in-going} perché vogliamo un andamento che sia $e^{ikr}=e^{-k_I r}$, dunque abbiamo solo $u^+_L(\eta,kr)$; questa però non è ben definita per $1+L+i\eta =0$, allora per correggere si usa la funzione di \Wh{}\index{funzione di \Wh}:
+$$W_{-i\eta,L+1/2}(-2i\rho) = e^{-\pi\eta/2}e^{-i\,L\pi/2} u^+_L(\eta,\rho)$$
+con $\rho\equiv kr$. Si può mostrare che per $r\to\infty$ ($\rho\to\infty$):
+$$W_{-i\eta,L+1/2}(-2i\rho) \to \underbrace{e^{i\rho-i\eta\ln{2\rho}}}_\text{Onda distorta} \, e^{-\eta\pi/2} = e^{-k_Ir + \eta_I \ln{2k_Ir}}\: e^{i\eta_I\pi/2}$$
+Dunque la nostra soluzione $u_L(r)$ asintoticamente sarà proporzionale a $W_{\eta_I,L+1/2}(2k_I r)$ e il fattore di proporzionalità $C_L$ viene appunto detto \textbf{Coefficiente Asintotico di Normalizzazione} (ANC)\index{Coefficiente Asintotico di Normalizzazione}.
+
+\paragraph{Nel metodo}
+Prendiamo la reazione:
+$$a + b \to c+\gamma$$
+in modo che sia perferica\index{reazione periferica}\footnote{Per quanto riguarda la notazione: con $\vec{\xi}_i$ indichiamo la posizione del nucleo $i$ rispetto all'origine (coordinate interne), con $\vec{r}$ invece indichiamo la distanza relativa tra il nucleo $b$ e il nucleo $c$.}, $E_{CM}\sim 0$: i nuclei $b$ e $c$ o si \vir{avvicinano poco} oppure entrano in interazione per breve tempo.\\ 
+Sappiamo ormai che la sezione d'urto dipenderà dall'elemento di matrice:
+\begin{align*}
+	M 
+	&= \oss{\psi_c}{\hat{\Theta}_\gamma}{\psi_{ab}^{scatt}} =\\
+	&= \oss{\psi_c (\vec{\xi}_a,\vec{\xi}_b,\vec{r})}{\hat{\Theta}_\gamma (	\vec{r})}{\psi_{a}(\vec{\xi}_a)\psi_b(\vec{\xi}_b)\underbrace{\phi^+_{k_i}(\vec{r})}_\text{onda distorta}} =\\ 
+	&= \oss{I_{ab}^c(\vec{r})}{\Theta_\gamma(\vec{r})}{\phi^+_{k_i}(\vec{r})}
+\end{align*}
+dove nell'ultimo passaggio abbiamo usato il fatto che l'operatore dipenda esclusivamente dalla distanza relativa $\vec{r}$ e quindi abbiamo integrato sulle coordinate interne, definendo\footnote{$I_{ab}^c \equiv I_{J_a J_b}^{J_c}$.}:
+$$
+I_{ab}^c (\vec{r}) = \clebs{\psi_a(\vec{\xi}_a)\psi_b(\vec{\xi}_b)}{\psi_c(\vec{\xi}_a,\vec{\xi}_b,\vec{r})} = \sum_{\ell,m,S,S_z} i^\ell \, \clebs{J_a M_a,J_b M_b}{SS_z} \clebs{SS_z, \ell m}{J_c M_c} Y_{\ell m}(\hat{r})\:I_{ab,\ell S}^c (r)
+$$
+Questo ci permette di scrivere l'andamento asintotico della $\psi_a$ come una certa funzione di \textit{overlap}\footnote{Porta infatti l'informazione dell'\textit{overlap} tra la funzione d'onda di scattering $bc$ e quella di $a$.} $I_{ab,\ell S}^c (r)$; allora ci aspettiamo che asintoticamente ($r\gg R_N$) avremo (usando gli ANC per la ridotta):
+$$I_{ab,\ell S}^c (r) \to \frac{C_{\ell S}}{r} \, W_{-i\eta,\ell+1/2} (2kr)$$%! che vuol dire -\eta ? 
+Dunque se conosco gli ANC allora conosco anche $I$ e di conseguenza $M$.
+
+\paragraph{Come trovare ANC} Esistono principalmente 2 modi:
+\begin{itemize}
+	\item calcolarli dalla teoria (non molto affidabili);
+	\item oppure prenderli da altri esperimenti, dove si ha lo stesso vertice ($a+b \longleftrightarrow c$) e valgono le condizioni di reazione periferica.
+\end{itemize}
+\noindent Nel secondo caso si scelgono spesso reazioni di \textit{transfer} $a(X,Y)c$, con $X=b+Y$ cluster (per cui il vertice è lo stesso).\\ 
+Per fare un esempio prendiamo:
+$$\ce{^{14}N} + p \to \ce{^{15}O} + \gamma$$
+$$\ce{^{14}N} + \underbrace{\ce{^{3}He}}_{p+d} \to \ce{^{15}O}+ d$$
+Sperimentalmente si misura $d\sigma^{transf}/d\Omega$ e questa è legata ai coefficienti di normalizzazione secondo:
+$$\frac{d\sigma^{transf}}{d\Omega}\propto \sum_{J_X J_c} (C_{bY}^X)^2 (C_{ab}^c)^2 \sigma_\text{DWBA}$$
+Se conosciamo $\sigma_\text{DWBA}$ e $C_{bY}^X$ otteniamo il valore cercato $C_{ac}^c$; $\sigma_\text{DWBA}$ si calcola facilmente, per quanto riguarda $C_{bY}^X$ si prende da un'altra reazione oppure si calcola (nel caso dell'esempio $C_{pd}^{\ce{^3He}}$ è calcolabile).
+
+\paragraph{Test case} Consideriamo la reazione:
+$$\ce{^{16}O} + p \to \ce{^{17}F} + \gamma$$
+per cui sono stati acquisiti dati da misure dirette. Dobbiamo allora trovare il ANC di $\ce{^{17}F} \longleftrightarrow \ce{^{16}O} + p$ e a tale scopo prendiamo la reazione:
+$$\ce{^{16}O} + \underbrace{\ce{^3He}}_{p+d} \to \ce{^{17}F} + d$$
+con un fascio di $\ce{^3He}$ a $29.75$ MeV (reazione periferica). Si misura $d\sigma^{transf}/d\Omega$, si calcola\footnote{In realtà si tiene conto di un potenziale nucleare (spesso Wood-Saxon) a parametri liberi, così da poter valutare se la condizione di soluzione asintotica è ben soddisfatta: questa infatti, se asintotica, deve rimanere la stessa al variare dei parametri del potenziale.} $\sigma_\text{DWBA}$ e $C_{pd}^{\ce{^3He}}$.\\ 
+I risultati sono riportati in Figura \ref{0421_OpgF} a sinistra per la distrubuzione angolare della reazione di \textit{transfer} e a destra per il fattore astrofisico da questa ottenuto; osserviamo che c'è sia uno stato fondamentale che un primo eccitato. Questo dimostra che il metodo funziona.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{Immagini/0421_theta.png}
+	\includegraphics[scale=0.4]{Immagini/0421_Ep.png}
+	\caption{A sinistra distribuzione angolare per la reazione $\ce{^{16}O}(\ce{^3He},d)\ce{^{17}F}$: le curve sono un fit in DWBA con parametri differenti; g.s. sta per \textit{ground-state}. A destra andamento del fattore astrofisico per $\ce{^{16}O}(p,\gamma)\ce{^{17}F}$: i puntini sono i dati delle misure dirette, mentre la curva rossa è ottenuta dagli ANC del grafico a sinistra.}
+	\label{0421_OpgF}
+\end{figure}
+
+\paragraph{Il suo utilizzo} Il ANC \textit{method} fu usato per misurare la reazione:
+$$\ce{^7Be} + p \to \ce{^8B}+\gamma$$
+Ci sono varie opzioni per la reazione di \textit{transfer} da scegliere:
+\begin{align*}
+	-&\quad \ce{^7Be}(\ce{^3He},d)\ce{^8B} \\
+	-&\quad \ce{^7Be}(\ce{^{10}B},\ce{^9Be})\ce{^8B} \\
+	-&\quad \ce{^7Be}(\ce{^{14}N},\ce{^{13}C})\ce{^8B} 
+\end{align*}
+Per l'ultima è riportato il grafico della distribuzione angolare in Figura \ref{0421_BepgB} a sinistra. Si ottenne così un fattore astrofisico $S_{17}^{ANC}(0) = (18.0\pm 1.9)$ eVb compatibile con quello della misura diretta $S_{17}^{direct}(0) = (20.8\pm 0.7\pm 1.4)$ eVb, dati in Figura \ref{0421_BepgB} a destra. Notiamo che mentre per il CD \textit{method} in Figura \ref{0419_esp} non si osservava nessuna risonanza qui invece compare.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{Immagini/0421_theta2.png}
+	\includegraphics[scale=0.4]{Immagini/0421_E-keV.png}
+	\caption{A sinistra distribuzione angolare della reazione $\ce{^{14}N}(\ce{^7Be},\ce{^8B})\ce{^{13}C}$: le linee rappresentano i fit in DWBA. A destra fattore astrofisico in funzione dell'energia ottenuto sia da misure dirette che con metodi indiretti.}
+	\label{0421_BepgB}
+\end{figure}
+
+
+
+\chapter{Le ultime reazioni}
+In questo capitolo sono presentate alcune reazioni di nucleosintesi stellare quali la 3$\alpha$, il biciclo CNNO con la reazione dell'azoto, l'\vir{\textit{Holy Grail} dell'astrofisica} e infine la reazione dell'ossigeno in neon, focalizzandosi sui diversi contributi alla sezione d'urto dei vari processi. Il capitolo copre le lezioni 21/04/2021, 22/04/2021, 26/04/2021 e 28/04/2021. 
+
+\section{La $3\alpha$}
+Abbiamo studiato\footnote{Vedi i capitoli \secrif{cap-BBN} e \secrif{cap-pp}.} che sia la catena $pp$\index{Catena protone-protone@Catena protone-protone $pp$} sia la BBN terminano con la produzione di particelle $\alpha$. Come avevamo già trattato nella sezione \secrif{sec-nuc-prim}, andare oltre sembra impossibile dal momento che non esistono nuclei legati per $A=5$ e quelli per $A=8$ decadono molto velocemente (\textit{mass gap}); tuttavia, le osservazioni mostrano che il $\ce{^{12}C}$ è il quarto elemento più abbondante nell'universo.\\ 
+%! Lei cita pure \& \"{O}pik ma non c'è letteratura al riguardo
+La soluzione arrivò da Salpeter\footnote{Salpeter, E.E., ApJ, 1952, vol.115, \texttt{DOI}: \doi{10.1086/145546}\articolo{Salpeter}.}: l'idea si basava sull'ipotesi che il carbonio si formasse in 2 \textit{step}.
+\begin{enumerate}[1)]
+	\item $\alpha +\alpha \to \ce{^8Be}$.\\ 
+	Questo in realtà è instabile perché lo stato $0^+$ è sopra la soglia di $\alpha+\alpha$, $Q=92$ keV e $\tau_{dec}\sim \ord{-16}$ s. Se abbiamo $2\alpha$ con energia cinetica $T\sim Q$ allora $v= \sqrt{4Q/m_\alpha}\sim \ord{-2}\, c \simeq 3\cdot\ord{6}$ m/s; possiamo trovare un ordine di grandezza del tempo di transito prendendo la distanza di interazione $d\sim 3$ fm, per cui $t\sim d/v \sim \ord{-21}$ s $\lll \tau_{dec}$. Dunque, abbiamo una \vir{piccolissima} concetrazione di $\ce{^8Be}$ che sappiamo essere $N(\ce{^8Be})/N(\alpha)\simeq 5\cdot\ord{-10}$. Può avvenire allora il secondo \textit{step}.
+	\item $\ce{^8Be + \alpha \to \ce{^{12}C} +\gamma}$.\\ 
+	Si tratta di una cattura diretta, ma il fattore astrofisico sarebbe troppo piccolo per spiegare l'abbondanza di carbonio. Ecco che intervenne Hoyle: egli suppose che esistesse una risonanza per questo processo. A quel tempo la sua fu una predizione perché non c'era modo di raccogliere dati per energie in quel range; ormai è stata osservata e confermata: $J^{\pi}=0^+$ e $\Gamma_{tot} = (8.90 \pm 1.08)$ eV (risonanza stretta), dove con $\Gamma_{tot}$ abbiamo indicato la larghezza del processo totale\footnote{Abbiamo considerato anche il processo di decadimento $\Gamma_\alpha$.} $\Gamma_{tot} = \Gamma_\alpha + \Gamma_{rad}\equiv \Gamma_\alpha + \Gamma_\gamma + \Gamma_{e^+e^-}$ .
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.4]{Immagini/0421_riso.png}
+		\caption{Livelli energetici per la risonanza di Hoyle della $3\alpha$.}
+		\label{0421_hoyle}
+	\end{figure}
+\end{enumerate}
+%%! CAPIRE MEGLIO QUANTO SEGUE
+\noindent Per avere $0^+\to0^+$ non può esserci decadimento $\gamma$ perché per questo è vietata la transizione, mentre si può ottenere con produzione di coppia $e^+e^-$; tuttavia, è più probabile una transizione a 2 \textit{step}: $0^+\to2^+\to0^+$ ($E2+E2$). In questo caso $\Gamma_\gamma = (3.6\pm 0.5)$ meV$\ll \Gamma_\alpha$ ($E2$ è \vir{piccolo}). Dalla \BW{}\footnote{$$\sigma_{BW} = \pi\frac{\hbar^2}{2\mu E}g\Gamma_a\Gamma_b \frac{1}{(E-E_R)^2+(\Gamma/2)^2}$$}:
+%
+$$\mean{\sigma v} \simeq \ppc{\frac{2\pi}{\mu kT}}^{3/2} \hbar^2 \ppc{g \frac{\Gamma_\gamma\Gamma_\alpha}{\Gamma_{tot}}} e^{-E_R/kT}\: \simeq \: \ppc{\frac{2\pi}{\mu kT}}^{3/2} \hbar^2 \Gamma_\gamma\, e^{-E_R/kT}$$
+%
+dove abbiamo calcolato\footnote{$$g=\frac{2J+1}{(2S_\alpha +1)(2S_{\ce{^8Be}}+1)} = 1 \qquad \text{per } 0^+$$} $g$ per $0^+$ e fatto l'approssimazione $\Gamma_{tot} \simeq \Gamma_\alpha$. Avremo allora per il rate:
+$$r_{3\alpha} = N_{\ce{^8Be}}N_\alpha \, \mean{\sigma v}$$

@@ -1,0 +1,259 @@
+%% APPUNTI DI REAZIONI NUCLEARI %%
+%%   DI INTERESSE ASTROFISICO   %%
+%
+%   Il documento è diviso in capitoli e sezioni in
+%   base agli argomenti e in parti in base alle 
+%   lezioni. Per ogni file importato è riportata
+%   nel main la descrizione del contenuto
+%
+%%
+\documentclass[12pt,a4paper,titlepage,openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+%\usepackage{comment}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{mhchem}
+%\usepackage{enumitem}
+\usepackage{extarrows}
+\usepackage{array,multirow}
+\usepackage{fancyhdr}
+\usepackage{imakeidx}           % Per creare l'indice
+\usepackage{cancel}             % Per cancellare i termini
+\usepackage{mathrsfs}           % Per alcuni font mathematici
+\usepackage{hyperref}
+\usepackage{enumerate}          % Per elenchi numerati migliori
+\usepackage{xcolor}             % Per i colori
+%% For blank pages
+\usepackage{afterpage}
+% Per avere i numeri alla giusta distanza
+%\usepackage{tocstyle}
+\usepackage{tocloft}
+\usepackage{bm}                 % Per lettere greche in grassetto
+
+\setlength{\cftchapnumwidth}{10mm}
+
+
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+    }
+%%
+
+\renewcommand*\thechapter{\Roman{chapter}} \renewcommand*\thesection{\arabic{section}}
+
+%\setcounter{secnumdepth}{3} % referenze alle sotto sezioni
+
+\makeindex[columns=2, title=Indice analitico, intoc]
+
+%\usepackage{multicol}
+%\setlength{\columnsep}{1cm}
+%\setlength{\columnseprule}{0.5pt}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+% Formattazione testo
+\newcommand{\acc}{\`}
+\newcommand{\vir}[1]{``#1''}
+
+% Circa maggiore e minore
+\newcommand{\lsim}{\lesssim}
+\newcommand{\gsim}{\gtrsim}
+
+% Simboli
+\newcommand{\pp}[3]{\Bigl #1  #2  \Bigr #3}
+\newcommand{\PP}[3]{\Biggl #1  #2  \Biggr #3}
+\newcommand{\ppc}[1]{\pp{(}{#1}{)}}
+\newcommand{\PPc}[1]{\PP{(}{#1}{)}}
+\newcommand{\PPq}[1]{\PP{[}{#1}{]}}
+\newcommand{\PPg}[1]{\PP{\{}{#1}{\}}}
+\newcommand{\Div}[1]{\vec{\nabla}\cdot\vec{#1}}
+\newcommand{\Rot}[1]{\vec{\nabla}\times\vec{#1}}
+\newcommand{\grad}{\vec{\nabla}}
+\newcommand{\derv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\dt}[1]{\derv{#1}{t}}
+\newcommand{\commute}[2]{\pp{[}{#1\,,\,#2}{]}}
+\newcommand{\comham}[1]{\commute{H}{#1}}
+\newcommand{\lambdabar}{{\mkern0.75mu\mathchar '26\mkern -9.75mu\lambda}} % Per avere la lambda barrata
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\tderpar}[1]{\frac{\partial #1}{\partial t}}
+\newcommand{\sol}{_{\odot}}
+\newcommand{\Msol}{$M\sol { }$}
+
+% Comandi per la redazione
+\newcommand{\nuc}[4]{{^{#2}_{#3}#1_{#4}}}
+\newcommand{\st}[1]{\bigl | #1 \bigr \rangle}
+%\newcommand{\bra}[1]{\bigl | #1 \bigr \rangle}
+\newcommand{\mean}[1]{\bigl\langle\, #1\, \bigr\rangle}
+\newcommand{\clebs}[2]{\bigl\langle\, #1\, |\, #2\, \bigr\rangle}
+\newcommand{\oss}[3]{\bigl\langle\, #1\, |\,#2\, |\,#3\, \bigr\rangle}
+\newcommand{\diag}[2]{\bigl\langle\, #1\, |\,#2\, |\,#1\, \bigr\rangle}
+\newcommand{\emat}[3]{\bigl\langle\, #1\, ||\,#2\, ||\,#3\, \bigr\rangle}
+\newcommand{\betamin}{\xrightarrow{\beta^-}}
+\newcommand{\betaplu}{\xrightarrow{\beta^+}}
+\newcommand{\catt}{\xrightarrow{\varepsilon}}
+\newcommand{\EM}{\xrightarrow{\gamma}}
+\newcommand{\unit}[1]{\;\mbox{#1}}
+\newcommand{\ord}[1]{10^{#1}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\scalar}[2]{\langle #1 | #2 \rangle}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{#1}}
+\newcommand{\secrif}[1]{\ref{#1}$\,$-\textit{\nameref{#1}}}
+\newcommand{\complrif}[1]{Approfondimenti \secrif{#1}}
+
+%%* I comandi per le quantità solari sono definiti dalla lezione 7
+
+% per indice analitico
+\newcommand{\esperimento}[1]{\index{ZEsperimenti@\textbf{Esperimenti}!#1}}
+\newcommand{\articolo}[1]{\index{ZZArticoli@\textbf{Articoli}!#1@\texttt{#1}}}
+\newcommand{\complementi}[1]{\index{ZZZComplementi@\textbf{Complementi}!#1}}
+
+% nomi
+\newcommand{\Sch}{Schr\"{o}dinger}
+\newcommand{\WE}{Wigner-Eckart}
+\newcommand{\cherenkov}{\v{C}herenkov}
+\newcommand{\BW}{Breit-Wigner}
+\newcommand{\Huckel}{H\"{u}ckel}
+\newcommand{\Wh}{Whittaker}
+\newcommand{\CG}{{Clebsch-Gordan}}
+
+% Ambiente curiosità
+\newenvironment{curiosita}[1][]{\par\medskip
+   \noindent \textbf{\textit{Curiosità: #1}} \rmfamily}{\medskip}
+
+\newtheorem{definition}{Definizione}
+
+%\renewcommand{\appendixpagename}{Complementi}
+%\renewcommand{\appendixtocname}{Complementi}
+
+%% Per i link nel testo
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+%    filecolor=magenta,      
+    urlcolor=cyan,
+%   Titolo nella barra segnalibri
+    pdftitle={Reazioni Astrofisiche},
+%   Per impostare i segnalibri
+    bookmarks=true,
+%    pdfpagemode=FullScreen,
+}
+
+
+\pagestyle{fancy}
+
+
+\title{Appunti del corso\\Reazioni Nucleari di Interesse Astrofisico}
+\author{Bernardo Vettori\\ \normalsize email: \href{mailto:bernardo.vettori@outlook.it}{bernardo.vettori@outlook.it}}
+\date{A.A. 2020/2021}
+
+
+\begin{document}
+\frontmatter
+\maketitle
+\addcontentsline{toc}{chapter}{Introduzione}
+\chapter*{Introduzione}
+\noindent In queste dispense sono raccolti gli appunti delle lezioni del corso di Reazioni Nucleari di Interesse Astrofisico A.A. 2020/2021 tenute dalla professoressa L.E. Marcucci. Non è quindi presente la parte di descrizione del deutone e dello scattering di 2 nucleoni tenuta invece dal professor A. Kievsky. Le immagini che compaiono sono state prese dagli appunti digitali del corso e l'ordine degli argomenti trattati corrisponde a quello adottato durante il semestre. Ogni capitolo presenta un incipit che ne descrive sinteticamente il contenuto e indica in quali lezioni viene affrontato.\\
+Per quanto riguarda la notazione, non vi è una scelta univoca, ma spesso viene ripresa quella degli articoli discussi a lezione; tuttavia le note a piè di pagina dovrebbero garantire la corretta comprensione della scelta adottata.\\
+L'ultimo capitolo \textit{\nameref{complementi}} raccoglie alcuni argomenti che ho personalmente approfondito durante lo studio, per cui non fanno parte del programma del corso.\\
+Questo lavoro è totalmente personale e non ha alcuna validità in relazione all'esame dal momento che non è né stato controllato né approvato dalla docente.
+Per qualsiasi tipo di errore o imprecisione (anche solo grammaticale) mi farebbe piacere esserne informato, così da poter correggere prontamente.
+\newpage
+\addcontentsline{toc}{chapter}{Indice}
+\tableofcontents
+\mainmatter
+
+%%  Primi concetti, Binding Energy, Decadimenti
+\input{Lez1.tex}    %   15/02
+%%  Modello a shell
+\input{Lez2.tex}    %   01/03
+%%  Modello a goccia e decadimento beta
+\input{Lez3.tex}    %   03/03
+%%  Teoria di Fermi sul decadimento beta e
+%   decadimenti permessi e proibiti
+\input{Lez4.tex}    %   04/03
+%%  Decadimento gamma
+\input{Lez5.tex}    %   08/03
+%%  Conclusione del decadimento gamma e 
+%   alcuni esempi
+\input{Lez6.tex}    %   10/03
+%%  Introduzione alla BBN
+\input{Lez7.tex}    %   11/03
+%%  Network della BBN
+\input{Lez8.tex}    %   15/03
+%%  La prima reazione
+\input{Lez9.tex}    %   17/03
+%%  Meson-Exchange Current 
+%   Introduzione alla pp
+%   Metodo ab-initio
+\input{Lez10.tex}    %   18/03
+%%  Il problema dei \nu Solari
+%   Reaction rate
+\input{Lez11.tex}    %   22/03
+%%  Fine Reaction rate
+%   Fattore astrofisico
+\input{Lez12.tex}    %   24/03
+%%  Risonanza
+\input{Lez13.tex}    %   25/03
+%%  Elettroscreening
+\input{Lez14.tex}    %   29/03
+%%  Studio pp con Ab Initio
+%   Articolo di Bethe
+\input{Lez15.tex}    %   31/03
+%%  Intro R-Matrix
+%   RM Calculable
+\input{Lez16.tex}    %   12/04
+%%  R-Matrix e Tecniche di Misura
+%   RM Phenomenological
+%   Intro Tecniche sperim
+%   Metodi Diretti
+%   Raggi cosmici e Radon
+\input{Lez17.tex}    %   14/04
+%%  Tecniche di Misura
+%   LUNA
+%   Il problema dell'elettroscreening, he\alpha
+%   ATOMKY Anomaly
+%   ERNA, Recoil mass separator
+\input{Lez18.tex}    %   15/04
+%%  Tecniche di Misura
+%   Metodi Indiretti
+%   CD method
+%   TH method
+\input{Lez19.tex}    %   19/04
+%%  Tecniche di Misura e Ultime reazioni
+%   Metodi Indiretti
+%   TH  method
+%   ANC method
+%   3\alpha
+\input{Lez20.tex}    %   21/04
+%%  Ultime reazioni
+%   Ciclo CN-NO
+%       CNO & NO 
+%       Reazione più lenta
+\input{Lez21.tex}    %   22/04
+%%  Ultime reazioni
+%   Holy Grail 
+%       risonanza ossigeno ed esperimenti
+\input{Lez22.tex}    %   26/04
+%%  Ultime reazioni
+%   Holy Grail 
+%       O(\alpha,\gamma)Ne
+%       Ultime reazioni nellle stelle
+\input{Lez23.tex}    %   28/04
+%% Complementi
+\input{Complementi.tex}
+
+
+\afterpage{\blankpage}
+\printindex
+%\listoffigures\addcontentsline{toc}{chapter}{Elenco delle figure}
+
+\end{document}
