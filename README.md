@@ -8,7 +8,7 @@ Le immagini che compaiono sono state prese dagli appunti digitali del corso e l'
 
  - Questo lavoro è **TOTALMENTE PERSONALE** e non ha alcuna validità in relazione all'esame dal momento che **NON È STATO NÉ CONTROLLATO NÉ TANTO MENO APPROVATO DALLA DOCENTE**.
 
- - Per qualsiasi tipo di errore o imprecisione (anche solo grammaticale o di battitura) mi farebbe piacere esserne informato, così da poter correggere prontamente ([bernardo.vettori@outlook.it](bernardo.vettori@outlook.it)).
+ - Per qualsiasi tipo di errore o imprecisione (anche solo grammaticale o di battitura) mi farebbe piacere esserne informato, così da poter correggere prontamente ([bernardo.vettori@outlook.it](mailto:bernardo.vettori@outlook.it)).
    Invito quindi sempre a **scaricare l'ultima release** degli appunti.
    
    Il *tag* della versione si compone `v[anno]-[mese].[indice]`. Per sapere se la versione è l'ultima controllare la *release*.
